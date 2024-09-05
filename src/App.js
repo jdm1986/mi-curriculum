@@ -6,8 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>¡Hola, soy Jesús!</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Este es mi currículum web desarrollado en React.
         </p>
         <a
           className="App-link"
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Aprende React
         </a>
       </header>
     </div>
@@ -23,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+//prueba github
