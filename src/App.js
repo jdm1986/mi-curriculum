@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+// Importamos los componentes AboutMe y Experience
+import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -7,9 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>¡Hola, soy Jesús!</h1>
-        <p>
-          Este es mi currículum web desarrollado en React.
-        </p>
+        <p>Este es mi currículum web desarrollado en React.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,10 +20,12 @@ function App() {
           Aprende React
         </a>
       </header>
+
+      {/* Incluimos las secciones de Sobre mí y Experiencia Laboral */}
+      <AboutMe />
+      <Experience />
     </div>
   );
 }
 
 export default App;
-
-//prueba github

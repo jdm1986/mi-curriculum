@@ -1,0 +1,23 @@
+/* Estilos para la sección "Sobre mí" */
+.about-me {
+  padding: 20px; /* Relleno interno para darle espacio al contenido */
+  background-color: #f9f9f9; /* Color de fondo suave */
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 800px; /* Ancho máximo para no ocupar toda la pantalla */
+  margin: 40px auto; /* Centra la sección y añade margen superior/inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadimos una ligera sombra para darle profundidad */
+}
+
+.about-me h2 {
+  color: #333; /* Color oscuro del título */
+  font-size: 2rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Separación entre el título y el contenido */
+  text-align: center; /* Centrar el título */
+}
+
+.about-me p {
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: #555; /* Color del texto */
+  line-height: 1.5; /* Espaciado entre líneas */
+  text-align: center; /* Centrar el texto */
+}
