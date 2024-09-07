@@ -1,0 +1,33 @@
+/* Estilos para la sección de habilidades */
+.skills {
+  padding: 30px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 1.3rem;
+  color: #555;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.skills li:last-child {
+  border-bottom: none; /* Eliminar el borde del último ítem */
+}

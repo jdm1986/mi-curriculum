@@ -3,6 +3,9 @@ import './App.css';
 // Importamos los componentes AboutMe y Experience
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
+import Education from './components/Education';
+import Courses from './components/Courses';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
       {/* Incluimos las secciones de Sobre mí y Experiencia Laboral */}
       <AboutMe />
       <Experience />
+      <Education />
+      <Courses />
+      <Skills />
     </div>
   );
 }

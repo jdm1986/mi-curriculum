@@ -1,23 +1,24 @@
 /* Estilos para la sección "Sobre mí" */
 .about-me {
-  padding: 20px; /* Relleno interno para darle espacio al contenido */
-  background-color: #f9f9f9; /* Color de fondo suave */
+  padding: 30px; /* Relleno amplio para que respire */
+  background-color: #f9f9f9; /* Fondo suave */
   border-radius: 8px; /* Bordes redondeados */
-  max-width: 800px; /* Ancho máximo para no ocupar toda la pantalla */
-  margin: 40px auto; /* Centra la sección y añade margen superior/inferior */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadimos una ligera sombra para darle profundidad */
+  max-width: 900px; /* Ancho máximo para centrar */
+  margin: 40px auto; /* Centrado */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .about-me h2 {
-  color: #333; /* Color oscuro del título */
-  font-size: 2rem; /* Tamaño del título */
-  margin-bottom: 10px; /* Separación entre el título y el contenido */
+  color: #333; /* Color oscuro */
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  margin-bottom: 15px; /* Espacio debajo del título */
   text-align: center; /* Centrar el título */
 }
 
 .about-me p {
-  font-size: 1.2rem; /* Tamaño del texto */
-  color: #555; /* Color del texto */
-  line-height: 1.5; /* Espaciado entre líneas */
-  text-align: center; /* Centrar el texto */
+  font-size: 1.3rem; /* Texto grande para legibilidad */
+  color: #555; /* Color gris oscuro */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-align: justify; /* Justificación para mejor lectura */
+  margin-bottom: 20px; /* Espacio entre párrafos */
 }
