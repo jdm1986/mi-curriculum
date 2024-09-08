@@ -28,8 +28,8 @@ function Navbar() {
         </div>
 
         <div className="navbar-text">
-          <h1>¡Hola, soy Jesús!</h1>
-          <p>Bienvenido/a a mi CV WEB.</p>
+          <h1>¡Hola! soy Jesús</h1>
+          <p>Estás en mi CV WEB.</p>
         </div>
 
         <div className="navbar-logo-right">
