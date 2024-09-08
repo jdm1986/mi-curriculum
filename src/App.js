@@ -1,35 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-// Importamos los componentes AboutMe y Experience
+// Importamos los componentes de las diferentes secciones
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Courses from './components/Courses';
 import Skills from './components/Skills';
+// Importamos el componente Footer para mostrar al final de la página
+import Footer from './components/Footer';
+// Importamos el componente Navbar para la navegación
+import Navbar from './components/Navbar';
+// Importamos los estilos de la aplicación
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>¡Hola, soy Jesús!</h1>
-        <p>Este es mi currículum web desarrollado en React.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprende React
-        </a>
-      </header>
+      {/* Menú de navegación con logo, texto y fotografía */}
+      <Navbar />
 
-      {/* Incluimos las secciones de Sobre mí y Experiencia Laboral */}
-      <AboutMe />
-      <Experience />
-      <Education />
-      <Courses />
-      <Skills />
+      {/* Imagen de fondo solo en el cuerpo de la página */}
+      <div className="background-container">
+        {/* Secciones del currículum */}
+        <AboutMe />
+        <Experience />
+        <Education />
+        <Courses />
+        <Skills />
+      </div>
+
+      {/* Pie de página */}
+      <Footer />
     </div>
   );
 }

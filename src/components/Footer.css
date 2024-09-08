@@ -1,0 +1,23 @@
+/* Estilos del pie de página */
+.footer {
+  background-color: #282c34; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo para el contenedor del contenido en el footer */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilo para el logo en el footer */
+.footer-logo {
+  height: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+}

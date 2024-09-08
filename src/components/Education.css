@@ -1,39 +1,16 @@
-/* Estilos para la sección de educación */
 .education {
-  padding: 20px; /* Espacio alrededor del contenido */
-  background-color: #f1f1f1; /* Color de fondo */
-  border-radius: 8px; /* Bordes redondeados */
-  max-width: 800px; /* Ancho máximo */
-  margin: 40px auto; /* Centrado */
+  padding: 20px;
+  background-color: #2c2c2c; /* Uniforme con las otras secciones */
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 40px auto;
+  color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .education h2 {
-  font-size: 2rem; /* Tamaño del título */
-  color: #333; /* Color del título */
-  margin-bottom: 20px; /* Espacio debajo del título */
-  text-align: center; /* Centrar el título */
-}
-
-.education ul {
-  list-style-type: none; /* Quitamos los puntos de la lista */
-  padding: 0;
-}
-
-.education li {
-  background-color: #ffffff; /* Fondo blanco para cada ítem */
-  border-radius: 5px; /* Bordes redondeados */
-  padding: 15px; /* Espacio dentro de cada ítem */
-  margin-bottom: 10px; /* Espacio entre los ítems */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.education li strong {
-  font-size: 1.3rem; /* Tamaño del texto para los títulos */
-  color: #333; /* Color del título */
-}
-
-.education li p {
-  margin-top: 5px; /* Espacio entre el título y la descripción */
-  color: #555; /* Color del texto */
-  font-size: 1rem; /* Tamaño del texto */
+  font-size: 2rem;
+  color: #61dafb; /* Color personalizado para títulos */
+  margin-bottom: 20px;
+  text-align: center;
 }

@@ -1,0 +1,132 @@
+/* Sección 1: Menú de navegación (visible solo en pantallas grandes) */
+.navbar-section1 {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Lista de menús en pantallas grandes */
+.menu-list-desktop {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list-desktop li {
+  margin: 0 15px;
+}
+
+.menu-list-desktop li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu-list-desktop li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección 2: Logo | Texto central | Foto personal */
+.navbar-section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #444;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Ajustes para logos y foto personal en la cabecera */
+.navbar-logo-left, .navbar-logo-right {
+  width: 80px;
+  margin: 0 15px;
+}
+
+.navbar-logo-left img, .navbar-logo-right img {
+  height: 80px;
+  cursor: pointer;
+}
+
+/* Ajustes de texto para el centro */
+.navbar-text {
+  text-align: center;
+  color: white;
+}
+
+.navbar-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.navbar-text p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+/* Menú desplegable para todas las pantallas */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  background-color: #333;
+  text-align: center;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu-list li a:hover {
+  background-color: #444;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .navbar-section1 {
+    display: none; /* Ocultar la sección 1 en móviles */
+  }
+
+  .navbar-section2 {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .menu-list {
+    width: 100%;
+  }
+}
+
+
+/* Footer responsivo */
+.footer {
+  background-color: #333;
+  color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer img {
+  height: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 0.8rem; /* Ajusta el tamaño de texto en dispositivos móviles */
+  }
+}
