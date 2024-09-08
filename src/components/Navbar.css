@@ -1,4 +1,4 @@
-/* Sección 1: Menú de navegación (visible solo en pantallas grandes) */
+/* Sección 1: Menú de navegación para pantallas grandes */
 .navbar-section1 {
   background-color: #333;
   padding: 10px 0;
@@ -30,10 +30,10 @@
   text-decoration: underline;
 }
 
-/* Sección 2: Logo | Texto central | Foto personal */
+/* Sección 2: Logo | Texto central | Foto personal (tanto móviles como pantallas grandes) */
 .navbar-section2 {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra el contenido */
   align-items: center;
   padding: 15px;
   background-color: #444;
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-/* Ajustes de texto para el centro */
+/* Ajustes de texto para el centro de la cabecera */
 .navbar-text {
   text-align: center;
   color: white;
@@ -71,45 +71,75 @@
   color: #bbb;
 }
 
-/* Menú desplegable para todas las pantallas */
-.menu-list {
+/* Menú desplegable con margen superior para móviles */
+.menu-list-mobile {
+  display: none; /* Se oculta inicialmente */
+  flex-direction: column;
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
+  padding: 10px 0;
+  margin: 20px 0 0; /* Margen superior para no cortar las palabras */
   background-color: #333;
-  text-align: center;
+  text-align: left; /* Alinear el texto a la izquierda */
+  padding-left: 20px; /* Espaciado del texto desde el borde */
+  position: fixed; /* Fijamos el menú para que no desaparezca con el scroll */
+  top: 80px; /* Ajuste para evitar que se sobreponga con la cabecera */
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-.menu-list li {
+/* Mostramos el menú cuando esté abierto */
+.menu-list-mobile.open {
+  display: flex;
+}
+
+/* Estilo de los elementos de la lista del menú */
+.menu-list-mobile li {
   padding: 10px;
+  position: relative;
 }
 
-.menu-list li a {
+/* Añadimos un punto antes de cada elemento del menú */
+.menu-list-mobile li:before {
+  content: '•'; /* Punto de lista */
+  position: absolute;
+  left: 0;
+  color: #61dafb; /* Color del punto */
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+/* Estilo de los enlaces dentro de la lista del menú */
+.menu-list-mobile li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  margin-left: 25px; /* Espacio entre el punto y el texto */
 }
 
-.menu-list li a:hover {
-  background-color: #444;
+.menu-list-mobile li a:hover {
+  color: #61dafb;
+  text-decoration: underline;
 }
 
-/* Estilos para pantallas pequeñas */
+/* Evitar que el contenido se "coma" el encabezado al navegar por las secciones */
+section {
+  scroll-margin-top: 120px; /* Ajuste del margen superior para evitar que el contenido quede cubierto */
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
 @media (max-width: 767px) {
-  .navbar-section1 {
-    display: none; /* Ocultar la sección 1 en móviles */
-  }
-
+  /* Ajuste para justificar los elementos en pantallas pequeñas */
   .navbar-section2 {
     justify-content: space-between;
     padding: 10px;
   }
 
-  .menu-list {
+  /* El menú ocupará todo el ancho de la pantalla */
+  .menu-list-mobile {
     width: 100%;
   }
 }
-
 
 /* Footer responsivo */
 .footer {
@@ -125,8 +155,9 @@
   vertical-align: middle;
 }
 
+/* Ajuste de la fuente del footer para pantallas pequeñas */
 @media (max-width: 767px) {
   .footer {
-    font-size: 0.8rem; /* Ajusta el tamaño de texto en dispositivos móviles */
+    font-size: 0.8rem;
   }
 }

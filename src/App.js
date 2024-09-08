@@ -4,6 +4,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Courses from './components/Courses';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 // Importamos el componente Footer para mostrar al final de la página
 import Footer from './components/Footer';
 // Importamos el componente Navbar para la navegación
@@ -14,20 +15,27 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* Menú de navegación con logo, texto y fotografía */}
       <Navbar />
-
-      {/* Imagen de fondo solo en el cuerpo de la página */}
       <div className="background-container">
-        {/* Secciones del currículum */}
-        <AboutMe />
-        <Experience />
-        <Education />
-        <Courses />
-        <Skills />
+        <section id="about-me">
+          <AboutMe />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="courses">
+          <Courses />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
       </div>
-
-      {/* Pie de página */}
       <Footer />
     </div>
   );
