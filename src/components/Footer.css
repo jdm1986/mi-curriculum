@@ -1,7 +1,9 @@
 /* Estilos del pie de página */
 .footer {
-  background-color: #282c34; /* Fondo oscuro */
-  color: white; /* Texto blanco */
+  background-image: url('../assets/fondo2.png'); /* Ruta hacia la imagen de fondo */
+  background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  color: white; /* Asegura que el texto sea legible */
   text-align: center;
   padding: 20px;
   position: fixed;

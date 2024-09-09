@@ -32,11 +32,13 @@
 
 /* Sección 2: Logo | Texto central | Foto personal (tanto móviles como pantallas grandes) */
 .navbar-section2 {
+  background-image: url('../assets/fondo2.png'); /* Ruta hacia la imagen de fondo */
+  background-size: cover; /* Para que cubra toda el área de la cabecera */
+  background-position: center; /* Centra la imagen de fondo */
   display: flex;
   justify-content: center; /* Centra el contenido */
   align-items: center;
   padding: 15px;
-  background-color: #444;
   position: fixed;
   top: 0;
   width: 100%;
@@ -76,11 +78,11 @@
   display: none; /* Se oculta inicialmente */
   flex-direction: column;
   list-style: none;
-  padding: 10px 0;
+  padding: 70px 0;
   margin: 0;
   background-color: #333;
   text-align: left; /* Alinear el texto a la izquierda */
-  padding-left: 20px; /* Espaciado del texto desde el borde */
+  padding-left: 10px; /* Espaciado del texto desde el borde */
   position: fixed;
   top: 140px; /* Ajuste para evitar que se sobreponga con la cabecera */
   left: 0;
