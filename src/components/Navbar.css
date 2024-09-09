@@ -97,8 +97,8 @@
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
   .menu-list-mobile {
-    top: 180px;
-    width: 15%; /* Menú ocupará el 15% del ancho en pantallas grandes */
+    top: 120px;
+    width: 20%; /* Menú ocupará el 20% del ancho en pantallas grandes */
     left: 10px; /* Para que no quede pegado al borde izquierdo */
     display: flex; /* Siempre visible en pantallas grandes */
     flex-direction: column;
