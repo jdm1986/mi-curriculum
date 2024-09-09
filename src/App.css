@@ -13,7 +13,7 @@ body {
 
 .App {
   text-align: center;
-  padding-top: 90px; /* Añade espacio para que la cabecera no cubra el contenido */
+  padding-top: 30px; /* Añade espacio para que la cabecera no cubra el contenido */
   padding-bottom: 60px; /* Añade espacio para el footer */
 }
 
@@ -59,7 +59,9 @@ body {
   background-size: cover;
   background-position: center;
   padding: 50px 20px; /* Ajustamos el espacio para las secciones */
+  margin-top: 0px; /* Ajuste para acercar el cuerpo a la cabecera */
 }
+
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
