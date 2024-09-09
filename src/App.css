@@ -1,3 +1,8 @@
+/* Activar desplazamiento suave en todo el documento */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Estilos generales */
 body {
   background-color: #1e1e1e; /* Color oscuro de fondo para el tema */
