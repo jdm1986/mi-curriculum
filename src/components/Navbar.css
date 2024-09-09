@@ -98,7 +98,8 @@
 @media (min-width: 768px) {
   .menu-list-mobile {
     top: 120px;
-    width: 20%; /* Menú ocupará el 20% del ancho en pantallas grandes */
+    width: 15%; /* Menú ocupará el 20% del ancho en pantallas grandes */
+    height: calc(82vh - 120px); /* Ocupa casi toda la altura, dejando un espacio con el footer */
     left: 10px; /* Para que no quede pegado al borde izquierdo */
     display: flex; /* Siempre visible en pantallas grandes */
     flex-direction: column;
@@ -110,7 +111,11 @@
 
 /* Estilo de los elementos de la lista del menú */
 .menu-list-mobile li {
-  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Caja con sombra */
   position: relative;
 }
 
@@ -124,17 +129,15 @@
   line-height: 1.5rem;
 }
 
-/* Estilo de los enlaces dentro de la lista del menú */
 .menu-list-mobile li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  margin-left: 25px; /* Espacio entre el punto y el texto */
+  margin-left: 25px;
 }
 
-.menu-list-mobile li a:hover {
-  color: #61dafb;
-  text-decoration: underline;
+.menu-list-mobile li:hover {
+  background-color: #444; /* Fondo al pasar el mouse */
 }
 
 /* Evitar que el contenido se "coma" el encabezado al navegar por las secciones */

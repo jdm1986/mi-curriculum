@@ -9,13 +9,12 @@ function Skills() {
     <section className="skills">
       <h2>Habilidades</h2>
       <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React</li>
+        <li>HTML - CSS - JavaScript - React</li>
         <li>Fundamentos de UX/UI</li>
         <li>Programación en Java y C#</li>
         <li>Bases de datos: MySQL, Workbench y Oracle</li>
         <li>Git y GitHub (Control de versiones)</li>
-        <li>Arduino</li>
+        <li>Arduino - Prácticas con módulo ESP-32</li>
         <li>Ofimática avanzada</li>
         <li>Herramientas de análisis de datos: R-Studio, Pentaho, MS PowerBI (Big Data)</li>
       </ul>

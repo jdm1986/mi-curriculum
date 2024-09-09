@@ -19,5 +19,12 @@
 
 /* Estilo para el logo en el footer */
 .footer-logo {
-  height: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: 60px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+.footer p {
+  margin-right: 10px; /* Añade un margen para que no se corte el texto */
+  white-space: nowrap; /* Evita que el texto se corte en varias líneas */
+  overflow: hidden; /* Asegura que el contenido extra no se muestre */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si es necesario */
 }
