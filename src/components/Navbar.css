@@ -77,20 +77,35 @@
   flex-direction: column;
   list-style: none;
   padding: 10px 0;
-  margin: 20px 0 0; /* Margen superior para no cortar las palabras */
+  margin: 0;
   background-color: #333;
   text-align: left; /* Alinear el texto a la izquierda */
   padding-left: 20px; /* Espaciado del texto desde el borde */
-  position: fixed; /* Fijamos el menú para que no desaparezca con el scroll */
-  top: 80px; /* Ajuste para evitar que se sobreponga con la cabecera */
+  position: fixed;
+  top: 140px; /* Ajuste para evitar que se sobreponga con la cabecera */
   left: 0;
   width: 100%;
   z-index: 999;
+  border-radius: 10px; /* Redondear las esquinas del menú */
 }
 
 /* Mostramos el menú cuando esté abierto */
 .menu-list-mobile.open {
   display: flex;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .menu-list-mobile {
+    top: 180px;
+    width: 15%; /* Menú ocupará el 15% del ancho en pantallas grandes */
+    left: 10px; /* Para que no quede pegado al borde izquierdo */
+    display: flex; /* Siempre visible en pantallas grandes */
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
 
 /* Estilo de los elementos de la lista del menú */
@@ -129,35 +144,22 @@ section {
 
 /* Estilos para pantallas pequeñas (menos de 768px) */
 @media (max-width: 767px) {
-  /* Ajuste para justificar los elementos en pantallas pequeñas */
   .navbar-section2 {
     justify-content: space-between;
     padding: 10px;
   }
 
-  /* El menú ocupará todo el ancho de la pantalla */
-  .menu-list-mobile {
-    width: 100%;
+  .navbar-logo-left, .navbar-logo-right {
+    margin-left: 10px;
+    margin-right: 30px;
   }
-}
 
-/* Footer responsivo */
-.footer {
-  background-color: #333;
-  color: #f0f0f0;
-  padding: 10px;
-  text-align: center;
-}
+  .navbar-text {
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.footer img {
-  height: 30px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-/* Ajuste de la fuente del footer para pantallas pequeñas */
-@media (max-width: 767px) {
-  .footer {
-    font-size: 0.8rem;
+  .menu-list-mobile {
+    width: 50%;
   }
 }

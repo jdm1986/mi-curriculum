@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Espacio entre el logo y el texto */
+  gap: 5px; /* Espacio entre el logo y el texto */
 }
 
 /* Estilo para el logo en el footer */
