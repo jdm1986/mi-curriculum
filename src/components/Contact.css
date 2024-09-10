@@ -42,3 +42,27 @@
   color: #61dafb;
   text-decoration: underline;
 }
+
+/* Estilos para el botón de descarga del CV */
+.download-item {
+  margin-top: 20px; /* Añadimos un margen superior para separar el botón */
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #61dafb; /* Fondo azul */
+  color: #2c2c2c; /* Texto oscuro */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #21a1f1; /* Cambio de color al pasar el ratón */
+  color: white;
+}
