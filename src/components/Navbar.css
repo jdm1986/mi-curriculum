@@ -104,7 +104,7 @@
     top: 120px;
     width: 15%; /* Menú ocupará el 20% del ancho en pantallas grandes */
     height: calc(82vh - 120px); /* Ocupa casi toda la altura, dejando un espacio con el footer */
-    left: 10px; /* Para que no quede pegado al borde izquierdo */
+    left: 20px; /* Para que no quede pegado al borde izquierdo */
     display: flex; /* Siempre visible en pantallas grandes */
     flex-direction: column;
     background-color: #333;
@@ -113,32 +113,25 @@
   }
 }
 
-/* Estilo de los elementos de la lista del menú */
-.menu-list-mobile li {
-  background-color: #333;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Caja con sombra */
-  position: relative;
+.menu-icon {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  color: #61dafb; /* Color del icono */
+  font-size: 1.2rem; /* Tamaño del icono */
 }
 
-/* Añadimos un punto antes de cada elemento del menú */
-.menu-list-mobile li:before {
-  content: '•'; /* Punto de lista */
-  position: absolute;
-  left: 5;
-  color: #61dafb; /* Color del punto */
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+.menu-list-mobile li {
+  display: flex;
+  align-items: center; /* Alinea los iconos y el texto */
+  padding: 10px;
+  position: relative;
+  border-radius: 8px;
 }
 
 .menu-list-mobile li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  margin-left: 25px; /* Espacio entre el punto y el texto */
-   display: block;  /* Hacer que el enlace ocupe todo el espacio del botón */
+  margin-left: 5px;
 }
 
 .menu-list-mobile li:hover {

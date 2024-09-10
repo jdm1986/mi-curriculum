@@ -2,12 +2,13 @@
 import React from 'react';
 // Importamos los estilos específicos de este componente
 import './Education.css';
+import { FaGraduationCap } from 'react-icons/fa';
 
 // Definimos el componente Education
 function Education() {
   return (
     <section className="education">
-      <h2>Educación</h2>
+      <h2><FaGraduationCap className="section-icon" /> Educación</h2>
       <ul>
         <li>
           <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong>

@@ -2,12 +2,14 @@
 import React from 'react';
 // Importamos los estilos de este componente
 import './Experience.css';
+import { FaBriefcase } from 'react-icons/fa'; // Importamos el icono de experiencia
+
 
 // Definimos el componente Experience
 function Experience() {
   return (
     <section className="experience">
-      <h2>Experiencia Laboral</h2>
+      <h2><FaBriefcase className="section-icon" /> Experiencia Laboral</h2>
       <ul>
         <li>
           <strong>Club Manager</strong>

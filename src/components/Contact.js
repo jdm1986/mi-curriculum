@@ -1,12 +1,17 @@
+// Importamos React para usar JSX
 import React from 'react';
-import './Contact.css'; // Importamos los estilos
-import { FaEnvelope, FaPhone, FaLinkedin, FaDownload } from 'react-icons/fa'; // Importamos los iconos
-import cvFile from '../assets/CVTJESUS.pdf'; // Asegúrate de que la ruta al PDF sea correcta
+// Importamos los estilos específicos del componente Contact
+import './Contact.css';
+// Importamos los iconos necesarios
+import { FaEnvelope, FaPhone, FaLinkedin, FaDownload } from 'react-icons/fa';
+// Importamos el archivo PDF del CV
+import cvFile from '../assets/CVTJESUS.pdf';
 
+// Definimos el componente Contact
 function Contact() {
   return (
     <section className="contact">
-      <h2>Contacto</h2>
+      <h2><FaEnvelope className="section-icon" /> Contacto</h2>
       <div className="contact-info">
         <div className="contact-item">
           <FaEnvelope className="contact-icon" />
@@ -22,7 +27,6 @@ function Contact() {
             LinkedIn: Jesús Díaz Martín
           </a>
         </div>
-        {/* Botón para descargar el CV */}
         <div className="download-item">
           <a href={cvFile} download="CV_Jesus_Diaz.pdf" className="download-btn">
             <FaDownload className="contact-icon" /> Descargar CV

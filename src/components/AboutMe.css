@@ -26,3 +26,9 @@
   background-color: #333; /* Fondo oscuro para resaltar el párrafo */
   border-radius: 5px; /* Bordes redondeados para los párrafos */
 }
+
+.section-icon {
+  margin-right: 10px;
+  color: #61dafb;
+  font-size: 1.5rem;
+}

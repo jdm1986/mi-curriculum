@@ -2,12 +2,13 @@
 import React from 'react';
 // Importamos los estilos específicos de este componente
 import './Skills.css';
+import { FaTools } from 'react-icons/fa'; // Importamos el icono de herramientas
 
 // Definimos el componente Skills
 function Skills() {
   return (
     <section className="skills">
-      <h2>Habilidades</h2>
+      <h2><FaTools className="section-icon" /> Habilidades</h2>
       <ul>
         <li>HTML - CSS - JavaScript - React</li>
         <li>Fundamentos de UX/UI</li>

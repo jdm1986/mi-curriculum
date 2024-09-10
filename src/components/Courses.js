@@ -2,12 +2,13 @@
 import React from 'react';
 // Importamos los estilos específicos de este componente
 import './Courses.css';
+import { FaCertificate } from 'react-icons/fa';
 
 // Definimos el componente Courses
 function Courses() {
   return (
     <section className="courses">
-      <h2>Cursos y Certificaciones</h2>
+      <h2><FaCertificate className="section-icon" /> Cursos y Certificaciones</h2>
       <ul>
         <li>
           <strong>Microsoft Power BI - Curso de Power BI Desktop</strong>
