@@ -20,8 +20,7 @@ function Experience() {
           <li>Gestión del área fitness, venta y fidelización de clientes de EP, coordinación de actividades y técnico multidisciplinar con soporte musical.</li>
         </li>
         <li>
-          <strong>Técnico Polivalente</strong>
-          <p><em>En diversos Clubes</em> (Ago 2007 - Dic 2013)</p>
+          <strong>Técnico Polivalente en AADD con soporte musical y Sala Fitness</strong>
           <ul>
             <li>Club Fit-in & Fitness Center Tomares (Sep 2010 - Sep 2013)</li>
             <li>Cartuja Sport S.L. (Oct 2008 - Jul 2010)</li>

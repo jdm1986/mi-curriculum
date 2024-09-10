@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Courses from './components/Courses';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 // Importamos el componente Footer para mostrar al final de la página
 import Footer from './components/Footer';
 // Importamos el componente Navbar para la navegación
@@ -34,6 +35,9 @@ function App() {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
         </section>
       </div>
       <Footer />

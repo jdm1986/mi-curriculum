@@ -8,6 +8,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Caja con sombra */
 }
 
+.education li:hover {
+  background-color: #444; /* Cambio de color al pasar el mouse */
+}
+
+
 .education h2 {
   font-size: 2rem;
   color: #61dafb;

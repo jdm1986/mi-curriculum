@@ -46,6 +46,19 @@ function Navbar() {
     }
   };
 
+   // Función para desplazarse a una sección
+     const scrollToSection = (sectionId) => {
+       const section = document.getElementById(sectionId);
+       if (section) {
+         section.scrollIntoView({ behavior: 'smooth' });
+       }
+     };
+
+     // Función para manejar el click en la foto personal
+     const handlePhotoClick = () => {
+       scrollToSection('contact'); // Aquí usas el id de la sección de contacto
+     };
+
   return (
     <>
       <nav className="navbar-section2">
@@ -59,7 +72,7 @@ function Navbar() {
         </div>
 
         <div className="navbar-logo-right">
-          <img src={logoRight} alt="Foto Personal" />
+          <img src={logoRight} alt="Foto Personal" onClick={handlePhotoClick} /> {/* Maneja el click */}
         </div>
 
         {/* Mostrar el menú en móviles o mantenerlo fijo en pantallas grandes */}
@@ -71,6 +84,7 @@ function Navbar() {
             <li><a href="#courses" onClick={() => handleMenuClick('courses')}>Cursos</a></li>
             <li><a href="#skills" onClick={() => handleMenuClick('skills')}>Habilidades</a></li>
             <li><a href="#projects" onClick={() => handleMenuClick('projects')}>Proyectos</a></li>
+            <li><a href="#contact" onClick={() => handleMenuClick('contact')}>Contacto</a></li>
           </ul>
         ) : null}
       </nav>

@@ -28,10 +28,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Caja con sombra */
 }
 
-.skills li:hover {
-  background-color: #444; /* Cambio de color al pasar el mouse */
-}
-
 .skills li::before {
   content: '•';
   color: #61dafb;
