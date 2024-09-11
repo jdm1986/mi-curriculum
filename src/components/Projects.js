@@ -36,9 +36,9 @@ function Projects() {
           {/* Detalles del proyecto jesusdiazmartincv.es */}
           {openDetails.jesusdiazmartincv && (
             <div className="project-details">
-              <p><strong>Reto principal:</strong> Crear un CV interactivo usando React.</p>
-              <p><strong>Dificultades:</strong> Adaptar el diseño responsivo y configurar el dominio en un servidor.</p>
-              <p><strong>Lo que aprendí:</strong> Integración de React con Nginx y despliegue en producción.</p>
+              <p><strong>Reto principal:</strong> Crear un CV web interactivo usando React y diseño responsivo.</p>
+              <p><strong>Dificultades:</strong> Aprender React, gestionar el control de versiones con Git y configurar correctamente el dominio personalizado en GitHub Pages con HTTPS.</p>
+              <p><strong>Lo que aprendí:</strong> Mejoré en React, control de versiones con Git, despliegue en producción y configuración de DNS y SSL. Adquirí experiencia integral en todo el ciclo de vida de un proyecto web.</p>
             </div>
           )}
         </li>
