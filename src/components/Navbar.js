@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub } from 'react-icons/fa'; // Importamos el icono de GitHub
 import logoLeft from '../assets/logomenu.png'; // Logo izquierdo (menú)
 import logoRight from '../assets/careto.png'; // Foto personal
 
@@ -47,18 +47,18 @@ function Navbar() {
     }
   };
 
-   // Función para desplazarse a una sección
-     const scrollToSection = (sectionId) => {
-       const section = document.getElementById(sectionId);
-       if (section) {
-         section.scrollIntoView({ behavior: 'smooth' });
-       }
-     };
+  // Función para desplazarse a una sección
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-     // Función para manejar el click en la foto personal
-     const handlePhotoClick = () => {
-       scrollToSection('contact'); // Aquí usas el id de la sección de contacto
-     };
+  // Función para manejar el click en la foto personal
+  const handlePhotoClick = () => {
+    scrollToSection('contact'); // Aquí usas el id de la sección de contacto
+  };
 
   return (
     <>
@@ -77,36 +77,40 @@ function Navbar() {
         </div>
 
         {/* Mostrar el menú en móviles o mantenerlo fijo en pantallas grandes */}
-                {(isMobile && isOpen) || !isMobile ? (
-                  <ul className={`menu-list-mobile ${isMobile && isOpen ? 'open' : ''}`}>
-                    <li>
-                      <FaUser className="menu-icon" />
-                      <a href="#about-me" onClick={() => handleMenuClick('about-me')}>Sobre mí</a>
-                    </li>
-                    <li>
-                      <FaBriefcase className="menu-icon" />
-                      <a href="#experience" onClick={() => handleMenuClick('experience')}>Experiencia</a>
-                    </li>
-                    <li>
-                      <FaGraduationCap className="menu-icon" />
-                      <a href="#education" onClick={() => handleMenuClick('education')}>Educación</a>
-                    </li>
-                    <li>
-                      <FaCertificate className="menu-icon" />
-                      <a href="#courses" onClick={() => handleMenuClick('courses')}>Cursos</a>
-                    </li>
-                    <li>
-                      <FaTools className="menu-icon" />
-                      <a href="#skills" onClick={() => handleMenuClick('skills')}>Habilidades</a>
-                    </li>
-                    <li>
-                      <FaProjectDiagram className="menu-icon" />
-                      <a href="#projects" onClick={() => handleMenuClick('projects')}>Proyectos</a>
-                    </li>
-                    <li>
-                      <FaEnvelope className="menu-icon" />
-                      <a href="#contact" onClick={() => handleMenuClick('contact')}>Contacto</a>
-                    </li>
+        {(isMobile && isOpen) || !isMobile ? (
+          <ul className={`menu-list-mobile ${isMobile && isOpen ? 'open' : ''}`}>
+            <li>
+              <FaUser className="menu-icon" />
+              <a href="#about-me" onClick={() => handleMenuClick('about-me')}>Sobre mí</a>
+            </li>
+            <li>
+              <FaBriefcase className="menu-icon" />
+              <a href="#experience" onClick={() => handleMenuClick('experience')}>Experiencia</a>
+            </li>
+            <li>
+              <FaGraduationCap className="menu-icon" />
+              <a href="#education" onClick={() => handleMenuClick('education')}>Educación</a>
+            </li>
+            <li>
+              <FaCertificate className="menu-icon" />
+              <a href="#courses" onClick={() => handleMenuClick('courses')}>Cursos</a>
+            </li>
+            <li>
+              <FaTools className="menu-icon" />
+              <a href="#skills" onClick={() => handleMenuClick('skills')}>Habilidades</a>
+            </li>
+            <li>
+              <FaProjectDiagram className="menu-icon" />
+              <a href="#projects" onClick={() => handleMenuClick('projects')}>Proyectos</a>
+            </li>
+            <li>
+              <FaGithub className="menu-icon" /> {/* Icono de GitHub */}
+              <a href="#github" onClick={() => handleMenuClick('github')}>GitHub</a>
+            </li>
+            <li>
+              <FaEnvelope className="menu-icon" />
+              <a href="#contact" onClick={() => handleMenuClick('contact')}>Contacto</a>
+            </li>
           </ul>
         ) : null}
       </nav>

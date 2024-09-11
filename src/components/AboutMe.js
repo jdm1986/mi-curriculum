@@ -20,7 +20,8 @@ function AboutMe() {
       <p>
         Aun comprometido con mi crecimiento en el sector tecnológico, mi pasión por
         el fitness define una parte esencial de quién soy. Estoy abierto a nuevas oportunidades
-        en ambos sectores, con el deseo aportar valor en proyectos multidisciplinares.
+        en ambos sectores, con el deseo aportar valor en proyectos multidisciplinares y seguir mejorando
+        mis habilidades y conocimientos, ansioso por abordar nuevos retos y desafíos.
       </p>
     </section>
   );
