@@ -5,6 +5,8 @@ import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProject
 import logoLeft from '../assets/logomenu.png'; // Logo izquierdo (menú)
 import logoRight from '../assets/careto.png'; // Foto personal
 import cvFile from '../assets/CVTJESUS.pdf'; // Importamos el archivo PDF del CV
+import { FaDumbbell } from 'react-icons/fa';
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,6 +97,10 @@ function Navbar() {
             <li>
               <FaCertificate className="menu-icon" />
               <a href="#courses" onClick={() => handleMenuClick('courses')}>Certificados IT</a>
+            </li>
+            <li>
+              <FaDumbbell className="menu-icon" />
+              <a href="#courses-fit" onClick={() => handleMenuClick('courses-fit')}>Formación Fitness</a>
             </li>
             <li>
               <FaTools className="menu-icon" />
