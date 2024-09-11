@@ -48,3 +48,29 @@
   color: #61dafb;
   font-size: 1.5rem;
 }
+
+.course-item {
+  margin-bottom: 20px;
+}
+
+.caret-icon {
+  cursor: pointer;
+  color: #61dafb;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.certificate-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.certificate-image img {
+  max-width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  margin-bottom: 15px; /* Espacio entre las imágenes */
+  height: auto; /* Mantener proporción */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

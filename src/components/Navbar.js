@@ -1,8 +1,10 @@
+// Importamos React para usar JSX
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub } from 'react-icons/fa'; // Importamos el icono de GitHub
+import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub, FaDownload } from 'react-icons/fa'; // Añadimos FaDownload
 import logoLeft from '../assets/logomenu.png'; // Logo izquierdo (menú)
 import logoRight from '../assets/careto.png'; // Foto personal
+import cvFile from '../assets/CVTJESUS.pdf'; // Importamos el archivo PDF del CV
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,10 +75,9 @@ function Navbar() {
         </div>
 
         <div className="navbar-logo-right">
-          <img src={logoRight} alt="Foto Personal" onClick={handlePhotoClick} /> {/* Maneja el click */}
+          <img src={logoRight} alt="Foto Personal" onClick={handlePhotoClick} />
         </div>
 
-        {/* Mostrar el menú en móviles o mantenerlo fijo en pantallas grandes */}
         {(isMobile && isOpen) || !isMobile ? (
           <ul className={`menu-list-mobile ${isMobile && isOpen ? 'open' : ''}`}>
             <li>
@@ -93,7 +94,7 @@ function Navbar() {
             </li>
             <li>
               <FaCertificate className="menu-icon" />
-              <a href="#courses" onClick={() => handleMenuClick('courses')}>Cursos</a>
+              <a href="#courses" onClick={() => handleMenuClick('courses')}>Certificados IT</a>
             </li>
             <li>
               <FaTools className="menu-icon" />
@@ -104,12 +105,18 @@ function Navbar() {
               <a href="#projects" onClick={() => handleMenuClick('projects')}>Proyectos</a>
             </li>
             <li>
-              <FaGithub className="menu-icon" /> {/* Icono de GitHub */}
+              <FaGithub className="menu-icon" />
               <a href="#github" onClick={() => handleMenuClick('github')}>GitHub</a>
             </li>
             <li>
               <FaEnvelope className="menu-icon" />
               <a href="#contact" onClick={() => handleMenuClick('contact')}>Contacto</a>
+            </li>
+            {/* Añadimos el botón de descarga del CV */}
+            <li className="download-item">
+              <a href={cvFile} download="CV_Jesus_Diaz.pdf" className="download-btn">
+                <FaDownload className="menu-icon" /> Descargar CV
+              </a>
             </li>
           </ul>
         ) : null}

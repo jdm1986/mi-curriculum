@@ -3,6 +3,7 @@ import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Courses from './components/Courses';
+import CoursesFit from './components/CoursesFit';  // Importamos la nueva sección
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import GithubSection from './components/GithubSection';
@@ -30,6 +31,9 @@ function App() {
         </section>
         <section id="courses">
           <Courses />
+        </section>
+        <section id="courses-fit">  {/* Nueva sección "Formación Fitness" */}
+          <CoursesFit />
         </section>
         <section id="skills">
           <Skills />
