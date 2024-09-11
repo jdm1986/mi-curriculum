@@ -28,13 +28,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: #479ECE; /* Fondo azul */
   color: #F0F0F0; /* Texto claro */
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+  gap: 0px; /* Reduce el espacio entre el icono y el texto */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
