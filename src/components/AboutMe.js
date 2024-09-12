@@ -10,18 +10,22 @@ function AboutMe() {
     <section className="about-me">
       <h2><FaUser className="section-icon" /> Sobre mí</h2>
       <p>
-        A lo largo de mi trayectoria profesional, tras más de 15 años el sector fitness, este
-        ha sido una fuente de grandes logros y satisfacción personal. Mi experiencia en la
-        gestión de equipos, análisis de datos y mejora del rendimiento en diversos clubes me
-        ha permitido desarrollar habilidades clave en liderazgo y trabajo en equipo. Sin embargo,
-        siempre he sido un entusiasta de la tecnología, lo que me ha llevado a comenzar una transición
-        hacia el mundo del desarrollo web y la inteligencia artificial.
+        A lo largo de mi trayectoria, con más de 15 años de experiencia en el sector fitness,
+        he alcanzado grandes logros profesionales impulsado por un fuerte compromiso laboral y búsqueda
+        continua de crecimiento. Mi experiencia en la gestión de equipos, análisis de datos y mejora
+        del rendimiento me ha permitido desarrollar habilidades clave en liderazgo, trabajo en equipo y motivación.
+        El bienestar físico, mental y psicosocial ha sido mi pilar central de mi misión profesional,
+        entendiendo que es clave para el éxito en este sector.
       </p>
       <p>
-        Aun comprometido con mi crecimiento en el sector tecnológico, mi pasión por
-        el fitness define una parte esencial de quién soy. Estoy abierto a nuevas oportunidades
-        en ambos sectores, con el deseo aportar valor en proyectos multidisciplinares y seguir mejorando
-        mis habilidades y conocimientos, ansioso por abordar nuevos retos y desafíos.
+        Por otro lado, mi pasión por la tecnología me ha llevado a explorar nuevos horizontes en el mundo del desarrollo web,
+        análisis de datos e inteligencia artificial. Aplicando el mismo nivel de dedicación y entusiasmo, estoy comprometido con
+        un continuo aprendizaje y mejora de mis habilidades.
+      </p>
+      <p>
+      Abierto a nuevas
+              oportunidades laborales, busco retos que me permitan seguir creciendo, aportar valor y contribuir
+              al desarrollo tanto del ámbito tecnológico como del sector fitness siempre con una visión de proyección y prospección.
       </p>
     </section>
   );
