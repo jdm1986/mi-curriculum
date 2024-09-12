@@ -1,4 +1,3 @@
-// Importamos React para usar JSX
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub, FaDownload } from 'react-icons/fa'; // Añadimos FaDownload
@@ -7,15 +6,14 @@ import logoRight from '../assets/careto.png'; // Foto personal
 import cvFile from '../assets/CVTJESUS.pdf'; // Importamos el archivo PDF del CV
 import { FaDumbbell } from 'react-icons/fa';
 
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Detectar si es móvil
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024); // Detectar si es móvil o tablet
 
-  // Escuchar cambios de tamaño de ventana para detectar si es móvil
+  // Escuchar cambios de tamaño de ventana para detectar si es móvil o tablet
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     window.addEventListener('resize', handleResize);
@@ -25,7 +23,7 @@ function Navbar() {
     };
   }, []);
 
-  // Función para alternar el menú en móviles
+  // Función para alternar el menú en móviles y tablets
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -127,6 +125,12 @@ function Navbar() {
           </ul>
         ) : null}
       </nav>
+      {/* Imagen fija en pantallas grandes */}
+      {!isMobile && (
+        <div className="fixed-photo-right">
+          <img src={logoRight} alt="Foto Personal Fija" />
+        </div>
+      )}
     </>
   );
 }
