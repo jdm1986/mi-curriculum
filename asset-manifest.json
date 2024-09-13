@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b7badfe.css",
-    "main.js": "/static/js/main.d7f857e6.js",
+    "main.css": "/static/css/main.ff64291f.css",
+    "main.js": "/static/js/main.141a0ff5.js",
     "static/js/453.1af2458b.chunk.js": "/static/js/453.1af2458b.chunk.js",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
@@ -21,22 +21,28 @@
     "static/media/hosteleria.png": "/static/media/hosteleria.71d2b04e1e3826127a78.png",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/especialistapilatessuelo.png": "/static/media/especialistapilatessuelo.b708825c5d4baa5bc5e4.png",
+    "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
+    "static/media/TractChun2.png": "/static/media/TractChun2.de182bc7a1656131b39b.png",
+    "static/media/TractChun1.png": "/static/media/TractChun1.3c77298b9169877c524b.png",
     "static/media/svbYdesa.png": "/static/media/svbYdesa.f1bcce990741c17ffdaa.png",
     "static/media/rvirtualyaumentada.png": "/static/media/rvirtualyaumentada.f849f2e7a82feadcac57.png",
     "static/media/iotsmartcityIA.png": "/static/media/iotsmartcityIA.cc9da9b6675f49cb980d.png",
     "static/media/iabigdata.png": "/static/media/iabigdata.b5c042eac01ab0e752db.png",
     "static/media/gestiondeportivafemxa.png": "/static/media/gestiondeportivafemxa.4c85c335b6e4b557f68d.png",
+    "static/media/proyectofinal3.png": "/static/media/proyectofinal3.71066a06b568710b5a9b.png",
     "static/media/udemipowerbi.png": "/static/media/udemipowerbi.dd27e1d0096443e5aeb6.png",
+    "static/media/proyectofinal2.png": "/static/media/proyectofinal2.af4de874bf3d6446bb5f.png",
+    "static/media/proyectofinal1.png": "/static/media/proyectofinal1.6b51a4c68eadc72d2846.png",
     "static/media/wdwpskills.png": "/static/media/wdwpskills.44f2aa40685579b30170.png",
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.2afcbf63892384f3cc4e.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
-    "main.3b7badfe.css.map": "/static/css/main.3b7badfe.css.map",
-    "main.d7f857e6.js.map": "/static/js/main.d7f857e6.js.map",
+    "main.ff64291f.css.map": "/static/css/main.ff64291f.css.map",
+    "main.141a0ff5.js.map": "/static/js/main.141a0ff5.js.map",
     "453.1af2458b.chunk.js.map": "/static/js/453.1af2458b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b7badfe.css",
-    "static/js/main.d7f857e6.js"
+    "static/css/main.ff64291f.css",
+    "static/js/main.141a0ff5.js"
   ]
 }
