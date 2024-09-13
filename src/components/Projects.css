@@ -28,12 +28,14 @@
   position: relative;
 }
 
-.project-list a {
+.project-list a,
+.project-title {
   color: #f0f0f0;
   text-decoration: none;
 }
 
-.project-list a:hover {
+.project-list a:hover,
+.project-title:hover {
   color: #61dafb;
 }
 
@@ -41,10 +43,11 @@
   cursor: pointer;
   font-size: 1.2rem;
   margin-left: 10px;
-  color: #61dafb;
+  color: #f0f0f0;
 }
 
-.project-details {
+.project-details,
+.sub-project-details {
   margin-top: 10px;
   padding: 15px;
   background-color: #333;
@@ -52,3 +55,31 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #f0f0f0;
 }
+
+/* Estilos para las imágenes dentro de proyectos */
+.project-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-images img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-item {
+  margin-bottom: 15px; /* Ajusta este valor para ganar más espacio */
+  padding-top: 10px; /* Si quieres añadir más separación interna */
+}
+
+.project-list li {
+  margin-bottom: 20px; /* Espaciado entre el título y los subproyectos */
+}
+
+
+
+
