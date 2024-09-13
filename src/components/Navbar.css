@@ -35,7 +35,7 @@
   font-weight: bold;
   gap: 0px; /* Reduce el espacio entre el icono y el texto */
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 100px; /* Añadir más margen superior */
+  margin-top: 10px; /* Añadir más margen superior */
 }
 
 .download-btn:hover {
