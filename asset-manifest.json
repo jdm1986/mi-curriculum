@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6d1e6a4.css",
-    "main.js": "/static/js/main.de43490d.js",
+    "main.css": "/static/css/main.42f58c02.css",
+    "main.js": "/static/js/main.f06622bd.js",
     "static/js/453.1af2458b.chunk.js": "/static/js/453.1af2458b.chunk.js",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
-    "static/media/LOGO2.png": "/static/media/LOGO2.de263d21bb6ec928df47.png",
+    "static/media/logodeveloper.png": "/static/media/logodeveloper.c7522d4b7b60916ad9d0.png",
     "static/media/fondo.png": "/static/media/fondo.4507b7209511205e7078.png",
     "static/media/logomenu.png": "/static/media/logomenu.a6801a2cd616180efd7b.png",
     "static/media/careto.png": "/static/media/careto.03b16371f6764a042cb2.png",
@@ -37,12 +37,12 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.2afcbf63892384f3cc4e.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
-    "main.f6d1e6a4.css.map": "/static/css/main.f6d1e6a4.css.map",
-    "main.de43490d.js.map": "/static/js/main.de43490d.js.map",
+    "main.42f58c02.css.map": "/static/css/main.42f58c02.css.map",
+    "main.f06622bd.js.map": "/static/js/main.f06622bd.js.map",
     "453.1af2458b.chunk.js.map": "/static/js/453.1af2458b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6d1e6a4.css",
-    "static/js/main.de43490d.js"
+    "static/css/main.42f58c02.css",
+    "static/js/main.f06622bd.js"
   ]
 }
