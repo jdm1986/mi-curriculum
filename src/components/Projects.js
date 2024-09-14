@@ -37,12 +37,12 @@ function Projects() {
       <ul className="project-list">
         {/* Proyecto jesusdiazmartincv.es */}
         <li onClick={() => toggleDetails('jesusdiazmartincv')} className="toggle-container">
-                  <a target="_blank">
-                    Mi CV-WEB >> www.jesusdiazmartincv.es - 09/2024
-                  </a>
-                  <span className="details-toggle">
-                    {openDetails.jesusdiazmartincv ? <FaCaretUp /> : <FaCaretDown />}
-                  </span>
+          <button className="project-button">
+            Mi CV-WEB >> www.jesusdiazmartincv.es - 09/2024
+          </button>
+          <span className="details-toggle">
+            {openDetails.jesusdiazmartincv ? <FaCaretUp /> : <FaCaretDown />}
+          </span>
 
           {/* Detalles del proyecto jesusdiazmartincv.es */}
           {openDetails.jesusdiazmartincv && (
@@ -61,12 +61,13 @@ function Projects() {
         </li>
 
         {/* Proyecto GestionaTusCV */}
+
         <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
-                  <a target="_blank" rel="noopener noreferrer">
+                  <button className="project-button">
                     APP Gestión CVS >> www.gestionatuscv.es - 06/2024
-                  </a>
+                  </button>
                   <span className="details-toggle">
-                    {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
+                    {openDetails.geestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
 
           {/* Detalles del proyecto GestionaTusCV */}
@@ -103,6 +104,8 @@ function Projects() {
         </li>
 
         {/* Proyecto Power BI */}
+
+
         <li>
           <span onClick={() => toggleDetails('powerbi')} className="details-toggle">
             Proyectos Power BI - 05/2024 {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
