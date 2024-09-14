@@ -11,10 +11,11 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+/* Centrar el contenido de la página */
 .App {
   text-align: center;
-  padding-top: 30px; /* Añade espacio para que la cabecera no cubra el contenido */
-  padding-bottom: 60px; /* Añade espacio para el footer */
+  padding-top: 80px; /* Añade espacio para que la cabecera no cubra el contenido */
+  padding-bottom: 80px; /* Añade espacio para el footer */
 }
 
 /* Centrar el texto del encabezado */
@@ -39,6 +40,7 @@ body {
   color: #f0f0f0;
   position: fixed; /* Cabecera fija */
   top: 0;
+  left: 0; /* Asegurar que la cabecera se extienda a todo el ancho */
   width: 100%;
   z-index: 1000;
 }
@@ -50,6 +52,7 @@ body {
   padding: 20px;
   position: fixed; /* Footer fijo */
   bottom: 0;
+  left: 0; /* Asegurar que el footer se extienda a todo el ancho */
   width: 100%;
   text-align: center;
 }
