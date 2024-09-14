@@ -1,7 +1,7 @@
 // Header.js
 import React, { useState } from 'react';
 import './Header.css';
-import logo from './assets/LOGO2.png'; // Aquí usa tu logo
+import logo from './assets/logodeveloper.png'; // Aquí usa tu logo
 
 function Header() {
   return (
