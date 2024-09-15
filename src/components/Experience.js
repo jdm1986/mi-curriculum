@@ -2,11 +2,15 @@
 import React from 'react';
 // Importamos los estilos de este componente
 import './Experience.css';
-import { FaBriefcase } from 'react-icons/fa'; // Importamos el icono de experiencia
-
+import { FaBriefcase, FaProjectDiagram } from 'react-icons/fa'; // Importamos el icono de experiencia y proyecto
 
 // Definimos el componente Experience
 function Experience() {
+  // Función para navegar a la sección de proyectos
+  const handleNavigateToProjects = () => {
+    window.location.href = '#projects';
+  };
+
   return (
     <section className="experience">
       <h2><FaBriefcase className="section-icon" /> Experiencia Laboral</h2>
@@ -15,11 +19,19 @@ function Experience() {
           <strong>Club Manager</strong>
           <p><em>Synergym Sevilla</em> (Dic 2021 - Mar 2023)</p>
           <li>Gestión íntegra del club y soporte al área manager. Coordinación y formación de equipos y nuevos club manager, apertura de clubs, análisis de resultados y gestión de objetivos.</li>
+          {/* Enlace a los proyectos Synergym */}
+          <p className="project-link" onClick={handleNavigateToProjects}>
+            <FaProjectDiagram /> Proyectos Synergym
+          </p>
         </li>
         <li>
           <strong>Assistant Fitness Manager y Entrenador Personal</strong>
           <p><em>Viding Concesion Sevilla S.L.</em> (Ago 2013 - Dic 2021)</p>
           <li>Gestión del área fitness, venta y fidelización de clientes de EP, coordinación de actividades y técnico multidisciplinar con soporte musical.</li>
+          {/* Enlace a los proyectos Viding */}
+          <p className="project-link" onClick={handleNavigateToProjects}>
+            <FaProjectDiagram /> Proyectos Viding
+          </p>
         </li>
         <li>
           <strong>Técnico Polivalente en AADD con soporte musical y Sala Fitness</strong>
@@ -29,13 +41,13 @@ function Experience() {
             <li>Galisport S.L. (Jul 2007 - Oct 2008)</li>
           </ul>
         </li>
-         <li>
-            <strong>Otros Desempeños Profesionales</strong>
-                <ul>
-                   <li>Responsable en Cafetería/Copas Bar Siza (Dic 2006 - May 2008)</li>
-                   <li>Responsable distribuidor de Telefonía Móvil Srt Serotec (Abr 2005 - Abr 2006)</li>
-                </ul>
-         </li>
+        <li>
+          <strong>Otros Desempeños Profesionales</strong>
+          <ul>
+            <li>Responsable en Cafetería/Copas Bar Siza (Dic 2006 - May 2008)</li>
+            <li>Responsable distribuidor de Telefonía Móvil Srt Serotec (Abr 2005 - Abr 2006)</li>
+          </ul>
+        </li>
       </ul>
     </section>
   );
