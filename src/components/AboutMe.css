@@ -19,7 +19,7 @@
   font-size: 1.2rem; /* Tamaño del texto */
   color: #e0e0e0; /* Color del texto */
   line-height: 1.5; /* Espacio entre líneas */
-  text-align: center; /* Centrar el texto */
+  text-align: justify; /* Centrar el texto */
   margin-bottom: 15px; /* Espacio inferior entre párrafos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para los párrafos */
   padding: 10px; /* Espaciado interno dentro del párrafo */

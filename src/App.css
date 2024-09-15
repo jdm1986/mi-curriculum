@@ -62,6 +62,10 @@ body {
   margin-top: 0px; /* Ajuste para acercar el cuerpo a la cabecera */
 }
 
+/* Justificar el texto en las secciones */
+
+
+
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {

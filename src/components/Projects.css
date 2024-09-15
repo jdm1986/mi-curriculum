@@ -30,7 +30,7 @@
 
 .project-list a,
 .project-title {
-  color: #f0f0f0;
+  color: #61dafb;
   text-decoration: none;
 }
 
@@ -57,6 +57,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #f0f0f0;
+  text-align: justify;
 }
 
 /* Estilos para las imágenes dentro de proyectos */
@@ -98,5 +99,9 @@
   color: #61dafb;
 }
 
-
-
+/* Centrar el enlace "Toca aquí para visitar" */
+.visit-link {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
