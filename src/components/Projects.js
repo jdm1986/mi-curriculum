@@ -61,47 +61,44 @@ function Projects() {
         </li>
 
         {/* Proyecto GestionaTusCV */}
-
-        <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
+                <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
                   <button className="project-button">
                     APP Gestión CVS >> www.gestionatuscv.es - 06/2024
                   </button>
                   <span className="details-toggle">
-                    {openDetails.geestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
+                    {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
 
-          {/* Detalles del proyecto GestionaTusCV */}
-          {openDetails.gestionatuscv && (
-            <div className="project-details">
-            <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
-                        Toca aquí para visitar >> www.gestionatuscv.es
-                      </a>
-              <p><strong>Reto principal:</strong> El objetivo principal del proyecto era desarrollar una aplicación web completa para la gestión de currículums, que permitiera a los usuarios registrarse, iniciar sesión, y subir y gestionar currículums. Adicionalmente, debía ofrecer opciones de seguridad avanzadas, como autenticación JWT y encriptado de contraseñas, manteniendo la confidencialidad de la información del usuario y la protección de datos sensibles mediante variables de entorno. Este proyecto involucraba tanto el frontend como el backend, configurando un entorno de desarrollo local con Nginx para desplegar la aplicación en producción mediante un dominio personalizado (gestionatuscv.es).</p>
-              <p><strong>Dificultades:</strong> El proyecto presentó diversos desafíos técnicos:
+                  {openDetails.gestionatuscv && (
+                    <div className="project-details">
+                      <div className="visit-link">
+                        <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
+                          Toca aquí para visitar >> www.gestionatuscv.es
+                        </a>
+                      </div>
+                      <p><strong>Reto principal:</strong> El objetivo principal del proyecto era desarrollar una aplicación web completa para la gestión de currículums...</p>
 
-                                                Autenticación JWT: Implementar un sistema de autenticación basado en tokens JWT (JSON Web Token) fue un reto considerable, ya que implicaba manejar los tokens de forma segura en el frontend y backend, además de integrarlos correctamente con las políticas de seguridad de Spring Security.
+                      <p><strong>Dificultades:</strong></p>
+                      <ul>
+                        <li><strong>Autenticación JWT:</strong> Implementar un sistema de autenticación basado en tokens JWT (JSON Web Token) fue un reto considerable...</li>
+                        <li><strong>Encriptado de contraseñas:</strong> Para asegurar que las contraseñas de los usuarios fueran almacenadas de manera segura...</li>
+                        <li><strong>Gestión de variables de entorno (.env):</strong> Aprender a gestionar datos sensibles fue esencial para el proyecto...</li>
+                        <li><strong>Implementación de Nginx y Proxy Inverso:</strong> Desplegar la aplicación en producción mediante Nginx fue un reto técnico...</li>
+                        <li><strong>Cambios en la IP del servidor:</strong> Al alojar la aplicación en un servidor local, el cambio de IP por parte del proveedor de servicios...</li>
+                      </ul>
 
-                                                Encriptado de contraseñas: Para asegurar que las contraseñas de los usuarios fueran almacenadas de manera segura, tuve que aprender e implementar la codificación con BCrypt en el backend. Esto me permitió garantizar que las contraseñas se encriptaran antes de almacenarse en la base de datos.
+                      <p><strong>Lo que aprendí:</strong></p>
+                      <ul>
+                        <li><strong>Seguridad en aplicaciones web:</strong> A través de la implementación de JWT y el uso de BCrypt para encriptar contraseñas...</li>
+                        <li><strong>Manejo de entornos y variables de entorno:</strong> Al separar las configuraciones de desarrollo y producción con un archivo .env...</li>
+                        <li><strong>Despliegue en producción con Nginx:</strong> Este fue mi primer proyecto en el que configuré Nginx como servidor web y proxy inverso...</li>
+                        <li><strong>Gestión de DNS y servidores:</strong> Aprendí a manejar los registros DNS y la configuración del dominio en Hostalia...</li>
+                      </ul>
 
-                                                Gestión de variables de entorno (.env): Aprender a gestionar datos sensibles fue esencial para el proyecto. La configuración de un archivo .env tanto en desarrollo como en producción me ayudó a separar configuraciones específicas, como credenciales y claves secretas, asegurando que no se expongan en el código.
-
-                                                Implementación de Nginx y Proxy Inverso: Desplegar la aplicación en producción mediante Nginx fue un reto técnico, sobre todo al configurar correctamente el proxy inverso y la gestión de archivos estáticos, asegurando que todo funcionara de manera eficiente en el servidor.
-
-                                                Cambios en la IP del servidor: Al alojar la aplicación en un servidor local, el cambio de IP por parte del proveedor de servicios de Internet era un factor recurrente. Esto requería actualizar manualmente los registros DNS en Hostalia cada vez que la IP cambiaba.</p>
-              <p><strong>Lo que aprendí:</strong> Este proyecto me permitió adquirir y consolidar varias habilidades clave:
-
-                                                  Seguridad en aplicaciones web: A través de la implementación de JWT y el uso de BCrypt para encriptar contraseñas, aprendí cómo manejar la autenticación de usuarios y el almacenamiento seguro de datos sensibles.
-
-                                                  Manejo de entornos y variables de entorno: Al separar las configuraciones de desarrollo y producción con un archivo .env, aprendí a gestionar las diferentes configuraciones necesarias según el entorno. Esto incluyó desde las claves secretas hasta las URL y configuraciones específicas de la base de datos, asegurando que la aplicación funcionara correctamente en ambos entornos.
-
-                                                  Despliegue en producción con Nginx: Este fue mi primer proyecto en el que configuré Nginx como servidor web y proxy inverso, lo que me dio una visión profunda sobre la infraestructura y cómo asegurar un entorno de producción eficiente. Entendí la importancia de gestionar correctamente las rutas, los certificados SSL y el manejo de errores.
-
-                                                  Gestión de DNS y servidores: Aprendí a manejar los registros DNS y la configuración del dominio en Hostalia, además de cómo resolver problemas relacionados con el cambio de IP de mi servidor, garantizando que la aplicación se mantuviera accesible al actualizar los registros A y AAAA.
-
-                                                  En resumen, este proyecto me proporcionó una valiosa experiencia en el desarrollo web completo, desde la implementación de funcionalidades backend con seguridad hasta el despliegue en producción. Además, mejoré mi capacidad para resolver problemas y configurar un entorno seguro y eficiente para los usuarios..</p>
-            </div>
-          )}
-        </li>
+                      <p><strong>Resumen:</strong> Este proyecto me proporcionó una valiosa experiencia en el desarrollo web completo...</p>
+                    </div>
+                  )}
+                </li>
 
         {/* Proyecto Power BI */}
 
