@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.42f58c02.css",
-    "main.js": "/static/js/main.f06622bd.js",
+    "main.css": "/static/css/main.b8681dca.css",
+    "main.js": "/static/js/main.01a93dc3.js",
     "static/js/453.1af2458b.chunk.js": "/static/js/453.1af2458b.chunk.js",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
@@ -37,12 +37,12 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.2afcbf63892384f3cc4e.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
-    "main.42f58c02.css.map": "/static/css/main.42f58c02.css.map",
-    "main.f06622bd.js.map": "/static/js/main.f06622bd.js.map",
+    "main.b8681dca.css.map": "/static/css/main.b8681dca.css.map",
+    "main.01a93dc3.js.map": "/static/js/main.01a93dc3.js.map",
     "453.1af2458b.chunk.js.map": "/static/js/453.1af2458b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42f58c02.css",
-    "static/js/main.f06622bd.js"
+    "static/css/main.b8681dca.css",
+    "static/js/main.01a93dc3.js"
   ]
 }
