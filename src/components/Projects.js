@@ -10,6 +10,26 @@ import proyectofinalA from '../assets/powerbi/TractChun1.png';
 import proyectofinalB from '../assets/powerbi/TractChun2.png';
 import proyectofinalC from '../assets/powerbi/TractChun3.png';
 
+
+// Importar las imágenes de la carpeta src/assets/synergym
+import incidenciasSala from '../assets/synergym/incidenciasSala.png';
+import listadoIncidenciasSocios from '../assets/synergym/listadoincidenciassocios.png';
+import retencionsocioslistabobajas from '../assets/synergym/retencionsocioslistabobajas.png';
+import retencionsocioslistadodevolucionesbancarias from '../assets/synergym/retencionsocioslistadodevolucionesbancarias.png';
+import retencionsocioslistadoNPS from '../assets/synergym/retencionsocioslistadoNPS.png';
+import reporteinteracciones from '../assets/synergym/reporteinteracciones.png';
+import pizarraobjetivosStaff from '../assets/synergym/pizarraobjetivosStaff.png';
+import controldiapruebasocio from '../assets/synergym/controldiapruebasocio.png';
+import checklistaperturaclub from '../assets/synergym/checklistaperturaclub.png';
+import retencionsocioreto21dias from '../assets/synergym/retencionsocioreto21dias.png';
+
+// Importar las imágenes de la carpeta src/assets/viding
+import gestionep1 from '../assets/viding/gestionep1.png';
+import gestionep2 from '../assets/viding/gestionep2.png';
+import gestionep3 from '../assets/viding/gestionep3.png';
+import gestionep5 from '../assets/viding/gestionep5.png';
+import fototriatlon from '../assets/viding/fototriatlon.JPG';
+
 function Projects() {
   // Estado para controlar la apertura de los detalles de cada proyecto
   const [openDetails, setOpenDetails] = useState({
@@ -18,6 +38,19 @@ function Projects() {
     powerbi: false,
     powerbiProject1: false,
     powerbiProject2: false,
+    synergymProject1: false,
+        synergymProject2: false,
+        synergymProject3: false,
+        synergymProject4: false,
+        synergymProject5: false,
+        synergymProject6: false,
+        synergymProject7: false,
+        synergymProject8: false,
+        synergymProject9: false,
+        synergymProject10: false,
+        viding: false,
+            vidingProject1: false,
+            vidingProject2: false,
   });
 
   // Función para alternar el estado del proyecto específico
@@ -102,7 +135,6 @@ function Projects() {
 
         {/* Proyecto Power BI */}
 
-
         <li>
           <span onClick={() => toggleDetails('powerbi')} className="details-toggle">
             Proyectos Power BI - 05/2024 {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
@@ -110,50 +142,254 @@ function Projects() {
 
           {/* Proyectos Power BI */}
           {openDetails.powerbi && (
-            <>
-              {/* Proyecto 1 */}
-              <div className="project-item">
-                <span onClick={() => toggleDetails('powerbiProject1')} className="details-toggle">
-                  Proyecto 1 {openDetails.powerbiProject1 ? <FaCaretUp /> : <FaCaretDown />}
-                </span>
-                {openDetails.powerbiProject1 && (
-                  <div className="project-details">
-                    <p><strong>Objetivo:</strong> Análisis de compras por categoría usando Power BI.</p>
-                    <p><strong>Lo que aprendí:</strong> Uso de Power BI Desktop, visualización de datos, filtros y segmentación, y publicación de informes.</p>
-                    <p><strong>Retos:</strong> Publicación de informes, modelado de datos y uso de fórmulas DAX.</p>
-                    <div className="project-images">
-                      <img src={proyectofinal1} alt="Proyecto Final 1 - Imagen 1" />
-                      <img src={proyectofinal2} alt="Proyecto Final 1 - Imagen 2" />
-                      <img src={proyectofinal3} alt="Proyecto Final 1 - Imagen 3" />
+            <div className="project-details">
+              <ul className="subproject-list"> {/* Agregamos la lista */}
+                {/* Proyecto 1 */}
+                <li>
+                  <span onClick={() => toggleDetails('powerbiProject1')} className="details-toggle">
+                    Proyecto 1 {openDetails.powerbiProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.powerbiProject1 && (
+                    <div className="sub-project-details">
+                      <p><strong>Objetivo:</strong> Análisis de compras por categoría usando Power BI.</p>
+                      <p><strong>Lo que aprendí:</strong> Uso de Power BI Desktop, visualización de datos, filtros y segmentación, y publicación de informes.</p>
+                      <p><strong>Retos:</strong> Publicación de informes, modelado de datos y uso de fórmulas DAX.</p>
+                      <div className="project-images">
+                        <img src={proyectofinal1} alt="Proyecto Final 1 - Imagen 1" />
+                        <img src={proyectofinal2} alt="Proyecto Final 1 - Imagen 2" />
+                        <img src={proyectofinal3} alt="Proyecto Final 1 - Imagen 3" />
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </li>
 
-              {/* Proyecto 2 */}
-              <div className="project-item">
-                <span onClick={() => toggleDetails('powerbiProject2')} className="details-toggle">
-                  Proyecto 2 {openDetails.powerbiProject2 ? <FaCaretUp /> : <FaCaretDown />}
-                </span>
-                {openDetails.powerbiProject2 && (
-                  <div className="project-details">
-                    <p><strong>Objetivo:</strong> Análisis de ventas y compras usando Power BI.</p>
-                    <p><strong>Lo que aprendí:</strong> Importación y transformación de datos, visualización de datos, uso de filtros, y publicación de informes.</p>
-                    <p><strong>Retos:</strong> Restricciones de publicación, modelado de datos y uso de fórmulas DAX.</p>
-                    <div className="project-images">
-                      <img src={proyectofinalA} alt="Proyecto Final 2 - Imagen 1" />
-                      <img src={proyectofinalB} alt="Proyecto Final 2 - Imagen 2" />
-                      <img src={proyectofinalC} alt="Proyecto Final 2 - Imagen 3" />
+                {/* Proyecto 2 */}
+                <li>
+                  <span onClick={() => toggleDetails('powerbiProject2')} className="details-toggle">
+                    Proyecto 2 {openDetails.powerbiProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.powerbiProject2 && (
+                    <div className="sub-project-details">
+                      <p><strong>Objetivo:</strong> Análisis de ventas y compras usando Power BI.</p>
+                      <p><strong>Lo que aprendí:</strong> Importación y transformación de datos, visualización de datos, uso de filtros, y publicación de informes.</p>
+                      <p><strong>Retos:</strong> Restricciones de publicación, modelado de datos y uso de fórmulas DAX.</p>
+                      <div className="project-images">
+                        <img src={proyectofinalA} alt="Proyecto Final 2 - Imagen 1" />
+                        <img src={proyectofinalB} alt="Proyecto Final 2 - Imagen 2" />
+                        <img src={proyectofinalC} alt="Proyecto Final 2 - Imagen 3" />
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            </>
+                  )}
+                </li>
+              </ul> {/* Cierre de la lista */}
+            </div>
+          )}
+
+        </li>
+
+        {/* Nueva sección: Proyectos Synergym */}
+        <li>
+          <span onClick={() => toggleDetails('synergym')} className="details-toggle">
+            Proyectos Synergym 2022/2023 {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
+          </span>
+
+          {/* Proyectos Synergym */}
+          {openDetails.synergym && (
+            <div className="project-details">
+              <p>Proyectos que creé durante mi etapa como Director de Club para mejorar flujos de trabajo, automatizar procesos, análisis de datos y toma de decisiones, todo orientado a mejorar el rendimiento de los clubs en función de los KPI´s y objetivos marcados por la compañía. Aproveché mis conocimientos en la nube para poder trabajar en remoto en muchas ocasiones.</p>
+
+              {/* Lista de subproyectos */}
+              <ul className="subproject-list">
+                {/* Proyecto 1 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject1')} className="details-toggle">
+                    INCIDENCIAS SALA - GENÉRICO {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject1 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Creé esta hoja para documentar y hacer un seguimiento de todas las incidencias relacionadas con la sala de fitness. Asigné columnas a los miembros del staff para que pudieran registrar problemas específicos, como fallos en las máquinas o el estado del material. Con esta hoja, gestioné el proceso de resolución de incidencias de manera efectiva, supervisando el estado ("Pendientes," "Solucionadas") y calculando métricas que me ayudaban a analizar el rendimiento del equipo y mejorar la experiencia de los socios.</p>
+                      <img src={incidenciasSala} alt="Incidencias Sala" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 2 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject2')} className="details-toggle">
+                    INCIDENCIAS SOCIOS S.ESTE {openDetails.synergymProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject2 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Esta hoja la diseñé para gestionar incidencias relacionadas directamente con los socios del club. Incluí columnas para registrar información importante del socio, como DNI y teléfono, y la descripción de la incidencia. También habilité el seguimiento del estado de la incidencia (e.g., "Pendientes," "Solucionadas"). Con esta herramienta, pude mejorar la atención al cliente y asegurar una resolución rápida de los problemas, aumentando la satisfacción y retención de los socios.</p>
+                      <img src={listadoIncidenciasSocios} alt="Listado Incidencias Socios" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 3 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject3')} className="details-toggle">
+                    LISTADOS LLAMADAS BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject3 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong>  Creé esta hoja para analizar las bajas de los socios a lo largo del año. Desarrollé categorías específicas que identificaban las causas de las bajas (e.g., "Cambio de Gimnasio," "Económica," "El Gimnasio Lleno"). Esto me permitía identificar los motivos más frecuentes de las bajas y ajustar las estrategias de retención, haciendo un seguimiento mensual del número de bajas y comparándolo con el desempeño del staff.</p>
+                      <img src={retencionsocioslistabobajas} alt="Listados Llamadas Bajas Anualidad" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 4 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject4')} className="details-toggle">
+                    LISTADOS LLAMADAS DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject4 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong>  Esta hoja la implementé para gestionar las devoluciones de cuotas o servicios. Hice un seguimiento detallado de las incidencias relacionadas, indicando motivos como "Enfermedad," "Inseguridad," o "Atención Staff." Además, registré los canales de contacto utilizados (e.g., SMS, llamadas) y asigné responsabilidades al staff. Este enfoque me ayudó a coordinar el proceso de gestión de devoluciones y a identificar las causas principales, mejorando la eficiencia en la resolución de incidencias.</p>
+                      <img src={retencionsocioslistadodevolucionesbancarias} alt="Listados Llamadas Devoluciones" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 5 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject5')} className="details-toggle">
+                    LISTADOS LLAMADAS NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject5 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Creé esta hoja para analizar el Net Promoter Score (NPS) de los socios y gestionar las acciones de seguimiento basadas en sus respuestas. Registré motivos específicos que afectan la satisfacción de los socios, como "Cambios de Horarios," "Mala Atención," y "Climatización." Además, realicé un seguimiento del número de llamadas y contactos realizados por el staff, asignando tareas específicas. Esta herramienta me permitió coordinar esfuerzos para mejorar la satisfacción del cliente y optimizar la experiencia en el club.</p>
+                      <img src={retencionsocioslistadoNPS} alt="Listados Llamadas NPS" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 6 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject6')} className="details-toggle">
+                    INTERACCIONES STAFF {openDetails.synergymProject6 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject6 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Diseñé esta hoja para analizar el rendimiento del staff en sus interacciones con los socios. Registré actividades como "HUELLA," "TOURS," y las comparé entre los distintos miembros del equipo, incluidas sus tasas de cumplimiento. También llevé un registro mensual de los resultados del equipo. Esto me permitió evaluar la efectividad de cada miembro y mejorar las operaciones diarias para garantizar un servicio de calidad.</p>
+                      <img src={reporteinteracciones} alt="Interacciones Staff 2023" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 7 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject7')} className="details-toggle">
+                    PIZARRA ONLINE OBJETIVOS STAFF {openDetails.synergymProject7 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject7 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Esta herramienta la desarrollé para planificar y hacer seguimiento de los objetivos semanales del personal. Cada hoja semanal registraba las métricas clave, como número de socios, ventas, y diferencias con el presupuesto. También incluí un "FOCUS DE LA SEMANA" para orientar las prioridades del equipo. La hoja me ayudó a ajustar las estrategias según el progreso real, proporcionando un análisis detallado del desempeño semanal.</p>
+                      <img src={pizarraobjetivosStaff} alt="Pizarra Online Objetivos Staff" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 8 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject8')} className="details-toggle">
+                    LISTADO DÍA PRUEBA SEVILLA ESTE {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject8 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Creé esta hoja para gestionar las actividades durante los días de prueba, que eran clave para captar nuevos socios. Hice un seguimiento de actividades como "DÍA PRUEBA ATENDIDO" y "CONTACTADO VENDIDO," registrando la participación y éxito de cada miembro del staff. Además, evalué la efectividad de las promociones y campañas de marketing, facilitando la toma de decisiones para mejorar la conversión de los días de prueba en nuevas inscripciones.</p>
+                      <img src={controldiapruebasocio} alt="Listado Día Prueba Sevilla Este 2023" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 9 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject9')} className="details-toggle">
+                    CHECKLIST APERTURA {openDetails.synergymProject9 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject9 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong>  Diseñé esta hoja como una herramienta de planificación para las aperturas del club. Incluí columnas que especificaban quién abría el club cada día, con un registro de la fecha y hora de apertura. Añadí un campo para observaciones, lo que me permitió mejorar la rutina de apertura al recoger y analizar cualquier incidencia. Esta planificación garantizaba que cada jornada se iniciara de manera ordenada y eficiente.</p>
+                      <img src={checklistaperturaclub} alt="Checklist Apertura 2023" />
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 10 */}
+                <li>
+                  <span onClick={() => toggleDetails('synergymProject10')} className="details-toggle">
+                    RETO 21 DÍAS - RETENCIÓN BAJA {openDetails.synergymProject10 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.synergymProject10 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Esta hoja la creé para registrar y analizar el desempeño individual de cada miembro del staff en el contexto de un reto mensual dirigido a retener a los socios que deseaban darse de baja. Medí los esfuerzos y resultados de cada persona, como el número de retos asumidos y éxitos logrados. Esta herramienta me permitía evaluar la efectividad del equipo y ajustar las estrategias de retención, identificando cuáles acciones tenían un mayor impacto en la retención de los socios.</p>
+                      <img src={retencionsocioreto21dias} alt="2022 Reto 21 Días - Retención Baja" />
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
           )}
         </li>
-      </ul>
-    </section>
-  );
-}
+        {/* Nueva sección: Proyectos Viding */}
+        <li>
+          <span onClick={() => toggleDetails('viding')} className="details-toggle">
+            Proyectos Viding 2014/2021 {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
+          </span>
 
-export default Projects;
+          {/* Proyectos Viding */}
+          {openDetails.viding && (
+            <div className="project-details">
+              <ul className="subproject-list">
+                {/* Proyecto 1: Gestión Servicio Entrenamiento Personal */}
+                <li>
+                  <span onClick={() => toggleDetails('vidingProject1')} className="details-toggle">
+                    Gestión Servicio Entrenamiento Personal 2018/2021 {openDetails.vidingProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.vidingProject1 && (
+                    <div className="sub-project-details">
+                      <p><strong>Funcionalidad:</strong> Desarrollé un control detallado del presupuesto y los objetivos financieros del servicio de entrenamiento personal en el año 2018. Mi responsabilidad como gestor del departamento incluía monitorear el volumen de ventas de cada entrenador y comparar los resultados con los objetivos establecidos por la compañía.
+                      <li></li>
+                      <ul>
+                                              <li><strong>Planificación y Control de Presupuesto:</strong> La hoja registra el "OBJETIVO (Sin IVA) 2018" para cada mes, proporcionando una guía clara de las metas financieras a alcanzar. Esto me permitía saber de antemano cuánto debía facturar el departamento mes a mes, sirviendo como referencia para evaluar el rendimiento.</li>
+                                              <li><strong>Desglose Mensual y Semestral:</strong> En la hoja, se incluyen columnas que detallan la "Cuota EP Partida (REMESA PROVIS)" tanto sin IVA como con IVA, lo cual me ayudaba a mantener una visión clara de las finanzas. También hay un resumen del "OBJETIVO ANUAL" y secciones específicas para el "Obj 1er Semestre" y "Objetivo 2º Semestre," lo que facilitaba el análisis de los resultados a nivel global y semestral.</li>
+                                              <li><strong>Análisis de Desempeño:</strong> Con estos datos, pude controlar las ventas de cada entrenador, comparar los ingresos reales con los objetivos, y detectar áreas que necesitaban mejoras. A partir de este análisis, proporcionaba feedback a los entrenadores, ajustaba estrategias y planificaba acciones correctivas para asegurar que se alcanzaran los objetivos financieros del departamento.</li>
+                                              <li><strong>Presentación de Resultados:</strong> La hoja me permitió presentar un análisis de los datos y resultados, mostrando de manera clara si el equipo estaba cumpliendo con las metas financieras tanto a nivel global como individual. Esto resultaba fundamental para la toma de decisiones y para demostrar el impacto del trabajo del equipo en el logro de los objetivos de la compañía.</li>
+                                              <li><strong>Conclusión:</strong> Como gestor del departamento de entrenamiento personal, esta hoja fue crucial para llevar un control exhaustivo de las ventas, evaluar el rendimiento de los entrenadores, y mantener el rumbo hacia los objetivos financieros marcados por la compañía. Me proporcionaba una visión completa del presupuesto anual y mensual, facilitando la toma de decisiones y la mejora continua del servicio, logrando alcanzar los objetivos marcados. Nota: los datos mostrados no son reales por cuestión de confidencialidad.</li>
+                      </ul>
+                      </p>
+
+                      <div className="project-images">
+                        <img src={gestionep1} alt="Gestión EP 1" />
+                        <img src={gestionep2} alt="Gestión EP 2" />
+                        <img src={gestionep3} alt="Gestión EP 3" />
+                        <img src={gestionep5} alt="Gestión EP 4" />
+                      </div>
+                    </div>
+                  )}
+                </li>
+
+                {/* Proyecto 2: Club Triatlón 2015 */}
+                <li>
+                  <span onClick={() => toggleDetails('vidingProject2')} className="details-toggle">
+                    CLUB TRIATLON 2015/2016 {openDetails.vidingProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+                  {openDetails.vidingProject2 && (
+                    <div className="sub-project-details">
+                      <p><strong>Resumen:</strong> Fui fundador del club de triatlón Viding, motivando a los usuarios interesados en participar y creando una comunidad centrada en un reto motivante y saludable. Guié los entrenamientos y proporcioné asesoramiento personalizado, planificando rutas, inscripciones y un objetivo claro: culminar el Triatlón modalidad Súper Sprint. La creación de este club contribuyó al desarrollo de una nueva comunidad dentro de Viding, en línea con los objetivos y presupuestos de la compañía.</p>
+                      <img src={fototriatlon} alt="Club Triatlón 2015" />
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
+          )}
+        </li>
+        </ul>
+        </section>
+        );
+        }
+
+        export default Projects;
