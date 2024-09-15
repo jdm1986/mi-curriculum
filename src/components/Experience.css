@@ -38,3 +38,14 @@
   color: #61dafb;
   font-size: 1.5rem;
 }
+
+/* Estilo para los enlaces de proyectos en la experiencia */
+.project-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: #61dafb;
+  text-decoration: underline;
+}
