@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.8e620f6d.js",
+    "main.js": "/static/js/main.cda0551a.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.8e620f6d.js.map": "/static/js/main.8e620f6d.js.map",
+    "main.cda0551a.js.map": "/static/js/main.cda0551a.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.8e620f6d.js"
+    "static/js/main.cda0551a.js"
   ]
 }
