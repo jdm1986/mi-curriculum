@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.0eef81fa.js",
+    "main.js": "/static/js/main.8e620f6d.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
@@ -19,7 +19,7 @@
     "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.b996fa799805de278389.pdf",
     "static/media/UX.png": "/static/media/UX.38c429666f5192b616a7.png",
     "static/media/datascience.png": "/static/media/datascience.83a100d68bc99f592ec7.png",
-    "static/media/hosteleria.png": "/static/media/hosteleria.71d2b04e1e3826127a78.png",
+    "static/media/hosteleria.png": "/static/media/hosteleria.158c4cfc25567e7877ef.png",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/especialistapilatessuelo.png": "/static/media/especialistapilatessuelo.b708825c5d4baa5bc5e4.png",
     "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.0eef81fa.js.map": "/static/js/main.0eef81fa.js.map",
+    "main.8e620f6d.js.map": "/static/js/main.8e620f6d.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.0eef81fa.js"
+    "static/js/main.8e620f6d.js"
   ]
 }
