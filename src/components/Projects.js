@@ -96,7 +96,7 @@ function Projects() {
         {/* Proyecto GestionaTusCV */}
                 <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
                   <button className="project-button">
-                    APP Gestión CVS - 2024
+                    APP GestionaTusCV - 2024
                   </button>
                   <span className="details-toggle">
                     {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
@@ -137,7 +137,7 @@ function Projects() {
 
         <li onClick={() => toggleDetails('powerbi')} className="toggle-container">
           <button className="project-button">
-            Ptos Power BI - 2024
+            Power BI - 2024
           </button>
           <span className="details-toggle">
             {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
@@ -193,7 +193,7 @@ function Projects() {
         {/* Nueva sección: Proyectos Synergym */}
         <li onClick={() => toggleDetails('synergym')} className="toggle-container">
           <button className="project-button">
-            Ptos Synergym 2022/2023
+            Synergym 2022/2023
           </button>
           <span className="details-toggle">
             {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
@@ -342,7 +342,7 @@ function Projects() {
         {/* Nueva sección: Proyectos Viding */}
         <li onClick={() => toggleDetails('viding')} className="toggle-container">
           <button className="project-button">
-            Ptos. Viding 2014/2021
+            Viding 2014/2021
           </button>
           <span className="details-toggle">
             {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
