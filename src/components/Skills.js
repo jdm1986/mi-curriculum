@@ -16,7 +16,7 @@ function Skills() {
         <li>Bases de datos: MySQL, Workbench y Oracle</li>
         <li>Git y GitHub (Control de versiones)</li>
         <li>Arduino - Prácticas con módulo ESP-32</li>
-        <li>Ofimática avanzada</li>
+        <li>Ofimática avanzada y gestión en la nube</li>
         <li>Herramientas de análisis de datos: R-Studio, Pentaho, MS PowerBI (Big Data)</li>
       </ul>
     </section>

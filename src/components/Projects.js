@@ -71,7 +71,7 @@ function Projects() {
         {/* Proyecto jesusdiazmartincv.es */}
         <li onClick={() => toggleDetails('jesusdiazmartincv')} className="toggle-container">
           <button className="project-button">
-            Mi CV-WEB - 09/2024
+            Mi CV-WEB - 2024
           </button>
           <span className="details-toggle">
             {openDetails.jesusdiazmartincv ? <FaCaretUp /> : <FaCaretDown />}
@@ -96,7 +96,7 @@ function Projects() {
         {/* Proyecto GestionaTusCV */}
                 <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
                   <button className="project-button">
-                    APP Gestión CVS - 06/2024
+                    APP Gestión CVS - 2024
                   </button>
                   <span className="details-toggle">
                     {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
@@ -135,9 +135,12 @@ function Projects() {
 
         {/* Proyecto Power BI */}
 
-        <li>
-          <span onClick={() => toggleDetails('powerbi')} className="details-toggle">
-            Proyectos Power BI - 05/2024 {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
+        <li onClick={() => toggleDetails('powerbi')} className="toggle-container">
+          <button className="project-button">
+            Ptos Power BI - 2024
+          </button>
+          <span className="details-toggle">
+            {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Power BI */}
@@ -188,9 +191,12 @@ function Projects() {
         </li>
 
         {/* Nueva sección: Proyectos Synergym */}
-        <li>
-          <span onClick={() => toggleDetails('synergym')} className="details-toggle">
-            Proyectos Synergym 2022/2023 {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
+        <li onClick={() => toggleDetails('synergym')} className="toggle-container">
+          <button className="project-button">
+            Ptos Synergym 2022/2023
+          </button>
+          <span className="details-toggle">
+            {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Synergym */}
@@ -334,9 +340,12 @@ function Projects() {
           )}
         </li>
         {/* Nueva sección: Proyectos Viding */}
-        <li>
-          <span onClick={() => toggleDetails('viding')} className="details-toggle">
-            Proyectos Viding 2014/2021 {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
+        <li onClick={() => toggleDetails('viding')} className="toggle-container">
+          <button className="project-button">
+            Ptos. Viding 2014/2021
+          </button>
+          <span className="details-toggle">
+            {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Viding */}
