@@ -96,7 +96,7 @@ function Projects() {
         {/* Proyecto GestionaTusCV */}
                 <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
                   <button className="project-button">
-                    APP GestionaTusCV - 2024
+                    GestionaTusCV - 2024
                   </button>
                   <span className="details-toggle">
                     {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
