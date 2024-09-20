@@ -71,7 +71,7 @@ function Projects() {
         {/* Proyecto jesusdiazmartincv.es */}
         <li onClick={() => toggleDetails('jesusdiazmartincv')} className="toggle-container">
           <button className="project-button">
-            Mi CV-WEB - 2024
+            Mi CV-WEB  09/2024
           </button>
           <span className="details-toggle">
             {openDetails.jesusdiazmartincv ? <FaCaretUp /> : <FaCaretDown />}
@@ -96,7 +96,7 @@ function Projects() {
         {/* Proyecto GestionaTusCV */}
                 <li onClick={() => toggleDetails('gestionatuscv')} className="toggle-container">
                   <button className="project-button">
-                    GestionaTusCV - 2024
+                    GestionaTusCV 06/2024
                   </button>
                   <span className="details-toggle">
                     {openDetails.gestionatuscv ? <FaCaretUp /> : <FaCaretDown />}
@@ -106,7 +106,7 @@ function Projects() {
                     <div className="project-details">
                       <div className="visit-link">
                         <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
-                           || www.gestionatuscv.es ||
+                          Toca aquí para visitar >> www.gestionatuscv.es
                         </a>
                       </div>
                       <p><strong>Reto principal:</strong> El objetivo principal del proyecto era desarrollar una aplicación web completa para la gestión de currículums, que permitiera a los usuarios registrarse, iniciar sesión, y subir y gestionar currículums. Adicionalmente, debía ofrecer opciones de seguridad avanzadas, como autenticación JWT y encriptado de contraseñas, manteniendo la confidencialidad de la información del usuario y la protección de datos sensibles mediante variables de entorno. Este proyecto involucraba tanto el frontend como el backend, configurando un entorno de desarrollo local con Nginx para desplegar la aplicación en producción mediante un dominio personalizado</p>
@@ -135,12 +135,9 @@ function Projects() {
 
         {/* Proyecto Power BI */}
 
-        <li onClick={() => toggleDetails('powerbi')} className="toggle-container">
-          <button className="project-button">
-            Power BI - 2024
-          </button>
-          <span className="details-toggle">
-            {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
+        <li>
+          <span onClick={() => toggleDetails('powerbi')} className="details-toggle">
+            PowerBI 05/2024 {openDetails.powerbi ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Power BI */}
@@ -191,12 +188,9 @@ function Projects() {
         </li>
 
         {/* Nueva sección: Proyectos Synergym */}
-        <li onClick={() => toggleDetails('synergym')} className="toggle-container">
-          <button className="project-button">
-            Synergym 2022/2023
-          </button>
-          <span className="details-toggle">
-            {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
+        <li>
+          <span onClick={() => toggleDetails('synergym')} className="details-toggle">
+            Synergym 2022/2023 {openDetails.synergym ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Synergym */}
@@ -209,7 +203,7 @@ function Projects() {
                 {/* Proyecto 1 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject1')} className="details-toggle">
-                    CONTROL INCIDENCIAS SALA FITNESS {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                    INCIDENCIAS SALA - GENÉRICO {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject1 && (
                     <div className="sub-project-details">
@@ -222,7 +216,7 @@ function Projects() {
                 {/* Proyecto 2 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject2')} className="details-toggle">
-                    INCIDENCIAS SOCIOS {openDetails.synergymProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                    INCIDENCIAS SOCIOS S.ESTE {openDetails.synergymProject2 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject2 && (
                     <div className="sub-project-details">
@@ -235,7 +229,7 @@ function Projects() {
                 {/* Proyecto 3 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject3')} className="details-toggle">
-                    LISTADOS DE LLAMADAS BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADOS LLAMADAS BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject3 && (
                     <div className="sub-project-details">
@@ -248,7 +242,7 @@ function Projects() {
                 {/* Proyecto 4 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject4')} className="details-toggle">
-                    LISTADOS DE LLAMADAS DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADOS LLAMADAS DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject4 && (
                     <div className="sub-project-details">
@@ -261,7 +255,7 @@ function Projects() {
                 {/* Proyecto 5 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject5')} className="details-toggle">
-                    LISTADOS DE LLAMADAS NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADOS LLAMADAS NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject5 && (
                     <div className="sub-project-details">
@@ -274,7 +268,7 @@ function Projects() {
                 {/* Proyecto 6 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject6')} className="details-toggle">
-                    GESTIÓN DE INTERACCIONES STAFF {openDetails.synergymProject6 ? <FaCaretUp /> : <FaCaretDown />}
+                    INTERACCIONES STAFF {openDetails.synergymProject6 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject6 && (
                     <div className="sub-project-details">
@@ -300,7 +294,7 @@ function Projects() {
                 {/* Proyecto 8 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject8')} className="details-toggle">
-                    LISTADO GESTIÓN DÍA PRUEBA {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADO DÍA PRUEBA SEVILLA ESTE {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject8 && (
                     <div className="sub-project-details">
@@ -313,7 +307,7 @@ function Projects() {
                 {/* Proyecto 9 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject9')} className="details-toggle">
-                    CHECKLIST CONTROL APERTURAS CLUB {openDetails.synergymProject9 ? <FaCaretUp /> : <FaCaretDown />}
+                    CHECKLIST APERTURA {openDetails.synergymProject9 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject9 && (
                     <div className="sub-project-details">
@@ -340,12 +334,9 @@ function Projects() {
           )}
         </li>
         {/* Nueva sección: Proyectos Viding */}
-        <li onClick={() => toggleDetails('viding')} className="toggle-container">
-          <button className="project-button">
-            Viding 2014/2021
-          </button>
-          <span className="details-toggle">
-            {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
+        <li>
+          <span onClick={() => toggleDetails('viding')} className="details-toggle">
+            Viding 2014/2021 {openDetails.viding ? <FaCaretUp /> : <FaCaretDown />}
           </span>
 
           {/* Proyectos Viding */}
