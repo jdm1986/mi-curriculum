@@ -203,7 +203,7 @@ function Projects() {
                 {/* Proyecto 1 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject1')} className="details-toggle">
-                    INCIDENCIAS SALA FITNESS {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                    INCIDENCIAS CLUB {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject1 && (
                     <div className="sub-project-details">
@@ -229,7 +229,7 @@ function Projects() {
                 {/* Proyecto 3 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject3')} className="details-toggle">
-                    LISTADO DE LLAMADAS - BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADO DE BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject3 && (
                     <div className="sub-project-details">
@@ -242,7 +242,7 @@ function Projects() {
                 {/* Proyecto 4 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject4')} className="details-toggle">
-                    LISTADO DE LLAMADAS - DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
+                    Bank Rejections {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject4 && (
                     <div className="sub-project-details">
@@ -255,7 +255,7 @@ function Projects() {
                 {/* Proyecto 5 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject5')} className="details-toggle">
-                    LISTADOS DE LLAMADAS - NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
+                    Net Promotore Score {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject5 && (
                     <div className="sub-project-details">
@@ -268,7 +268,7 @@ function Projects() {
                 {/* Proyecto 6 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject6')} className="details-toggle">
-                    INTERACCIONES STAFF {openDetails.synergymProject6 ? <FaCaretUp /> : <FaCaretDown />}
+                    INTERACCIONES {openDetails.synergymProject6 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject6 && (
                     <div className="sub-project-details">
@@ -281,7 +281,7 @@ function Projects() {
                 {/* Proyecto 7 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject7')} className="details-toggle">
-                    PIZARRA ONLINE - OBJETIVOS STAFF {openDetails.synergymProject7 ? <FaCaretUp /> : <FaCaretDown />}
+                    OBJETIVOS STAFF {openDetails.synergymProject7 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject7 && (
                     <div className="sub-project-details">
@@ -294,7 +294,7 @@ function Projects() {
                 {/* Proyecto 8 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject8')} className="details-toggle">
-                    LISTADO DÍA DE PRUEBA SOCIO POTENCIAL {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
+                    DÍA DE PRUEBA {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject8 && (
                     <div className="sub-project-details">
@@ -320,7 +320,7 @@ function Projects() {
                 {/* Proyecto 10 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject10')} className="details-toggle">
-                    RETO 21 DÍAS - RETENCIÓN DE BAJA {openDetails.synergymProject10 ? <FaCaretUp /> : <FaCaretDown />}
+                    RETENCIÓN DE BAJAS {openDetails.synergymProject10 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject10 && (
                     <div className="sub-project-details">
