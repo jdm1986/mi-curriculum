@@ -203,7 +203,7 @@ function Projects() {
                 {/* Proyecto 1 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject1')} className="details-toggle">
-                    INCIDENCIAS SALA - GENÉRICO {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                    INCIDENCIAS SALA FITNESS {openDetails.synergymProject1 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject1 && (
                     <div className="sub-project-details">
@@ -216,7 +216,7 @@ function Projects() {
                 {/* Proyecto 2 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject2')} className="details-toggle">
-                    INCIDENCIAS SOCIOS S.ESTE {openDetails.synergymProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                    INCIDENCIAS SOCIOS {openDetails.synergymProject2 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject2 && (
                     <div className="sub-project-details">
@@ -229,7 +229,7 @@ function Projects() {
                 {/* Proyecto 3 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject3')} className="details-toggle">
-                    LISTADOS LLAMADAS BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADO DE LLAMADAS - BAJAS {openDetails.synergymProject3 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject3 && (
                     <div className="sub-project-details">
@@ -242,7 +242,7 @@ function Projects() {
                 {/* Proyecto 4 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject4')} className="details-toggle">
-                    LISTADOS LLAMADAS DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADO DE LLAMADAS - DEVOLUCIONES {openDetails.synergymProject4 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject4 && (
                     <div className="sub-project-details">
@@ -255,7 +255,7 @@ function Projects() {
                 {/* Proyecto 5 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject5')} className="details-toggle">
-                    LISTADOS LLAMADAS NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADOS DE LLAMADAS - NPS {openDetails.synergymProject5 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject5 && (
                     <div className="sub-project-details">
@@ -281,7 +281,7 @@ function Projects() {
                 {/* Proyecto 7 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject7')} className="details-toggle">
-                    PIZARRA ONLINE OBJETIVOS STAFF {openDetails.synergymProject7 ? <FaCaretUp /> : <FaCaretDown />}
+                    PIZARRA ONLINE - OBJETIVOS STAFF {openDetails.synergymProject7 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject7 && (
                     <div className="sub-project-details">
@@ -294,7 +294,7 @@ function Projects() {
                 {/* Proyecto 8 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject8')} className="details-toggle">
-                    LISTADO DÍA PRUEBA SEVILLA ESTE {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
+                    LISTADO DÍA DE PRUEBA SOCIO POTENCIAL {openDetails.synergymProject8 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject8 && (
                     <div className="sub-project-details">
@@ -320,7 +320,7 @@ function Projects() {
                 {/* Proyecto 10 */}
                 <li>
                   <span onClick={() => toggleDetails('synergymProject10')} className="details-toggle">
-                    RETO 21 DÍAS - RETENCIÓN BAJA {openDetails.synergymProject10 ? <FaCaretUp /> : <FaCaretDown />}
+                    RETO 21 DÍAS - RETENCIÓN DE BAJA {openDetails.synergymProject10 ? <FaCaretUp /> : <FaCaretDown />}
                   </span>
                   {openDetails.synergymProject10 && (
                     <div className="sub-project-details">
