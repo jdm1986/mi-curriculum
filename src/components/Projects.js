@@ -106,7 +106,7 @@ function Projects() {
                     <div className="project-details">
                       <div className="visit-link">
                         <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
-                          Toca aquí para visitar >> www.gestionatuscv.es
+                          || www.gestionatuscv.es ||
                         </a>
                       </div>
                       <p><strong>Reto principal:</strong> El objetivo principal del proyecto era desarrollar una aplicación web completa para la gestión de currículums, que permitiera a los usuarios registrarse, iniciar sesión, y subir y gestionar currículums. Adicionalmente, debía ofrecer opciones de seguridad avanzadas, como autenticación JWT y encriptado de contraseñas, manteniendo la confidencialidad de la información del usuario y la protección de datos sensibles mediante variables de entorno. Este proyecto involucraba tanto el frontend como el backend, configurando un entorno de desarrollo local con Nginx para desplegar la aplicación en producción mediante un dominio personalizado</p>
