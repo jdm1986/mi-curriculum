@@ -71,7 +71,7 @@ function Navbar() {
 
         <div className="navbar-text">
           <h1>¡Hola!</h1>
-          <p>Estás en la CV WEB de Jesús Díaz.</p>
+          <p>Estás en la WEB-CV de Jesús Díaz.</p>
         </div>
 
         <div className="navbar-logo-right">
