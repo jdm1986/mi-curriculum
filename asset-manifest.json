@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.b93cde0b.js",
+    "main.js": "/static/js/main.16ca4f19.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
@@ -22,10 +22,10 @@
     "static/media/hosteleria.png": "/static/media/hosteleria.158c4cfc25567e7877ef.png",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/especialistapilatessuelo.png": "/static/media/especialistapilatessuelo.b708825c5d4baa5bc5e4.png",
+    "static/media/svbYdesa.png": "/static/media/svbYdesa.d1449515e05328440fd8.png",
     "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
     "static/media/TractChun2.png": "/static/media/TractChun2.de182bc7a1656131b39b.png",
     "static/media/TractChun1.png": "/static/media/TractChun1.3c77298b9169877c524b.png",
-    "static/media/svbYdesa.png": "/static/media/svbYdesa.f1bcce990741c17ffdaa.png",
     "static/media/rvirtualyaumentada.png": "/static/media/rvirtualyaumentada.f849f2e7a82feadcac57.png",
     "static/media/gestionep5.png": "/static/media/gestionep5.ee97eb98f2dba8e5add5.png",
     "static/media/iotsmartcityIA.png": "/static/media/iotsmartcityIA.cc9da9b6675f49cb980d.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.b93cde0b.js.map": "/static/js/main.b93cde0b.js.map",
+    "main.16ca4f19.js.map": "/static/js/main.16ca4f19.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.b93cde0b.js"
+    "static/js/main.16ca4f19.js"
   ]
 }
