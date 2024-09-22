@@ -10,7 +10,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <img src={logo} alt="Logo Jesús" className="footer-logo" />
-        <p>© - {new Date().getFullYear()} JDM - All Rights Reserved</p>
+        <p>© {new Date().getFullYear()} All Rights Reserved</p>
       </div>
       <a href="/privacy-policy.html" className="privacy-link">Políticas de Privacidad</a>
     </footer>
