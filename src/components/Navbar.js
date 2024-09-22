@@ -98,7 +98,7 @@ function Navbar() {
             </li>
             <li>
               <FaDumbbell className="menu-icon" />
-              <a href="#courses-fit" onClick={() => handleMenuClick('courses-fit')}>Formación Fitness</a>
+              <a href="#courses-fit" onClick={() => handleMenuClick('courses-fit')}>Certificados Fitness</a>
             </li>
             <li>
               <FaTools className="menu-icon" />

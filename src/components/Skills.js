@@ -17,6 +17,7 @@ function Skills() {
         <li>Git y GitHub (Control de versiones)</li>
         <li>Arduino - Prácticas con módulo ESP-32</li>
         <li>Ofimática avanzada y gestión en la nube</li>
+        <li>Familiarizado con Canva y Prezi</li>
         <li>Herramientas de análisis de datos: R-Studio, Pentaho, MS PowerBI (Big Data)</li>
       </ul>
     </section>
