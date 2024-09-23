@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.0c54c78c.js",
+    "main.js": "/static/js/main.57a45ade.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
@@ -18,7 +18,6 @@
     "static/media/marketingestrategicoyoperacional.png": "/static/media/marketingestrategicoyoperacional.2c52eda1e02cee3786d6.png",
     "static/media/datascience.png": "/static/media/datascience.44286f89798ac6da7555.png",
     "static/media/EPersonal.png": "/static/media/EPersonal.75b1a6d09db7c1d18036.png",
-    "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.b996fa799805de278389.pdf",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/hosteleria.png": "/static/media/hosteleria.66eb58920da96b24877f.png",
     "static/media/svbYdesa.png": "/static/media/svbYdesa.70eb76e9b365bcf95357.png",
@@ -37,6 +36,7 @@
     "static/media/retencionsocioslistabobajas.png": "/static/media/retencionsocioslistabobajas.5f3c27849c4731c22297.png",
     "static/media/gestionep1.png": "/static/media/gestionep1.93b6b71cda65802abc9b.png",
     "static/media/proyectofinal3.png": "/static/media/proyectofinal3.71066a06b568710b5a9b.png",
+    "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.b02cb97c9282dfc678d1.pdf",
     "static/media/incidenciasSala.png": "/static/media/incidenciasSala.268f4273b97c363fd0ea.png",
     "static/media/udemipowerbi.png": "/static/media/udemipowerbi.14bbf75340b5b7a5379f.png",
     "static/media/retencionsocioslistadoNPS.png": "/static/media/retencionsocioslistadoNPS.5469e8298c0ae59170d1.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.0c54c78c.js.map": "/static/js/main.0c54c78c.js.map",
+    "main.57a45ade.js.map": "/static/js/main.57a45ade.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.0c54c78c.js"
+    "static/js/main.57a45ade.js"
   ]
 }
