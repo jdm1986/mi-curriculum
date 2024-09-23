@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.57a45ade.js",
+    "main.js": "/static/js/main.b75c8977.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
+    "static/media/careto.png": "/static/media/careto.1d732538f4e51a0991c3.png",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
     "static/media/logodeveloper.png": "/static/media/logodeveloper.c7522d4b7b60916ad9d0.png",
     "static/media/fondo.png": "/static/media/fondo.4507b7209511205e7078.png",
     "static/media/logomenu.png": "/static/media/logomenu.a6801a2cd616180efd7b.png",
-    "static/media/careto.png": "/static/media/careto.03b16371f6764a042cb2.png",
     "static/media/powerbi.png": "/static/media/powerbi.1d5035dff02e52bd08f9.png",
     "static/media/CicloFeda.png": "/static/media/CicloFeda.848e625e40be4ebc6d53.png",
     "static/media/BFTrainer.png": "/static/media/BFTrainer.6ac6651408d662fea0db.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.57a45ade.js.map": "/static/js/main.57a45ade.js.map",
+    "main.b75c8977.js.map": "/static/js/main.b75c8977.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.57a45ade.js"
+    "static/js/main.b75c8977.js"
   ]
 }
