@@ -23,7 +23,7 @@ function AboutMe() {
         estoy comprometido con un continuo aprendizaje y mejora de mis habilidades.
       </p>
       <p>
-      Abierto a nuevas oportunidades laborales, busco retos que me permitan seguir creciendo, aportar valor y contribuir
+      Busco nuevos retos que me permitan seguir creciendo, aportar valor y contribuir
       al desarrollo tanto del ámbito tecnológico como del sector fitness siempre con una visión de proyección y prospección.
       </p>
     </section>
