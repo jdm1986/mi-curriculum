@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.bcd59c6d.js",
+    "main.js": "/static/js/main.63b80319.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/careto.png": "/static/media/careto.1d732538f4e51a0991c3.png",
@@ -35,7 +35,7 @@
     "static/media/gestionep3.png": "/static/media/gestionep3.89cb0cb2a4f051f5032a.png",
     "static/media/retencionsocioslistabobajas.png": "/static/media/retencionsocioslistabobajas.5f3c27849c4731c22297.png",
     "static/media/gestionep1.png": "/static/media/gestionep1.93b6b71cda65802abc9b.png",
-    "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.3a534b89c140972dba4e.pdf",
+    "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.4a4749fe2e36b52be424.pdf",
     "static/media/proyectofinal3.png": "/static/media/proyectofinal3.71066a06b568710b5a9b.png",
     "static/media/incidenciasSala.png": "/static/media/incidenciasSala.268f4273b97c363fd0ea.png",
     "static/media/udemipowerbi.png": "/static/media/udemipowerbi.14bbf75340b5b7a5379f.png",
@@ -53,11 +53,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.bcd59c6d.js.map": "/static/js/main.bcd59c6d.js.map",
+    "main.63b80319.js.map": "/static/js/main.63b80319.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.bcd59c6d.js"
+    "static/js/main.63b80319.js"
   ]
 }
