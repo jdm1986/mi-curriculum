@@ -16,9 +16,9 @@ function Experience() {
       <h2><FaBriefcase className="section-icon" /> Experiencia Laboral</h2>
       <ul>
       <li>
-            <strong>Director en FitnessPark</strong>
+            <strong>Club Manager</strong>
             <p><em>Fitness Park España - Jts Seville </em> (Dic 2024 - Actualidad)</p>
-            <li>Gestión de la precomercialización, funcionamiento íntegro del club y soporte al district manager. Coordinación y formación de equipos, análisis de resultados y gestión de objetivos.</li>
+            <li>Gestión de la precomercialización, funcionamiento íntegro del club y soporte al district manager. Selección, coordinación y formación de equipos, análisis de resultados y gestión de objetivos.</li>
 
             </li>
         <li>
