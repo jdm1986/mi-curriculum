@@ -13,6 +13,8 @@ import rvirtualyaumentada from '../assets/certificados it/rvirtualyaumentada.png
 import cpd from '../assets/certificados it/cpd.png';
 import UX from '../assets/certificados it/UX.png';
 import iabigdata from '../assets/certificados it/iabigdata.png';
+import sql from '../assets/certificados it/SQL.png';
+import udemysql from '../assets/certificados it/UdemiSQL.png';
 
 // Definimos el componente Courses
 function Courses() {
@@ -23,12 +25,24 @@ function Courses() {
     setActiveImage(activeImage === image ? null : image); // Si la imagen está activa, la cierra, si no, la abre
   };
 
-
-
   return (
     <section className="courses">
       <h2><FaCertificate className="section-icon" /> Certificaciones IT</h2>
       <ul>
+      {/* Curso más reciente: SQL */}
+              <li>
+                <strong>SQL - Curso de SQL IBM SKILLSBUILD - DATAHACK</strong>
+                <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Dic 2024) - (40 horas + 16 Udemy)</p>
+                <span onClick={() => toggleImage('sql')} className="caret-icon">
+                  {activeImage === 'sql' ? <FaCaretUp /> : <FaCaretDown />}
+                </span>
+                {activeImage === 'sql' && (
+                  <div className="certificate-image">
+                    <img src={sql} alt="Certificado SQL" />
+                    <img src={udemysql} alt="Certificado Udemi SQL" />
+                  </div>
+                )}
+              </li>
         <li>
           <strong>Microsoft Power BI - Curso de Power BI Desktop</strong>
           <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Jun 2024) - (40 horas + 24 Udemy)</p>
