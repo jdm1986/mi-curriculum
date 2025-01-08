@@ -15,6 +15,7 @@ import UX from '../assets/certificados it/UX.png';
 import iabigdata from '../assets/certificados it/iabigdata.png';
 import sql from '../assets/certificados it/SQL.png';
 import udemysql from '../assets/certificados it/UdemiSQL.png';
+import python from '../assets/certificados it/Python.png';
 
 // Definimos el componente Courses
 function Courses() {
@@ -29,7 +30,7 @@ function Courses() {
     <section className="courses">
       <h2><FaCertificate className="section-icon" /> Certificaciones IT</h2>
       <ul>
-      {/* Curso más reciente: SQL */}
+              {/* Curso más reciente: SQL */}
               <li>
                 <strong>SQL - Curso de SQL IBM SKILLSBUILD - DATAHACK</strong>
                 <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Dic 2024) - (40 horas + 16 Udemy)</p>
@@ -43,6 +44,23 @@ function Courses() {
                   </div>
                 )}
               </li>
+
+              {/* Curso de Python */}
+                      <li>
+                        <strong>Iniciación a la Programación: Python (Autoestudio) 2ª Edición</strong>
+                        <p><em>IBM SkillsBuild</em> (Nov 2024)</p>
+                        <span onClick={() => toggleImage('python')} className="caret-icon">
+                          {activeImage === 'python' ? <FaCaretUp /> : <FaCaretDown />}
+                        </span>
+                        {activeImage === 'python' && (
+                          <div className="certificate-image">
+                            <img src={python} alt="Certificado Python" />
+                          </div>
+                        )}
+                      </li>
+
+              {/* Curso de Power BI */}
+
         <li>
           <strong>Microsoft Power BI - Curso de Power BI Desktop</strong>
           <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Jun 2024) - (40 horas + 24 Udemy)</p>
@@ -56,6 +74,7 @@ function Courses() {
             </div>
           )}
         </li>
+
         <li>
           <strong>DISEÑO DE WEBS PARA HOSTELERÍA</strong>
           <p><em>CESUR - IFCD0038</em> (Jul 2024) - (100 horas)</p>
