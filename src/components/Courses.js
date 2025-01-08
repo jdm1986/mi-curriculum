@@ -5,6 +5,8 @@ import './Courses.css';
 import { FaCertificate, FaCaretDown, FaCaretUp } from 'react-icons/fa';
 import powerbi from '../assets/certificados it/powerbi.png';
 import udemipowerbi from '../assets/certificados it/udemipowerbi.png';
+import powerbi from '../assets/certificados it/sql.png';
+import udemipowerbi from '../assets/certificados it/udemisql.png';
 import hosteleria from '../assets/certificados it/hosteleria.png';
 import wdwpskills from '../assets/certificados it/wdwpskills.png';
 import datascience from '../assets/certificados it/datascience.png';
@@ -24,11 +26,23 @@ function Courses() {
   };
 
 
-
   return (
     <section className="courses">
       <h2><FaCertificate className="section-icon" /> Certificaciones IT</h2>
       <ul>
+      <li>
+                <strong> SQL - Curso SQL IBM SkillsBuld Datachack </strong>
+                <p><em>DataHack - En colaboración con IBM - SkillsBuild Datachack</em> (Dic 2024) - (40 horas + 16 Udemy)</p>
+                <span onClick={() => toggleImage('sql')} className="caret-icon">
+                  {activeImage === 'sql' ? <FaCaretUp /> : <FaCaretDown />}
+                </span>
+                {activeImage === 'sql' && (
+                  <div className="certificate-image">
+                    <img src={sql} alt="Certificado SQL" />
+                    <img src={udemisql} alt="Certificado Udemi SQL" />
+                  </div>
+                )}
+              </li>
         <li>
           <strong>Microsoft Power BI - Curso de Power BI Desktop</strong>
           <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Jun 2024) - (40 horas + 24 Udemy)</p>
