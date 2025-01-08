@@ -1,0 +1,85 @@
+/* Activar desplazamiento suave en todo el documento */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos generales */
+body {
+  background-color: #1e1e1e; /* Color oscuro de fondo para el tema */
+  color: #f0f0f0; /* Color del texto */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Centrar el contenido de la página */
+.App {
+  text-align: center;
+  padding-top: 80px; /* Añade espacio para que la cabecera no cubra el contenido */
+  padding-bottom: 80px; /* Añade espacio para el footer */
+}
+
+/* Centrar el texto del encabezado */
+.header-title {
+  text-align: center;
+}
+
+/* Estilo para el enlace de correo */
+.email-link {
+  color: #ffffff; /* Cambiar a color blanco */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+.email-link:hover {
+  text-decoration: underline; /* Subrayar al pasar el cursor */
+}
+
+/* Estilos de la cabecera */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: #f0f0f0;
+  position: fixed; /* Cabecera fija */
+  top: 0;
+  left: 0; /* Asegurar que la cabecera se extienda a todo el ancho */
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Estilo para el pie de página y el logo */
+.App-footer {
+  background-color: #333;
+  color: #f0f0f0;
+  padding: 20px;
+  position: fixed; /* Footer fijo */
+  bottom: 0;
+  left: 0; /* Asegurar que el footer se extienda a todo el ancho */
+  width: 100%;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 50px; /* Ajustar el tamaño del logo */
+  margin-right: 10px; /* Espacio al lado del logo */
+  vertical-align: middle; /* Alinear con el texto */
+}
+
+/* Imagen de fondo aplicada al cuerpo */
+.background-container {
+  background-image: url('./assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px; /* Ajustamos el espacio para las secciones */
+  margin-top: 0px; /* Ajuste para acercar el cuerpo a la cabecera */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 100px; /* Reducción del tamaño del logo en móviles */
+    margin-top: 10px;
+  }
+
+  .App-header {
+    padding: 10px;
+  }
+}

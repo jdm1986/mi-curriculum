@@ -1,0 +1,59 @@
+/* Estilos del pie de página */
+.footer {
+  background-image: url('../assets/fondo2.png'); /* Ruta hacia la imagen de fondo */
+  background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  color: white; /* Asegura que el texto sea legible */
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex; /* Para centrar contenido horizontalmente */
+  flex-direction: column; /* Apilar los elementos verticalmente */
+  align-items: center; /* Centra los elementos */
+}
+
+/* Estilo para el contenedor del contenido en el footer */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Espacio entre el logo y el texto */
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Estilo para el logo en el footer */
+.footer-logo {
+  height: 65px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+.footer p {
+  margin: 0; /* Remover márgenes para evitar desplazamiento */
+  white-space: nowrap; /* Evita que el texto se corte en varias líneas */
+  overflow: hidden; /* Asegura que el contenido extra no se muestre */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si es necesario */
+}
+
+.privacy-link {
+  color: #ffffff; /* Color blanco */
+  text-decoration: none;
+  margin-top: -15px; /* Espacio superior para separar del contenido */
+  font-size: 0.9rem; /* Ajustar el tamaño del texto */
+  display: block; /* Asegura que esté en una nueva línea */
+}
+
+.privacy-link:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .privacy-link {
+    font-size: 0.8rem; /* Reducir aún más el tamaño del texto en móviles */
+  }
+}

@@ -1,0 +1,34 @@
+.about-me {
+  padding: 20px; /* Espacio dentro de la caja */
+  background-color: #2c2c2c; /* Fondo oscuro consistente con otras secciones */
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 800px; /* Limita el ancho máximo de la caja */
+  margin: 40px auto; /* Centra la caja en la pantalla */
+  color: #f0f0f0; /* Color del texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para la caja */
+}
+
+.about-me h2 {
+  color: #61dafb; /* Color azul para los títulos */
+  font-size: 2rem; /* Tamaño de fuente del título */
+  margin-bottom: 20px; /* Espacio inferior entre el título y el contenido */
+  text-align: center; /* Centra el título */
+}
+
+.about-me p {
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: #e0e0e0; /* Color del texto */
+  line-height: 1.5; /* Espacio entre líneas */
+  text-align: justify; /* Centrar el texto */
+  margin-bottom: 15px; /* Espacio inferior entre párrafos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para los párrafos */
+  padding: 10px; /* Espaciado interno dentro del párrafo */
+  background-color: #333; /* Fondo oscuro para resaltar el párrafo */
+  border-radius: 5px; /* Bordes redondeados para los párrafos */
+}
+
+.section-icon {
+  margin-right: 10px;
+  color: #61dafb;
+  font-size: 1.5rem;
+}
