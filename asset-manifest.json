@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.63b80319.js",
+    "main.js": "/static/js/main.c472d5dd.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
     "static/media/careto.png": "/static/media/careto.1d732538f4e51a0991c3.png",
@@ -25,6 +25,7 @@
     "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
     "static/media/TractChun2.png": "/static/media/TractChun2.de182bc7a1656131b39b.png",
     "static/media/TractChun1.png": "/static/media/TractChun1.3c77298b9169877c524b.png",
+    "static/media/SQL.png": "/static/media/SQL.30938108c43186af340a.png",
     "static/media/iotsmartcityIA.png": "/static/media/iotsmartcityIA.4577568a782275fb9210.png",
     "static/media/rvirtualyaumentada.png": "/static/media/rvirtualyaumentada.91276141c9c01466174c.png",
     "static/media/gestionep5.png": "/static/media/gestionep5.ee97eb98f2dba8e5add5.png",
@@ -39,6 +40,7 @@
     "static/media/proyectofinal3.png": "/static/media/proyectofinal3.71066a06b568710b5a9b.png",
     "static/media/incidenciasSala.png": "/static/media/incidenciasSala.268f4273b97c363fd0ea.png",
     "static/media/udemipowerbi.png": "/static/media/udemipowerbi.14bbf75340b5b7a5379f.png",
+    "static/media/UdemiSQL.png": "/static/media/UdemiSQL.57f84ba623746ae4010b.png",
     "static/media/retencionsocioslistadoNPS.png": "/static/media/retencionsocioslistadoNPS.5469e8298c0ae59170d1.png",
     "static/media/retencionsocioslistadodevolucionesbancarias.png": "/static/media/retencionsocioslistadodevolucionesbancarias.709947cb45e855019cba.png",
     "static/media/pizarraobjetivosStaff.png": "/static/media/pizarraobjetivosStaff.6d929faa44ec081a3e83.png",
@@ -53,11 +55,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.63b80319.js.map": "/static/js/main.63b80319.js.map",
+    "main.c472d5dd.js.map": "/static/js/main.c472d5dd.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.63b80319.js"
+    "static/js/main.c472d5dd.js"
   ]
 }
