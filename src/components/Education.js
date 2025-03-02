@@ -5,6 +5,7 @@ import './Education.css';
 import { FaGraduationCap, FaCaretDown, FaCaretUp } from 'react-icons/fa';
 import bachiller from '../assets/estudios/bachiller.png';
 import tsaf from '../assets/estudios/tsaf.png';
+import notasDAW from '../assets/estudios/notasDAW.png';
 
 // Definimos el componente Education
 function Education() {
@@ -21,7 +22,15 @@ function Education() {
       <ul>
         <li>
           <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong>
-          <p><em>ILERNA</em> (2023 - 2025)</p>
+          <p><em>ILERNA</em> (2023 - 2025) - FINALIZANDO</p>
+          <span onClick={() => toggleImage('notasDAW')} className="caret-icon">
+            {activeImage === 'notasDAW' ? <FaCaretUp /> : <FaCaretDown />}
+          </span>
+          {activeImage === 'notasDAW' && (
+            <div className="certificate-image">
+              <img src={notasDAW} alt="Notas DAW" />
+            </div>
+          )}
         </li>
         <li>
           <strong>Técnico Superior en Acondicionamiento Físico</strong>

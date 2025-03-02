@@ -16,6 +16,9 @@ import iabigdata from '../assets/certificados it/iabigdata.png';
 import sql from '../assets/certificados it/SQL.png';
 import udemysql from '../assets/certificados it/UdemiSQL.png';
 import python from '../assets/certificados it/Python.png';
+import marketing from '../assets/certificados_it/MARKETING.png';
+import certificadomarketing from '../assets/certificados_it/CERTIFICADOMARKETING.png';
+
 
 // Definimos el componente Courses
 function Courses() {
@@ -44,6 +47,21 @@ function Courses() {
                   </div>
                 )}
               </li>
+
+              <li>
+                <strong>DIGITAL MARKETING & AUTOMATION MARKETING</strong>
+                <p><em>EUROFORMAC-MÉTODO</em> (Oct 2024 - Nov 2024) - (60 horas)</p>
+                <span onClick={() => toggleImage('marketing')} className="caret-icon">
+                  {activeImage === 'marketing' ? <FaCaretUp /> : <FaCaretDown />}
+                </span>
+                {activeImage === 'marketing' && (
+                  <div className="certificate-image">
+                    <img src={marketing} alt="Certificado Marketing" />
+                    <img src={certificadomarketing} alt="Certificado Avanzado de Marketing" />
+                  </div>
+                )}
+              </li>
+
 
               {/* Curso de Python */}
                       <li>
