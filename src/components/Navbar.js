@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub, FaDownload } from 'react-icons/fa'; // Añadimos FaDownload
 import logoLeft from '../assets/logomenu.png'; // Logo izquierdo (menú)
-import logoRight from '../assets/careto.png'; // Foto personal
+import logoRight from '../assets/CARETO2.png'; // Foto personal
 import cvFile from '../assets/CVTJESUS.pdf'; // Importamos el archivo PDF del CV
 import { FaDumbbell } from 'react-icons/fa';
 
