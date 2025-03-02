@@ -94,7 +94,7 @@ function Navbar() {
             </li>
             <li>
               <FaCertificate className="menu-icon" />
-              <a href="#courses" onClick={() => handleMenuClick('courses')}>Certificados IT</a>
+              <a href="#courses" onClick={() => handleMenuClick('courses')}>certificados_it</a>
             </li>
             <li>
               <FaDumbbell className="menu-icon" />
