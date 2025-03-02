@@ -84,33 +84,64 @@ function Projects() {
 
       <ul className="project-list">
 
-      {/* Proyecto más reciente: FitnessPark - Análisis Comercial */}
+      {/* Proyecto más reciente: FitnessPark */}
         <li>
-          <span onClick={() => toggleDetails('fitnesspark')} className="details-toggle">
-            FitnessPark - Análisis Comercial 03/2025 {openDetails.fitnesspark ? <FaCaretUp /> : <FaCaretDown />}
-          </span>
+                  <span onClick={() => toggleDetails('fitnesspark')} className="details-toggle">
+                    Fitness Park 2025 {openDetails.fitnesspark ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
 
-          {openDetails.fitnesspark && (
-            <div className="project-details">
-              <p><strong>📊 Preparando el terreno en mi primer proyecto en FitnessPark de análisis de métricas comerciales individuales y globales de club.</strong></p>
+                  {openDetails.fitnesspark && (
+                    <div className="project-details">
+                      <p>
+                        🏋️‍♂️ Como Director de Club en <strong>Fitness Park</strong>, me he propuesto optimizar la gestión del club
+                        a través del análisis de datos y la mejora en los flujos de trabajo.
+                        Mi objetivo es utilizar herramientas tecnológicas avanzadas para potenciar la conversión comercial,
+                        facilitar la toma de decisiones estratégicas y maximizar la eficiencia del equipo. 📊🚀
+                      </p>
+                      <p>
+                        💡 <strong>Habilidades aplicadas:</strong> Análisis de datos, Business Intelligence, optimización de procesos comerciales y
+                        desarrollo de herramientas digitales para mejorar la productividad del equipo.
+                      </p>
 
-              <p>🚀 Explorando cómo los comerciales interactuarán, cerrarán ventas y optimizarán su tiempo con datos reales. 🎯💼</p>
+                      {/* 🔽 SUBPROYECTO 1: ANÁLISIS COMERCIAL */}
+                      <ul className="subproject-list">
+                        <li>
+                          <span onClick={() => toggleDetails('fitnessparkProject1')} className="details-toggle">
+                            Análisis Comercial {openDetails.fitnessparkProject1 ? <FaCaretUp /> : <FaCaretDown />}
+                          </span>
 
-              <p>💪 <strong>Desafíos:</strong> Fechas que no cuadraban, fórmulas que no calculaban y... ¡esa sensación de dulce victoria al ver todo encajar! 🧩🎉</p>
+                          {openDetails.fitnessparkProject1 && (
+                            <div className="sub-project-details">
+                              <p>
+                                📌 <strong>Objetivo:</strong> Desarrollar un sistema de análisis comercial eficiente utilizando
+                                <strong>Power BI</strong> para procesar los datos de <strong>Resamania</strong>, el CRM de la empresa.
+                                La idea principal es transformar los datos en métricas claras y comprensibles para los comerciales y la dirección del club.
+                              </p>
+                              <p>
+                                🔍 <strong>Proceso:</strong>
+                              </p>
+                              <ul>
+                                <li>✅ Adecuación y limpieza de los datos extraídos del CRM <strong>Resamania</strong>.</li>
+                                <li>📊 Creación de dashboards en <strong>Power BI</strong> para visualizar conversiones y tendencias comerciales.</li>
+                                <li>📈 Análisis de oportunidades de mejora en los cierres de ventas y gestión de clientes.</li>
+                                <li>💼 Implementación de una hoja de control en Excel que los comerciales pueden usar a diario.</li>
+                              </ul>
+                              <p>
+                                🚀 <strong>Impacto:</strong> Facilita el análisis en tiempo real del rendimiento del equipo comercial, permitiendo
+                                tomar decisiones informadas y optimizar la conversión de clientes.
+                              </p>
 
-              <p>👨‍💻 ¿Quién dijo que los números eran aburridos? 🥳</p>
-
-              <p>📈 **Power BI al rescate:** Visualizando patrones de ventas, interacción comercial y tendencias de cierre. <br />
-                      🔍 **Análisis en tiempo real:** ¿Dónde se están perdiendo oportunidades? ¿Qué estrategias funcionan mejor? <br />
-                      🏆 **Decisiones basadas en datos:** Optimizando la conversión y mejorando la eficiencia del equipo comercial. </p>
-
-              {/* Imagen del proyecto FitnessPark */}
-              <div className="project-images">
-                <img src={proyectometricacomercial} alt="Métricas Comerciales FitnessPark" />
-              </div>
-            </div>
-          )}
-        </li>
+                              {/* Imagen del proyecto */}
+                              <div className="project-images">
+                                <img src={proyectometricacomercial} alt="Análisis Comercial Fitness Park" />
+                              </div>
+                            </div>
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </li>
 
         {/* Proyecto jesusdiazmartincv.es */}
         <li onClick={() => toggleDetails('jesusdiazmartincv')} className="toggle-container">
