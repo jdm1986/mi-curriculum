@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.d572f1f4.js",
+    "main.js": "/static/js/main.fd151abe.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -24,11 +24,11 @@
     "static/media/marketingestrategicoyoperacional.png": "/static/media/marketingestrategicoyoperacional.2c52eda1e02cee3786d6.png",
     "static/media/datascience.png": "/static/media/datascience.44286f89798ac6da7555.png",
     "static/media/EPersonal.png": "/static/media/EPersonal.75b1a6d09db7c1d18036.png",
+    "static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.png": "/static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.34a6dfbe1f5e5b1d3622.png",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/hosteleria.png": "/static/media/hosteleria.66eb58920da96b24877f.png",
     "static/media/svbYdesa.png": "/static/media/svbYdesa.70eb76e9b365bcf95357.png",
     "static/media/especialistapilatessuelo.png": "/static/media/especialistapilatessuelo.abdd5c30af9fa71844e1.png",
-    "static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.png": "/static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.02a6c7c96f9700fc8f53.png",
     "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
     "static/media/TractChun2.png": "/static/media/TractChun2.de182bc7a1656131b39b.png",
     "static/media/MARKETING.png": "/static/media/MARKETING.61d9062a37294f8505b7.png",
@@ -66,11 +66,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.d572f1f4.js.map": "/static/js/main.d572f1f4.js.map",
+    "main.fd151abe.js.map": "/static/js/main.fd151abe.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.d572f1f4.js"
+    "static/js/main.fd151abe.js"
   ]
 }
