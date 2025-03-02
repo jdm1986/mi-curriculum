@@ -30,9 +30,24 @@ import gestionep3 from '../assets/viding/gestionep3.png';
 import gestionep5 from '../assets/viding/gestionep5.png';
 import fototriatlon from '../assets/viding/fototriatlon.JPG';
 
+// Importar las imágenes de la carpeta src/assets/certificados_it (para las imágenes esp-32)
+import esp32_1 from '../assets/certificados_it/ESP32_1.JPG';
+import esp32_2 from '../assets/certificados_it/ESP32_2.JPG';
+import esp32_3 from '../assets/certificados_it/ESP32_3.JPG';
+import esp32_4 from '../assets/certificados_it/ESP32_4.JPG';
+import esp32_5 from '../assets/certificados_it/ESP32_5.JPG';
+import esp32_6 from '../assets/certificados_it/ESP32_6.JPG';
+
+// Importar la imagen del proyecto FitnessPark
+import proyectometricacomercial from '../assets/certificados_it/PROYECTOMETRICACOMERCIALVIILLALOBOS.png';
+
+
+
+
 function Projects() {
   // Estado para controlar la apertura de los detalles de cada proyecto
   const [openDetails, setOpenDetails] = useState({
+    fitnesspark: false,
     gestionatuscv: false,
     jesusdiazmartincv: false,
     powerbi: false,
@@ -68,6 +83,35 @@ function Projects() {
       </h2>
 
       <ul className="project-list">
+
+      {/* Proyecto más reciente: FitnessPark - Análisis Comercial */}
+        <li>
+          <span onClick={() => toggleDetails('fitnesspark')} className="details-toggle">
+            FitnessPark - Análisis Comercial 03/2025 {openDetails.fitnesspark ? <FaCaretUp /> : <FaCaretDown />}
+          </span>
+
+          {openDetails.fitnesspark && (
+            <div className="project-details">
+              <p><strong>📊 Preparando el terreno en mi primer proyecto en FitnessPark de análisis de métricas comerciales individuales y globales de club.</strong></p>
+
+              <p>🚀 Explorando cómo los comerciales interactuarán, cerrarán ventas y optimizarán su tiempo con datos reales. 🎯💼</p>
+
+              <p>💪 <strong>Desafíos:</strong> Fechas que no cuadraban, fórmulas que no calculaban y... ¡esa sensación de dulce victoria al ver todo encajar! 🧩🎉</p>
+
+              <p>👨‍💻 ¿Quién dijo que los números eran aburridos? 🥳</p>
+
+              <p>📈 **Power BI al rescate:** Visualizando patrones de ventas, interacción comercial y tendencias de cierre. <br />
+                      🔍 **Análisis en tiempo real:** ¿Dónde se están perdiendo oportunidades? ¿Qué estrategias funcionan mejor? <br />
+                      🏆 **Decisiones basadas en datos:** Optimizando la conversión y mejorando la eficiencia del equipo comercial. </p>
+
+              {/* Imagen del proyecto FitnessPark */}
+              <div className="project-images">
+                <img src={proyectometricacomercial} alt="Métricas Comerciales FitnessPark" />
+              </div>
+            </div>
+          )}
+        </li>
+
         {/* Proyecto jesusdiazmartincv.es */}
         <li onClick={() => toggleDetails('jesusdiazmartincv')} className="toggle-container">
           <button className="project-button">
@@ -196,6 +240,41 @@ function Projects() {
           )}
 
         </li>
+
+                {/* Nueva sección: Proyectos ESP-32 */}
+                <li>
+                  <span onClick={() => toggleDetails('esp32')} className="details-toggle">
+                    Proyectos ESP-32 02/2024 {openDetails.esp32 ? <FaCaretUp /> : <FaCaretDown />}
+                  </span>
+
+                  {openDetails.esp32 && (
+                    <div className="project-details">
+                      <p><strong>Descripción:</strong> Durante mi trabajo con la ESP-32, en la formación de Programación para soluciones de IoT y Smart City aplicables a entornos 5G, desarrollé varios proyectos que incluían control de sensores, transmisión de datos y visualización en tiempo real.</p>
+
+                      <p><strong>Video demostrativo:</strong></p>
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://drive.google.com/file/d/1kmrXXQwMVttvhUb8ZvTKGML3ux-9eem4/preview"
+                        title="Proyecto ESP-32"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+
+                      <p><strong>Galería de imágenes:</strong></p>
+                      <div className="project-images">
+                        <img src={esp32_1} alt="ESP32 Proyecto 1" />
+                        <img src={esp32_2} alt="ESP32 Proyecto 2" />
+                        <img src={esp32_3} alt="ESP32 Proyecto 3" />
+                        <img src={esp32_4} alt="ESP32 Proyecto 4" />
+                        <img src={esp32_5} alt="ESP32 Proyecto 5" />
+                        <img src={esp32_6} alt="ESP32 Proyecto 6" />
+                      </div>
+                    </div>
+                  )}
+                </li>
+
 
         {/* Nueva sección: Proyectos Synergym */}
         <li>
