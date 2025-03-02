@@ -283,15 +283,17 @@ function Projects() {
                       <p><strong>Descripción:</strong> Durante mi trabajo con la ESP-32, en la formación de Programación para soluciones de IoT y Smart City aplicables a entornos 5G, desarrollé varios proyectos que incluían control de sensores, transmisión de datos y visualización en tiempo real.</p>
 
                       <p><strong>Video demostrativo:</strong></p>
-                      <iframe
-                        width="560"
-                        height="315"
-                        src="https://drive.google.com/file/d/1kmrXXQwMVttvhUb8ZvTKGML3ux-9eem4/preview"
-                        title="Proyecto ESP-32"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+
+                      {/* 🔥 Envolver el iframe en un contenedor para hacerlo responsivo */}
+                      <div className="video-container">
+                        <iframe
+                          src="https://drive.google.com/file/d/1kmrXXQwMVttvhUb8ZvTKGML3ux-9eem4/preview"
+                          title="Proyecto ESP-32"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
 
                       <p><strong>Galería de imágenes:</strong></p>
                       <div className="project-images">
