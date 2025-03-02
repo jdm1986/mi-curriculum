@@ -1,12 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e53641.css",
-    "main.js": "/static/js/main.37af930c.js",
+    "main.js": "/static/js/main.d572f1f4.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
+    "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
+    "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
+    "static/media/ESP32_3.JPG": "/static/media/ESP32_3.1c27def34466b2c7f920.JPG",
+    "static/media/ESP32_4.JPG": "/static/media/ESP32_4.df1c76bc75dd5fb145d7.JPG",
+    "static/media/ESP32_1.JPG": "/static/media/ESP32_1.91d1355033e9b952f6b9.JPG",
+    "static/media/ESP32_5.JPG": "/static/media/ESP32_5.83cd4d0a9808c0d02777.JPG",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
-    "static/media/careto.png": "/static/media/careto.1d732538f4e51a0991c3.png",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
+    "static/media/CARETO2.png": "/static/media/CARETO2.429100397104a3071149.png",
     "static/media/logodeveloper.png": "/static/media/logodeveloper.c7522d4b7b60916ad9d0.png",
     "static/media/fondo.png": "/static/media/fondo.4507b7209511205e7078.png",
     "static/media/logomenu.png": "/static/media/logomenu.a6801a2cd616180efd7b.png",
@@ -22,8 +28,10 @@
     "static/media/hosteleria.png": "/static/media/hosteleria.66eb58920da96b24877f.png",
     "static/media/svbYdesa.png": "/static/media/svbYdesa.70eb76e9b365bcf95357.png",
     "static/media/especialistapilatessuelo.png": "/static/media/especialistapilatessuelo.abdd5c30af9fa71844e1.png",
+    "static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.png": "/static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.02a6c7c96f9700fc8f53.png",
     "static/media/TractChun3.png": "/static/media/TractChun3.410e35939f26ada772f6.png",
     "static/media/TractChun2.png": "/static/media/TractChun2.de182bc7a1656131b39b.png",
+    "static/media/MARKETING.png": "/static/media/MARKETING.61d9062a37294f8505b7.png",
     "static/media/TractChun1.png": "/static/media/TractChun1.3c77298b9169877c524b.png",
     "static/media/SQL.png": "/static/media/SQL.30938108c43186af340a.png",
     "static/media/iotsmartcityIA.png": "/static/media/iotsmartcityIA.4577568a782275fb9210.png",
@@ -34,6 +42,7 @@
     "static/media/gestiondeportivafemxa.png": "/static/media/gestiondeportivafemxa.4d26c4111ad7e655f6c6.png",
     "static/media/gestionep2.png": "/static/media/gestionep2.f0777096747e991ffc37.png",
     "static/media/gestionep3.png": "/static/media/gestionep3.89cb0cb2a4f051f5032a.png",
+    "static/media/CERTIFICADOMARKETING.png": "/static/media/CERTIFICADOMARKETING.dac0d0826d01c477d230.png",
     "static/media/retencionsocioslistabobajas.png": "/static/media/retencionsocioslistabobajas.5f3c27849c4731c22297.png",
     "static/media/gestionep1.png": "/static/media/gestionep1.93b6b71cda65802abc9b.png",
     "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.4a4749fe2e36b52be424.pdf",
@@ -50,17 +59,18 @@
     "static/media/proyectofinal1.png": "/static/media/proyectofinal1.6b51a4c68eadc72d2846.png",
     "static/media/wdwpskills.png": "/static/media/wdwpskills.765300e3739fc79101b4.png",
     "static/media/checklistaperturaclub.png": "/static/media/checklistaperturaclub.0660d0e19bdee2006c2d.png",
+    "static/media/notasDAW.png": "/static/media/notasDAW.85fb450043e75f9acf42.png",
     "static/media/listadoincidenciassocios.png": "/static/media/listadoincidenciassocios.047aeb45a463111b03bb.png",
     "static/media/retencionsocioreto21dias.png": "/static/media/retencionsocioreto21dias.f74cd1860bcb9b8edbcb.png",
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.c7e53641.css.map": "/static/css/main.c7e53641.css.map",
-    "main.37af930c.js.map": "/static/js/main.37af930c.js.map",
+    "main.d572f1f4.js.map": "/static/js/main.d572f1f4.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e53641.css",
-    "static/js/main.37af930c.js"
+    "static/js/main.d572f1f4.js"
   ]
 }
