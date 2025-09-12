@@ -180,15 +180,10 @@ function Projects() {
                   {openDetails.gestionatuscv && (
                     <div className="project-details">
                       <div className="visit-link">
-                        <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gestionatuscvs-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
                           || www.gestionatuscv.es ||
                         </a>
                       </div>
-                      <div className="visit-link">
-                                              <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
-                                                || https://gestionatuscvs-production.up.railway.app/ ||
-                                              </a>
-                                            </div>
                       <p><strong>Reto principal:</strong> Desarrollar una aplicación web completa de gestión de currículums
                       (registro/login, subida/gestión de PDFs, departamentos por usuario, búsquedas) con seguridad JWT, encriptado de contraseñas,
                       y despliegue en la nube con contenedores. El sistema debía separar configuración por entornos, proteger secretos vía variables
