@@ -184,32 +184,42 @@ function Projects() {
                           || www.gestionatuscv.es ||
                         </a>
                       </div>
-                      <p><strong>Reto principal:</strong> El proyecto consistió en desarrollar una aplicación
-                      web completa para la gestión de currículums, que permitiera a los usuarios registrarse,
-                      iniciar sesión, y subir y gestionar currículums, con una arquitectura que abarcase tanto
-                      el frontend como el backend. Los requisitos incluían seguridad avanzada mediante la
-                      autenticación JWT, encriptado de contraseñas, y la protección de datos sensibles con
-                      variables de entorno. Además, el proyecto debía ofrecer la opción de gestión de
-                      departamentos personalizados para cada usuario y mantener un entorno seguro de producción
-                      desplegado en Nginx con un dominio personalizado.</p>
+                      <div className="visit-link">
+                                              <a href="https://gestionatuscv.es" target="_blank" rel="noopener noreferrer">
+                                                || https://gestionatuscvs-production.up.railway.app/ ||
+                                              </a>
+                                            </div>
+                      <p><strong>Reto principal:</strong> Desarrollar una aplicación web completa de gestión de currículums
+                      (registro/login, subida/gestión de PDFs, departamentos por usuario, búsquedas) con seguridad JWT, encriptado de contraseñas,
+                      y despliegue en la nube con contenedores. El sistema debía separar configuración por entornos, proteger secretos vía variables
+                      de entorno y operar con dominio propio y HTTPS..</p>
 
-                      <p><strong>Dificultades:</strong> El proyecto presentó diversos desafíos técnicos:</p>
+                      <p><strong>Solución:</strong> El proyecto presentó diversos desafíos técnicos:</p>
                       <ul>
-                        <li><strong>Autenticación JWT:</strong> Implementar un sistema seguro de autenticación basado en tokens JWT fue un reto significativo, ya que exigió integrar los tokens en el flujo de seguridad de Spring Security y manejar su almacenamiento de manera segura en el frontend y backend.</li>
-                        <li><strong>Encriptado de contraseñas:</strong> La implementación de BCrypt para almacenar contraseñas de forma segura implicó aprender técnicas de encriptado en Java y aplicar las mejores prácticas de seguridad para proteger la información de los usuarios.</li>
-                        <li><strong>Gestión de variables de entorno (.env):</strong> Aprender a separar configuraciones específicas para desarrollo y producción, incluyendo credenciales sensibles y configuraciones de base de datos, fue esencial para garantizar que los datos sensibles no estuvieran expuestos en el código fuente.</li>
-                        <li><strong>Implementación de Nginx y Proxy Inverso:</strong> Configurar Nginx para servir la aplicación y manejar el proxy inverso, los archivos estáticos y los certificados SSL, supuso un reto considerable, especialmente para asegurar una experiencia de usuario fluida y un entorno de producción robusto.</li>
-                        <li><strong>Configuración de JPA y gestión de entidades:</strong> La implementación de JPA para gestionar la persistencia de datos y las relaciones entre entidades, como los departamentos y currículums, presentó desafíos al configurar las relaciones y asegurar un correcto funcionamiento de las operaciones CRUD.</li>
+                        <li><strong>Arquitectura:</strong> Spring Boot (API REST) + MySQL; autenticación JWT; contraseñas con BCrypt; subida de CVs en PDF.</li>
+                        <li><strong>Contenerización:</strong> Dockerfile multietapa para minimizar el tamaño del artefacto.
+                        Docker-compose para desarrollo local con servicios app + db, healthchecks y volúmenes persistentes.
+                        Configuración 12-factor con .env (dev/prod)..</li>
+                        <li><strong>Despliegue cloud (Railway):</strong> Conexión directa con GitHub → build & deploy automáticos.
+                                                                         Servicio Docker para la app y MySQL gestionado (plugin de Railway).
+                                                                         Dominio personalizado y TLS gestionados por Railway (reverse proxy nativo) → sin Nginx propio.
+                                                                         Variables de entorno y secretos gestionados desde el panel de Railway..</li>
+                        <li><strong>Gestión de ficheros:</strong> En local: volumen Docker (/data/uploads).
+                                                                  En producción: (recomendado) almacenamiento de objetos (S3/R2/Backblaze B2) con URLs firmadas, evitando el filesystem efímero de la plataforma..</li>
+                        <li><strong>Seguridad:</strong> JWT con expiración/refresh; BCryptPasswordEncoder.
+                                                        Cabeceras HTTP y CORS configurables por entorno.
+                                                        Rotación sencilla de secretos mediante variables..</li>
                         <li><strong>Límite de 30 minutos para usuarios no administradores:</strong> Configurar un límite de tiempo para los usuarios sin rol de administrador, de forma que los datos se eliminaran automáticamente después de 30 minutos, representó un desafío técnico y funcional. Esta funcionalidad ha sido diseñada pensando en la futura escalabilidad, permitiendo eliminar el límite si se decide monetizar la aplicación.</li>
-                        <li><strong>Problemas con cambios en la IP del servidor:</strong> Hospedar la aplicación en un servidor local exigió tener en cuenta una actualización constante de los registros DNS debido a los cambios en la IP proporcionada por el ISP.</li>
+                        <li><strong>Operación:</strong> Logs centralizados (Railway Logs) y métricas básicas.
+                                                        Jobs programados para limpieza de datos (usuarios free con ventana de 30min) usando tareas/cron de Spring..</li>
                       </ul>
 
                       <p><strong>Lo que aprendí:</strong> Este proyecto me permitió adquirir y consolidar varias habilidades clave:</p>
                       <ul>
                         <li><strong>Seguridad en aplicaciones web:</strong> Implementé medidas de seguridad efectivas como la autenticación JWT y el encriptado de contraseñas con BCrypt, lo que me brindó una comprensión profunda de las mejores prácticas de seguridad para aplicaciones web.</li>
                         <li><strong>Manejo de JPA y persistencia de datos:</strong> Aprendí a gestionar relaciones complejas entre entidades en JPA, así como a implementar funcionalidades avanzadas de búsqueda y eliminación de datos, como la asociación de departamentos con los currículums de cada usuario.</li>
-                        <li><strong>Despliegue en producción con Nginx:</strong> Configurar un entorno de producción seguro y eficiente con Nginx me permitió entender la importancia de una correcta gestión de certificados SSL, la configuración del proxy inverso y la optimización del rendimiento del servidor.</li>
-                        <li><strong>Gestión de DNS y servidores:</strong> La experiencia en la configuración de registros DNS y la actualización de la IP del servidor me permitió garantizar la accesibilidad constante de la aplicación, resolviendo problemas con los cambios de IP.</li>
+                        <li><strong>Despliegue en producción:</strong> Docker y ciclos de despliegue reproducibles; Railway como PaaS con CI/CD desde GitHub.</li>
+                        <li><strong>Producción:</strong> configuración por entorno, secretos, dominios, TLS y logging.</li>
                         <li><strong>Escalabilidad y gestión de usuarios:</strong> a configuración de límites temporales para usuarios no administradores me ha preparado para futuros escenarios de escalabilidad, donde la aplicación podría monetizarse eliminando el límite para ciertos planes.</li>
                       </ul>
 
