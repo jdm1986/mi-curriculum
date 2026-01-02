@@ -43,30 +43,6 @@
   text-decoration: underline;
 }
 
-/* Estilos para el botón de descarga del CV */
-.download-item {
-  margin-top: 20px; /* Añadimos un margen superior para separar el botón */
-}
-
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #479ECE; /* Fondo azul */
-  color: #F0F0F0; /* Texto oscuro */
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  gap: 20px; /* Añadimos un espacio entre el icono y el texto */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.download-btn:hover {
-  background-color: #21a1f1; /* Cambio de color al pasar el ratón */
-  color: white;
-}
 
 .section-icon {
   margin-right: 10px;
