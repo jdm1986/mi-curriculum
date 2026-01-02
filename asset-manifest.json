@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7794886f.css",
-    "main.js": "/static/js/main.502ee38d.js",
+    "main.js": "/static/js/main.25eb45d3.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -65,11 +65,11 @@
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
     "main.7794886f.css.map": "/static/css/main.7794886f.css.map",
-    "main.502ee38d.js.map": "/static/js/main.502ee38d.js.map",
+    "main.25eb45d3.js.map": "/static/js/main.25eb45d3.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7794886f.css",
-    "static/js/main.502ee38d.js"
+    "static/js/main.25eb45d3.js"
   ]
 }
