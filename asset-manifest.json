@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d31412c1.css",
-    "main.js": "/static/js/main.36ef9560.js",
+    "main.css": "/static/css/main.7794886f.css",
+    "main.js": "/static/js/main.502ee38d.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -45,7 +45,6 @@
     "static/media/CERTIFICADOMARKETING.png": "/static/media/CERTIFICADOMARKETING.dac0d0826d01c477d230.png",
     "static/media/retencionsocioslistabobajas.png": "/static/media/retencionsocioslistabobajas.5f3c27849c4731c22297.png",
     "static/media/gestionep1.png": "/static/media/gestionep1.93b6b71cda65802abc9b.png",
-    "static/media/CVTJESUS.pdf": "/static/media/CVTJESUS.4a4749fe2e36b52be424.pdf",
     "static/media/Python.png": "/static/media/Python.1aa6ca1f88fb4dddd19e.png",
     "static/media/proyectofinal3.png": "/static/media/proyectofinal3.71066a06b568710b5a9b.png",
     "static/media/incidenciasSala.png": "/static/media/incidenciasSala.268f4273b97c363fd0ea.png",
@@ -65,12 +64,12 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
-    "main.d31412c1.css.map": "/static/css/main.d31412c1.css.map",
-    "main.36ef9560.js.map": "/static/js/main.36ef9560.js.map",
+    "main.7794886f.css.map": "/static/css/main.7794886f.css.map",
+    "main.502ee38d.js.map": "/static/js/main.502ee38d.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d31412c1.css",
-    "static/js/main.36ef9560.js"
+    "static/css/main.7794886f.css",
+    "static/js/main.502ee38d.js"
   ]
 }
