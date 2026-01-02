@@ -114,7 +114,7 @@ function Projects() {
                             <div className="sub-project-details">
                               <p>
                                 📌 <strong>Objetivo:</strong> Desarrollar un sistema de análisis comercial eficiente utilizando
-                                <strong>Power BI</strong> para procesar los datos de <strong>Resamania</strong>, el CRM de la empresa.
+                                <strong>Power BI</strong>.
                                 La idea principal es transformar los datos en métricas claras y comprensibles para los comerciales y la dirección del club.
                               </p>
                               <p>
