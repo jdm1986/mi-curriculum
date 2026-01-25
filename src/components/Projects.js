@@ -40,6 +40,7 @@ import esp32_6 from '../assets/certificados_it/ESP32_6.JPG';
 
 // Importar la imagen del proyecto FitnessPark
 import proyectometricacomercial from '../assets/certificados_it/PROYECTOMETRICACOMERCIALVIILLALOBOS.png';
+import automatismosResamania from '../assets/certificados_it/AUTOMATISMOSRESAMANIA.png';
 
 
 
@@ -48,6 +49,8 @@ function Projects() {
   // Estado para controlar la apertura de los detalles de cada proyecto
   const [openDetails, setOpenDetails] = useState({
     fitnesspark: false,
+    fitnessparkProject1: false,
+    fitnessparkProject2: false,
     gestionatuscv: false,
     jesusdiazmartincv: false,
     powerbi: false,
@@ -134,6 +137,23 @@ function Projects() {
                               {/* Imagen del proyecto */}
                               <div className="project-images">
                                 <img src={proyectometricacomercial} alt="Análisis Comercial Fitness Park" />
+                              </div>
+                            </div>
+                          )}
+                        </li>
+                        <li>
+                          <span onClick={() => toggleDetails('fitnessparkProject2')} className="details-toggle">
+                            Software de Gestión Propio {openDetails.fitnessparkProject2 ? <FaCaretUp /> : <FaCaretDown />}
+                          </span>
+
+                          {openDetails.fitnessparkProject2 && (
+                            <div className="sub-project-details">
+                              <p>
+                                Desarrollé un software interno de gestión para Fitness Park en Python (GUI con Tkinter), con módulos de incidencias, mapas, préstamos y clientes. Migré la persistencia a PostgreSQL para trabajo multi‑equipo en LAN, usando almacenamiento de recursos en BLOBs y control de accesos por PIN/roles. Centralicé la ingesta de CSV diarios en la base de datos para eliminar dependencias locales. Implementé backups automáticos con pg_dump/pg_restore, histórico y copia a OneDrive, garantizando continuidad operativa.
+                              </p>
+
+                              <div className="project-images">
+                                <img src={automatismosResamania} alt="Software de Gestión Propio Fitness Park" />
                               </div>
                             </div>
                           )}
