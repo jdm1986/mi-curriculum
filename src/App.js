@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 // Importamos el componente Navbar para la navegación
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 // Importamos los estilos de la aplicación
 import './App.css';
 
@@ -49,6 +50,7 @@ function App() {
         </section>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

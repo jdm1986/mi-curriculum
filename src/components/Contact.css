@@ -1,6 +1,8 @@
 .contact {
   padding: 20px;
-  background-color: #2c2c2c; /* Fondo oscuro como el resto de las secciones */
+  background: rgba(10, 12, 20, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Fondo oscuro como el resto de las secciones */
   border-radius: 8px;
   max-width: 800px;
   margin: 40px auto;
@@ -18,29 +20,46 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 14px;
 }
 
-.contact-item {
-  display: flex;
+.contact-btn {
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  color: #61dafb; /* Color de iconos */
-}
-
-.contact-item a, .contact-item p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-decoration: none;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  width: 100%;
+  max-width: 340px;
+  justify-content: center;
 }
 
-.contact-item a:hover {
-  color: #61dafb;
-  text-decoration: underline;
+.contact-btn--email {
+  background-color: #479ECE;
+}
+
+.contact-btn--email:hover {
+  background-color: #21a1f1;
+  transform: translateY(-2px);
+}
+
+.contact-btn--linkedin {
+  background-color: #0077B5;
+}
+
+.contact-btn--linkedin:hover {
+  background-color: #005f93;
+  transform: translateY(-2px);
+}
+
+.contact-btn-icon {
+  font-size: 1.3rem;
 }
 
 

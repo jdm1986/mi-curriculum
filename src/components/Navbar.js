@@ -4,21 +4,42 @@ import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProject
 import logoLeft from '../assets/logomenu.png';
 import logoRight from '../assets/CARETO2.png';
 
+const sections = ['about-me', 'experience', 'education', 'courses', 'courses-fit', 'skills', 'projects', 'github', 'contact'];
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024); // Detectar si es móvil o tablet
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [activeSection, setActiveSection] = useState('about-me');
 
   // Escuchar cambios de tamaño de ventana para detectar si es móvil o tablet
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1024);
     };
-
     window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+  // IntersectionObserver para detectar la sección visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            window.history.replaceState(null, '', '#' + entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   // Función para alternar el menú en móviles y tablets
@@ -83,39 +104,39 @@ function Navbar() {
 
         {(isMobile && isOpen) || !isMobile ? (
           <ul className={`menu-list-mobile ${isMobile && isOpen ? 'open' : ''}`}>
-            <li>
+            <li className={activeSection === 'about-me' ? 'active' : ''}>
               <FaUser className="menu-icon" />
               <a href="#about-me" onClick={() => handleMenuClick('about-me')}>Sobre mí</a>
             </li>
-            <li>
+            <li className={activeSection === 'experience' ? 'active' : ''}>
               <FaBriefcase className="menu-icon" />
               <a href="#experience" onClick={() => handleMenuClick('experience')}>Experiencia</a>
             </li>
-            <li>
+            <li className={activeSection === 'education' ? 'active' : ''}>
               <FaGraduationCap className="menu-icon" />
               <a href="#education" onClick={() => handleMenuClick('education')}>Educación</a>
             </li>
-            <li>
+            <li className={activeSection === 'courses' ? 'active' : ''}>
               <FaCertificate className="menu-icon" />
               <a href="#courses" onClick={() => handleMenuClick('courses')}>Certificados IT</a>
             </li>
-            <li>
+            <li className={activeSection === 'courses-fit' ? 'active' : ''}>
               <FaDumbbell className="menu-icon" />
               <a href="#courses-fit" onClick={() => handleMenuClick('courses-fit')}>Certificados Fitness</a>
             </li>
-            <li>
+            <li className={activeSection === 'skills' ? 'active' : ''}>
               <FaTools className="menu-icon" />
               <a href="#skills" onClick={() => handleMenuClick('skills')}>Habilidades</a>
             </li>
-            <li>
+            <li className={activeSection === 'projects' ? 'active' : ''}>
               <FaProjectDiagram className="menu-icon" />
               <a href="#projects" onClick={() => handleMenuClick('projects')}>Proyectos</a>
             </li>
-            <li>
+            <li className={activeSection === 'github' ? 'active' : ''}>
               <FaGithub className="menu-icon" />
               <a href="#github" onClick={() => handleMenuClick('github')}>GitHub</a>
             </li>
-            <li>
+            <li className={activeSection === 'contact' ? 'active' : ''}>
               <FaEnvelope className="menu-icon" />
               <a href="#contact" onClick={() => handleMenuClick('contact')}>Contacto</a>
             </li>

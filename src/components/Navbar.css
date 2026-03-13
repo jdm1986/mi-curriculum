@@ -59,11 +59,12 @@
 
 /* Sección 2: Logo | Texto central | Foto personal (tanto móviles como pantallas grandes) */
 .navbar-section2 {
-  background-image: url('../assets/fondo2.png'); /* Ruta hacia la imagen de fondo */
-  background-size: cover; /* Para que cubra toda el área de la cabecera */
-  background-position: center; /* Centra la imagen de fondo */
+  background: rgba(10, 12, 20, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(97, 218, 251, 0.12);
   display: flex;
-  justify-content: center; /* Centra el contenido */
+  justify-content: center;
   align-items: center;
   padding: 5px;
   position: fixed;
@@ -108,17 +109,20 @@
   list-style: none;
   padding: 70px 0;
   margin: 0;
-  background-color: #333;
-  text-align: left; /* Alinear el texto a la izquierda */
-  padding-left: 10px; /* Espaciado del texto desde el borde */
+  background: rgba(10, 12, 20, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(97, 218, 251, 0.1);
+  text-align: left;
+  padding-left: 10px;
   position: fixed;
-  top: 140px; /* Ajuste para evitar que se sobreponga con la cabecera */
+  top: 140px;
   left: 0;
   width: 100%;
-  height: calc(100vh - 140px); /* El menú ocupa el 100% de la altura disponible menos la cabecera */
+  height: calc(100vh - 140px);
   z-index: 999;
-  border-radius: 10px; /* Redondear las esquinas del menú */
-  overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido es mayor que la altura */
+  border-radius: 10px;
+  overflow-y: auto;
 }
 
 /* Mostramos el menú cuando esté abierto */
@@ -135,7 +139,10 @@
     left: 20px; /* Para que no quede pegado al borde izquierdo */
     display: flex; /* Siempre visible en pantallas grandes */
     flex-direction: column;
-    background-color: #333;
+    background: rgba(10, 12, 20, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(97, 218, 251, 0.1);
     padding: 10px;
     border-radius: 10px;
   }
@@ -248,9 +255,19 @@
 }
 
 .menu-list-mobile li:hover {
-  background-color: #444; /* Fondo al pasar el mouse */
+  background-color: rgba(97, 218, 251, 0.1);
   color: #61dafb;
   text-decoration: underline;
+}
+
+.menu-list-mobile li.active {
+  background-color: rgba(97, 218, 251, 0.08);
+  border-left: 3px solid #61dafb;
+}
+
+.menu-list-mobile li.active a {
+  color: #61dafb;
+  font-weight: bold;
 }
 
 /* Evitar que el contenido se "coma" el encabezado al navegar por las secciones */

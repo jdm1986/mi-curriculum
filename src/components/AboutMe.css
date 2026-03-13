@@ -1,6 +1,8 @@
 .about-me {
   padding: 20px; /* Espacio dentro de la caja */
-  background-color: #2c2c2c; /* Fondo oscuro consistente con otras secciones */
+  background: rgba(10, 12, 20, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Fondo oscuro consistente con otras secciones */
   border-radius: 8px; /* Bordes redondeados */
   max-width: 800px; /* Limita el ancho máximo de la caja */
   margin: 40px auto; /* Centra la caja en la pantalla */

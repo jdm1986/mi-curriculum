@@ -1,0 +1,39 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #479ECE;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+  pointer-events: none;
+  z-index: 998;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+  background-color: #21a1f1;
+}
+
+/* Solo visible en móvil y tablet */
+@media (min-width: 1025px) {
+  .scroll-to-top {
+    display: none;
+  }
+}

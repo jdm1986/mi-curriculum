@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import { FaProjectDiagram, FaCaretDown, FaCaretUp } from 'react-icons/fa';
+import Lightbox from './Lightbox';
 
 // Importar las imágenes de la carpeta src/assets/powerbi
 import proyectofinal1 from '../assets/powerbi/proyectofinal1.png';
@@ -73,6 +74,9 @@ function Projects() {
             vidingProject2: false,
   });
 
+  // Estado para el lightbox
+  const [lightboxSrc, setLightboxSrc] = useState(null);
+
   // Función para alternar el estado del proyecto específico
   const toggleDetails = (project) => {
     setOpenDetails((prevState) => ({
@@ -81,8 +85,16 @@ function Projects() {
     }));
   };
 
+  // Abrir lightbox al clicar en cualquier imagen del contenedor
+  const handleImageClick = (e) => {
+    if (e.target.tagName === 'IMG') {
+      setLightboxSrc(e.target.src);
+    }
+  };
+
   return (
-    <section className="projects" id="projects">
+    <>
+    <section className="projects" id="projects" onClick={handleImageClick}>
       <h2>
         <FaProjectDiagram className="section-icon" /> Proyectos
       </h2>
@@ -536,7 +548,9 @@ function Projects() {
         </li>
         </ul>
         </section>
-        );
-        }
+        {lightboxSrc && <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />}
+    </>
+  );
+}
 
         export default Projects;
