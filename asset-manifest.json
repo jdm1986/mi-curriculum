@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3150c80.css",
-    "main.js": "/static/js/main.30795a72.js",
+    "main.css": "/static/css/main.cba218d1.css",
+    "main.js": "/static/js/main.41a00732.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -65,12 +65,12 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "static/media/fondo2.png": "/static/media/fondo2.a26cc282c9bc161cacdb.png",
     "index.html": "/index.html",
-    "main.c3150c80.css.map": "/static/css/main.c3150c80.css.map",
-    "main.30795a72.js.map": "/static/js/main.30795a72.js.map",
+    "main.cba218d1.css.map": "/static/css/main.cba218d1.css.map",
+    "main.41a00732.js.map": "/static/js/main.41a00732.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3150c80.css",
-    "static/js/main.30795a72.js"
+    "static/css/main.cba218d1.css",
+    "static/js/main.41a00732.js"
   ]
 }
