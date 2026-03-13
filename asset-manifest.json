@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.26864ed7.css",
+    "main.css": "/static/css/main.df90507d.css",
     "main.js": "/static/js/main.5e79cc84.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
@@ -64,12 +64,12 @@
     "static/media/retencionsocioreto21dias.png": "/static/media/retencionsocioreto21dias.f74cd1860bcb9b8edbcb.png",
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "index.html": "/index.html",
-    "main.26864ed7.css.map": "/static/css/main.26864ed7.css.map",
+    "main.df90507d.css.map": "/static/css/main.df90507d.css.map",
     "main.5e79cc84.js.map": "/static/js/main.5e79cc84.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26864ed7.css",
+    "static/css/main.df90507d.css",
     "static/js/main.5e79cc84.js"
   ]
 }
