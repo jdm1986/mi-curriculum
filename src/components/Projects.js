@@ -56,6 +56,8 @@ function Projects() {
     powerbi: false,
     powerbiProject1: false,
     powerbiProject2: false,
+    esp32: false,
+    synergym: false,
     synergymProject1: false,
         synergymProject2: false,
         synergymProject3: false,
@@ -136,7 +138,7 @@ function Projects() {
 
                               {/* Imagen del proyecto */}
                               <div className="project-images">
-                                <img src={proyectometricacomercial} alt="Análisis Comercial Fitness Park" />
+                                <img src={proyectometricacomercial} alt="Análisis Comercial Fitness Park" loading="lazy" />
                               </div>
                             </div>
                           )}
@@ -153,7 +155,7 @@ function Projects() {
                               </p>
 
                               <div className="project-images">
-                                <img src={automatismosResamania} alt="Software de Gestión Propio Fitness Park" />
+                                <img src={automatismosResamania} alt="Software de Gestión Propio Fitness Park" loading="lazy" />
                               </div>
                             </div>
                           )}
@@ -265,9 +267,9 @@ function Projects() {
                       <p><strong>Lo que aprendí:</strong> Uso de Power BI Desktop, visualización de datos, filtros y segmentación, y publicación de informes.</p>
                       <p><strong>Retos:</strong> Publicación de informes, modelado de datos y uso de fórmulas DAX.</p>
                       <div className="project-images">
-                        <img src={proyectofinal1} alt="Proyecto Final 1 - Imagen 1" />
-                        <img src={proyectofinal2} alt="Proyecto Final 1 - Imagen 2" />
-                        <img src={proyectofinal3} alt="Proyecto Final 1 - Imagen 3" />
+                        <img src={proyectofinal1} alt="Proyecto Final 1 - Imagen 1" loading="lazy" />
+                        <img src={proyectofinal2} alt="Proyecto Final 1 - Imagen 2" loading="lazy" />
+                        <img src={proyectofinal3} alt="Proyecto Final 1 - Imagen 3" loading="lazy" />
                       </div>
                     </div>
                   )}
@@ -284,9 +286,9 @@ function Projects() {
                       <p><strong>Lo que aprendí:</strong> Importación y transformación de datos, visualización de datos, uso de filtros, y publicación de informes.</p>
                       <p><strong>Retos:</strong> Restricciones de publicación, modelado de datos y uso de fórmulas DAX.</p>
                       <div className="project-images">
-                        <img src={proyectofinalA} alt="Proyecto Final 2 - Imagen 1" />
-                        <img src={proyectofinalB} alt="Proyecto Final 2 - Imagen 2" />
-                        <img src={proyectofinalC} alt="Proyecto Final 2 - Imagen 3" />
+                        <img src={proyectofinalA} alt="Proyecto Final 2 - Imagen 1" loading="lazy" />
+                        <img src={proyectofinalB} alt="Proyecto Final 2 - Imagen 2" loading="lazy" />
+                        <img src={proyectofinalC} alt="Proyecto Final 2 - Imagen 3" loading="lazy" />
                       </div>
                     </div>
                   )}
@@ -322,12 +324,12 @@ function Projects() {
 
                       <p><strong>Galería de imágenes:</strong></p>
                       <div className="project-images">
-                        <img src={esp32_1} alt="ESP32 Proyecto 1" />
-                        <img src={esp32_2} alt="ESP32 Proyecto 2" />
-                        <img src={esp32_3} alt="ESP32 Proyecto 3" />
-                        <img src={esp32_4} alt="ESP32 Proyecto 4" />
-                        <img src={esp32_5} alt="ESP32 Proyecto 5" />
-                        <img src={esp32_6} alt="ESP32 Proyecto 6" />
+                        <img src={esp32_1} alt="ESP32 Proyecto 1" loading="lazy" />
+                        <img src={esp32_2} alt="ESP32 Proyecto 2" loading="lazy" />
+                        <img src={esp32_3} alt="ESP32 Proyecto 3" loading="lazy" />
+                        <img src={esp32_4} alt="ESP32 Proyecto 4" loading="lazy" />
+                        <img src={esp32_5} alt="ESP32 Proyecto 5" loading="lazy" />
+                        <img src={esp32_6} alt="ESP32 Proyecto 6" loading="lazy" />
                       </div>
                     </div>
                   )}
@@ -355,7 +357,7 @@ function Projects() {
                   {openDetails.synergymProject1 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Creé esta hoja para documentar y hacer un seguimiento de todas las incidencias relacionadas con la sala de fitness. Asigné columnas a los miembros del staff para que pudieran registrar problemas específicos, como fallos en las máquinas o el estado del material. Con esta hoja, gestioné el proceso de resolución de incidencias de manera efectiva, supervisando el estado ("Pendientes," "Solucionadas") y calculando métricas que me ayudaban a analizar el rendimiento del equipo y mejorar la experiencia de los socios.</p>
-                      <img src={incidenciasSala} alt="Incidencias Sala" />
+                      <img src={incidenciasSala} alt="Incidencias Sala" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -368,7 +370,7 @@ function Projects() {
                   {openDetails.synergymProject2 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Esta hoja la diseñé para gestionar incidencias relacionadas directamente con los socios del club. Incluí columnas para registrar información importante del socio, como DNI y teléfono, y la descripción de la incidencia. También habilité el seguimiento del estado de la incidencia (e.g., "Pendientes," "Solucionadas"). Con esta herramienta, pude mejorar la atención al cliente y asegurar una resolución rápida de los problemas, aumentando la satisfacción y retención de los socios.</p>
-                      <img src={listadoIncidenciasSocios} alt="Listado Incidencias Socios" />
+                      <img src={listadoIncidenciasSocios} alt="Listado Incidencias Socios" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -381,7 +383,7 @@ function Projects() {
                   {openDetails.synergymProject3 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong>  Creé esta hoja para analizar las bajas de los socios a lo largo del año. Desarrollé categorías específicas que identificaban las causas de las bajas (e.g., "Cambio de Gimnasio," "Económica," "El Gimnasio Lleno"). Esto me permitía identificar los motivos más frecuentes de las bajas y ajustar las estrategias de retención, haciendo un seguimiento mensual del número de bajas y comparándolo con el desempeño del staff.</p>
-                      <img src={retencionsocioslistabobajas} alt="Listados Llamadas Bajas Anualidad" />
+                      <img src={retencionsocioslistabobajas} alt="Listados Llamadas Bajas Anualidad" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -394,7 +396,7 @@ function Projects() {
                   {openDetails.synergymProject4 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong>  Esta hoja la implementé para gestionar las devoluciones de cuotas o servicios. Hice un seguimiento detallado de las incidencias relacionadas, indicando motivos como "Enfermedad," "Inseguridad," o "Atención Staff." Además, registré los canales de contacto utilizados (e.g., SMS, llamadas) y asigné responsabilidades al staff. Este enfoque me ayudó a coordinar el proceso de gestión de devoluciones y a identificar las causas principales, mejorando la eficiencia en la resolución de incidencias.</p>
-                      <img src={retencionsocioslistadodevolucionesbancarias} alt="Listados Llamadas Devoluciones" />
+                      <img src={retencionsocioslistadodevolucionesbancarias} alt="Listados Llamadas Devoluciones" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -407,7 +409,7 @@ function Projects() {
                   {openDetails.synergymProject5 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Creé esta hoja para analizar el Net Promoter Score (NPS) de los socios y gestionar las acciones de seguimiento basadas en sus respuestas. Registré motivos específicos que afectan la satisfacción de los socios, como "Cambios de Horarios," "Mala Atención," y "Climatización." Además, realicé un seguimiento del número de llamadas y contactos realizados por el staff, asignando tareas específicas. Esta herramienta me permitió coordinar esfuerzos para mejorar la satisfacción del cliente y optimizar la experiencia en el club.</p>
-                      <img src={retencionsocioslistadoNPS} alt="Listados Llamadas NPS" />
+                      <img src={retencionsocioslistadoNPS} alt="Listados Llamadas NPS" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -420,7 +422,7 @@ function Projects() {
                   {openDetails.synergymProject6 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Diseñé esta hoja para analizar el rendimiento del staff en sus interacciones con los socios. Registré actividades como "HUELLA," "TOURS," y las comparé entre los distintos miembros del equipo, incluidas sus tasas de cumplimiento. También llevé un registro mensual de los resultados del equipo. Esto me permitió evaluar la efectividad de cada miembro y mejorar las operaciones diarias para garantizar un servicio de calidad.</p>
-                      <img src={reporteinteracciones} alt="Interacciones Staff 2023" />
+                      <img src={reporteinteracciones} alt="Interacciones Staff 2023" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -433,7 +435,7 @@ function Projects() {
                   {openDetails.synergymProject7 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Esta herramienta la desarrollé para planificar y hacer seguimiento de los objetivos semanales del personal. Cada hoja semanal registraba las métricas clave, como número de socios, ventas, y diferencias con el presupuesto. También incluí un "FOCUS DE LA SEMANA" para orientar las prioridades del equipo. La hoja me ayudó a ajustar las estrategias según el progreso real, proporcionando un análisis detallado del desempeño semanal.</p>
-                      <img src={pizarraobjetivosStaff} alt="Pizarra Online Objetivos Staff" />
+                      <img src={pizarraobjetivosStaff} alt="Pizarra Online Objetivos Staff" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -446,7 +448,7 @@ function Projects() {
                   {openDetails.synergymProject8 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Creé esta hoja para gestionar las actividades durante los días de prueba, que eran clave para captar nuevos socios. Hice un seguimiento de actividades como "DÍA PRUEBA ATENDIDO" y "CONTACTADO VENDIDO," registrando la participación y éxito de cada miembro del staff. Además, evalué la efectividad de las promociones y campañas de marketing, facilitando la toma de decisiones para mejorar la conversión de los días de prueba en nuevas inscripciones.</p>
-                      <img src={controldiapruebasocio} alt="Listado Día Prueba Sevilla Este 2023" />
+                      <img src={controldiapruebasocio} alt="Listado Día Prueba Sevilla Este 2023" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -459,7 +461,7 @@ function Projects() {
                   {openDetails.synergymProject9 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong>  Diseñé esta hoja como una herramienta de planificación para las aperturas del club. Incluí columnas que especificaban quién abría el club cada día, con un registro de la fecha y hora de apertura. Añadí un campo para observaciones, lo que me permitió mejorar la rutina de apertura al recoger y analizar cualquier incidencia. Esta planificación garantizaba que cada jornada se iniciara de manera ordenada y eficiente.</p>
-                      <img src={checklistaperturaclub} alt="Checklist Apertura 2023" />
+                      <img src={checklistaperturaclub} alt="Checklist Apertura 2023" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -472,7 +474,7 @@ function Projects() {
                   {openDetails.synergymProject10 && (
                     <div className="sub-project-details">
                       <p><strong>Funcionalidad:</strong> Esta hoja la creé para registrar y analizar el desempeño individual de cada miembro del staff en el contexto de un reto mensual dirigido a retener a los socios que deseaban darse de baja. Medí los esfuerzos y resultados de cada persona, como el número de retos asumidos y éxitos logrados. Esta herramienta me permitía evaluar la efectividad del equipo y ajustar las estrategias de retención, identificando cuáles acciones tenían un mayor impacto en la retención de los socios.</p>
-                      <img src={retencionsocioreto21dias} alt="2022 Reto 21 Días - Retención Baja" />
+                      <img src={retencionsocioreto21dias} alt="2022 Reto 21 Días - Retención Baja" loading="lazy" />
                     </div>
                   )}
                 </li>
@@ -497,8 +499,7 @@ function Projects() {
                   </span>
                   {openDetails.vidingProject1 && (
                     <div className="sub-project-details">
-                      <p><strong>Funcionalidad:</strong> Desarrollé un control detallado del presupuesto y los objetivos financieros del servicio de entrenamiento personal en el año 2018. Mi responsabilidad como gestor del departamento incluía monitorear el volumen de ventas de cada entrenador y comparar los resultados con los objetivos establecidos por la compañía.
-                      <li></li>
+                      <p><strong>Funcionalidad:</strong> Desarrollé un control detallado del presupuesto y los objetivos financieros del servicio de entrenamiento personal en el año 2018. Mi responsabilidad como gestor del departamento incluía monitorear el volumen de ventas de cada entrenador y comparar los resultados con los objetivos establecidos por la compañía.</p>
                       <ul>
                                               <li><strong>Planificación y Control de Presupuesto:</strong> La hoja registra el "OBJETIVO (Sin IVA) 2018" para cada mes, proporcionando una guía clara de las metas financieras a alcanzar. Esto me permitía saber de antemano cuánto debía facturar el departamento mes a mes, sirviendo como referencia para evaluar el rendimiento.</li>
                                               <li><strong>Desglose Mensual y Semestral:</strong> En la hoja, se incluyen columnas que detallan la "Cuota EP Partida (REMESA PROVIS)" tanto sin IVA como con IVA, lo cual me ayudaba a mantener una visión clara de las finanzas. También hay un resumen del "OBJETIVO ANUAL" y secciones específicas para el "Obj 1er Semestre" y "Objetivo 2º Semestre," lo que facilitaba el análisis de los resultados a nivel global y semestral.</li>
@@ -506,13 +507,12 @@ function Projects() {
                                               <li><strong>Presentación de Resultados:</strong> La hoja me permitió presentar un análisis de los datos y resultados, mostrando de manera clara si el equipo estaba cumpliendo con las metas financieras tanto a nivel global como individual. Esto resultaba fundamental para la toma de decisiones y para demostrar el impacto del trabajo del equipo en el logro de los objetivos de la compañía.</li>
                                               <li><strong>Conclusión:</strong> Como gestor del departamento de entrenamiento personal, esta hoja fue crucial para llevar un control exhaustivo de las ventas, evaluar el rendimiento de los entrenadores, y mantener el rumbo hacia los objetivos financieros marcados por la compañía. Me proporcionaba una visión completa del presupuesto anual y mensual, facilitando la toma de decisiones y la mejora continua del servicio, logrando alcanzar los objetivos marcados. Nota: los datos mostrados no son reales por cuestión de confidencialidad.</li>
                       </ul>
-                      </p>
 
                       <div className="project-images">
-                        <img src={gestionep1} alt="Gestión EP 1" />
-                        <img src={gestionep2} alt="Gestión EP 2" />
-                        <img src={gestionep3} alt="Gestión EP 3" />
-                        <img src={gestionep5} alt="Gestión EP 4" />
+                        <img src={gestionep1} alt="Gestión EP 1" loading="lazy" />
+                        <img src={gestionep2} alt="Gestión EP 2" loading="lazy" />
+                        <img src={gestionep3} alt="Gestión EP 3" loading="lazy" />
+                        <img src={gestionep5} alt="Gestión EP 4" loading="lazy" />
                       </div>
                     </div>
                   )}
@@ -526,7 +526,7 @@ function Projects() {
                   {openDetails.vidingProject2 && (
                     <div className="sub-project-details">
                       <p><strong>Resumen:</strong> Fui fundador del club de triatlón Viding, motivando a los usuarios interesados en participar y creando una comunidad centrada en un reto motivante y saludable. Guié los entrenamientos y proporcioné asesoramiento personalizado, planificando rutas, inscripciones y un objetivo claro: culminar el Triatlón modalidad Súper Sprint. La creación de este club contribuyó al desarrollo de una nueva comunidad dentro de Viding, en línea con los objetivos y presupuestos de la compañía.</p>
-                      <img src={fototriatlon} alt="Club Triatlón 2015" />
+                      <img src={fototriatlon} alt="Club Triatlón 2015" loading="lazy" />
                     </div>
                   )}
                 </li>

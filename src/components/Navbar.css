@@ -174,6 +174,11 @@
     display: block;
   }
 
+  /* Ocultar la imagen del logo en móvil, solo mostrar el botón hamburguesa */
+  .navbar-logo-left img {
+    display: none;
+  }
+
   .menu-list-mobile {
     top: 120px;
     width: 100%; /* Ocupa todo el ancho de la pantalla */
@@ -195,6 +200,28 @@
 @media (max-width: 768px) {
   .menu-list-mobile {
     width: 100%; /* El menú ocupa el 50% del ancho en móviles */
+  }
+}
+
+.hamburger-btn {
+  display: block;
+  background: none;
+  border: 2px solid #61dafb;
+  border-radius: 6px;
+  color: #61dafb;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-top: 6px;
+}
+
+.hamburger-btn:hover {
+  background-color: rgba(97, 218, 251, 0.15);
+}
+
+@media (min-width: 1025px) {
+  .hamburger-btn {
+    display: none;
   }
 }
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub } from 'react-icons/fa'; // Añadimos FaDownload
-import logoLeft from '../assets/logomenu.png'; // Logo izquierdo (menú)
-import logoRight from '../assets/CARETO2.png'; // Foto personal
-import { FaDumbbell } from 'react-icons/fa';
+import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate, FaTools, FaProjectDiagram, FaEnvelope, FaGithub, FaDumbbell, FaBars, FaTimes } from 'react-icons/fa';
+import logoLeft from '../assets/logomenu.png';
+import logoRight from '../assets/CARETO2.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +65,11 @@ function Navbar() {
       <nav className="navbar-section2">
         <div className="navbar-logo-left">
           <img src={logoLeft} alt="Logo Izquierdo" onClick={handleLogoClick} />
+          {isMobile && (
+            <button className="hamburger-btn" onClick={toggleMenu} aria-label="Abrir menú">
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          )}
         </div>
 
         <div className="navbar-text">
@@ -93,7 +97,7 @@ function Navbar() {
             </li>
             <li>
               <FaCertificate className="menu-icon" />
-              <a href="#courses" onClick={() => handleMenuClick('courses')}>certificados_it</a>
+              <a href="#courses" onClick={() => handleMenuClick('courses')}>Certificados IT</a>
             </li>
             <li>
               <FaDumbbell className="menu-icon" />
