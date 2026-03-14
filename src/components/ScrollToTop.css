@@ -37,3 +37,10 @@
     display: none;
   }
 }
+
+/* Encima del footer fijo en móvil */
+@media (max-width: 1024px) {
+  .scroll-to-top {
+    bottom: 100px;
+  }
+}

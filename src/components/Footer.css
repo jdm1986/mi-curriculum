@@ -51,10 +51,28 @@
 /* Ajustes responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer {
-    padding: 10px; /* Reducir padding en pantallas pequeñas */
+    padding: 6px 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 36px;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
   }
 
   .privacy-link {
-    font-size: 0.8rem; /* Reducir aún más el tamaño del texto en móviles */
+    font-size: 0.75rem;
+    margin-top: 0;
   }
 }
