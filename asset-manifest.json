@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.df90507d.css",
-    "main.js": "/static/js/main.3a67bd63.js",
+    "main.js": "/static/js/main.86e26250.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -10,6 +10,7 @@
     "static/media/ESP32_1.JPG": "/static/media/ESP32_1.91d1355033e9b952f6b9.JPG",
     "static/media/ESP32_5.JPG": "/static/media/ESP32_5.83cd4d0a9808c0d02777.JPG",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
+    "static/media/IaIniciacion.png": "/static/media/IaIniciacion.49d4ce9bbca599b6fc49.png",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
     "static/media/CARETO2.png": "/static/media/CARETO2.429100397104a3071149.png",
@@ -65,11 +66,11 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "index.html": "/index.html",
     "main.df90507d.css.map": "/static/css/main.df90507d.css.map",
-    "main.3a67bd63.js.map": "/static/js/main.3a67bd63.js.map",
+    "main.86e26250.js.map": "/static/js/main.86e26250.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df90507d.css",
-    "static/js/main.3a67bd63.js"
+    "static/js/main.86e26250.js"
   ]
 }
