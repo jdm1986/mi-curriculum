@@ -18,6 +18,7 @@ import udemysql from '../assets/certificados_it/UdemiSQL.png';
 import python from '../assets/certificados_it/Python.png';
 import marketing from '../assets/certificados_it/MARKETING.png';
 import certificadomarketing from '../assets/certificados_it/CERTIFICADOMARKETING.png';
+import iaIniciacion from '../assets/certificados_it/IaIniciacion.png';
 
 
 // Definimos el componente Courses
@@ -33,7 +34,20 @@ function Courses() {
     <section className="courses">
       <h2><FaCertificate className="section-icon" /> Certificaciones IT</h2>
       <ul>
-              {/* Curso más reciente: SQL */}
+              {/* Curso más reciente: Desarrollo con IA */}
+              <li>
+                <strong>Desarrollo con IA: de 0 a Producción</strong>
+                <p><em>BIG school</em> (Mar 2026) - (6 horas)</p>
+                <span onClick={() => toggleImage('iaIniciacion')} className="caret-icon">
+                  {activeImage === 'iaIniciacion' ? <FaCaretUp /> : <FaCaretDown />}
+                </span>
+                {activeImage === 'iaIniciacion' && (
+                  <div className="certificate-image">
+                    <img src={iaIniciacion} alt="Certificado Iniciación al Desarrollo con IA" />
+                  </div>
+                )}
+              </li>
+
               <li>
                 <strong>SQL - Curso de SQL IBM SKILLSBUILD - DATAHACK</strong>
                 <p><em>DataHack - En colaboración con IBM - SkillsBuild</em> (Dic 2024) - (40 horas + 16 Udemy)</p>

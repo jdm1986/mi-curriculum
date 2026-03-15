@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Projects.css';
-import { FaProjectDiagram, FaCaretDown, FaCaretUp } from 'react-icons/fa';
+import { FaProjectDiagram, FaCaretDown, FaCaretUp, FaGithub, FaYoutube } from 'react-icons/fa';
 import Lightbox from './Lightbox';
 
 // Importar las imágenes de la carpeta src/assets/powerbi
@@ -213,9 +213,12 @@ function Projects() {
 
                   {openDetails.gestionatuscv && (
                     <div className="project-details">
-                      <div className="visit-link">
-                        <a href="https://gestionatuscvs-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
-                          || www.gestionatuscv.es ||
+                      <div className="visit-link" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <a href="https://github.com/jdm1986/gestionatuscvs" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                          <FaGithub /> Código fuente
+                        </a>
+                        <a href="https://youtu.be/EvbYr_IeJYw" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#ff4e4e' }}>
+                          <FaYoutube /> Ver demo en YouTube
                         </a>
                       </div>
                       <p><strong>Reto principal:</strong> Desarrollar una aplicación web completa de gestión de currículums
