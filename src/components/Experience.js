@@ -6,9 +6,12 @@ import { FaBriefcase, FaProjectDiagram } from 'react-icons/fa'; // Importamos el
 
 // Definimos el componente Experience
 function Experience() {
-  // Función para navegar a la sección de proyectos
-  const handleNavigateToProjects = () => {
+  // Función para navegar a la sección de proyectos abriendo un subapartado concreto
+  const handleNavigateToProjects = (section) => {
     window.location.href = '#projects';
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('openProjectSection', { detail: section }));
+    }, 50);
   };
 
   return (
@@ -19,14 +22,17 @@ function Experience() {
             <strong>Club Manager</strong>
             <p><em>Fitness Park España - Jts Seville </em> (Dic 2024 - Actualidad)</p>
             <li>Gestión de la precomercialización, funcionamiento íntegro del club y soporte al district manager. Selección, coordinación y formación de equipos, análisis de resultados y gestión de objetivos.</li>
-
+            {/* Enlace a los proyectos Fitness Park */}
+            <p className="project-link" onClick={() => handleNavigateToProjects('fitnesspark')}>
+              <FaProjectDiagram /> Proyectos Fitness Park
+            </p>
             </li>
         <li>
           <strong>Club Manager</strong>
           <p><em>Synergym Sevilla</em> (Dic 2021 - Mar 2023)</p>
           <li>Gestión íntegra del club y soporte al área manager. Coordinación y formación de equipos y nuevos club manager, apertura de clubs, análisis de resultados y gestión de objetivos.</li>
           {/* Enlace a los proyectos Synergym */}
-          <p className="project-link" onClick={handleNavigateToProjects}>
+          <p className="project-link" onClick={() => handleNavigateToProjects('synergym')}>
             <FaProjectDiagram /> Proyectos Synergym
           </p>
         </li>
@@ -35,7 +41,7 @@ function Experience() {
           <p><em>Viding Concesion Sevilla S.L.</em> (Ago 2013 - Dic 2021)</p>
           <li>Gestión del área fitness, venta y fidelización de clientes de EP, coordinación de actividades y técnico multidisciplinar con soporte musical.</li>
           {/* Enlace a los proyectos Viding */}
-          <p className="project-link" onClick={handleNavigateToProjects}>
+          <p className="project-link" onClick={() => handleNavigateToProjects('viding')}>
             <FaProjectDiagram /> Proyectos Viding
           </p>
         </li>

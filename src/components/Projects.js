@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import { FaProjectDiagram, FaCaretDown, FaCaretUp, FaGithub, FaYoutube } from 'react-icons/fa';
 import Lightbox from './Lightbox';
@@ -76,6 +76,15 @@ function Projects() {
 
   // Estado para el lightbox
   const [lightboxSrc, setLightboxSrc] = useState(null);
+
+  // Escucha el evento de Experience para abrir un subapartado concreto
+  useEffect(() => {
+    const handleOpenSection = (e) => {
+      setOpenDetails((prev) => ({ ...prev, [e.detail]: true }));
+    };
+    window.addEventListener('openProjectSection', handleOpenSection);
+    return () => window.removeEventListener('openProjectSection', handleOpenSection);
+  }, []);
 
   // Función para alternar el estado del proyecto específico
   const toggleDetails = (project) => {
