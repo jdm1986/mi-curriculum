@@ -4,7 +4,11 @@
       "Bash(npm start:*)",
       "Bash(npm run:*)",
       "PowerShell(npm run build)",
-      "PowerShell(git add -A)"
+      "PowerShell(git add -A)",
+      "PowerShell(git push origin master)",
+      "PowerShell(npm run deploy)",
+      "Read(//c/Users/JESUS/**)",
+      "Read(//c/Users/JESUS/Downloads/**)"
     ]
   }
 }

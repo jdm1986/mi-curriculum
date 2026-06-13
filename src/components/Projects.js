@@ -41,7 +41,7 @@ import esp32_6 from '../assets/certificados_it/ESP32_6.JPG';
 
 // Importar la imagen del proyecto FitnessPark
 import proyectometricacomercial from '../assets/certificados_it/PROYECTOMETRICACOMERCIALVIILLALOBOS.png';
-import automatismosResamania from '../assets/certificados_it/AUTOMATISMOSRESAMANIA.png';
+import automatismosResamania from '../assets/certificados_it/AUTOMATISMOS RESAMANIA ACTUALIZADA.png';
 
 
 
