@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.306ec624.css",
-    "main.js": "/static/js/main.9fe9cc9e.js",
+    "main.js": "/static/js/main.1ac691b7.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
     "static/media/ESP32_6.JPG": "/static/media/ESP32_6.6a58a8c62cdadfc6df04.JPG",
@@ -10,6 +10,7 @@
     "static/media/ESP32_1.JPG": "/static/media/ESP32_1.91d1355033e9b952f6b9.JPG",
     "static/media/ESP32_5.JPG": "/static/media/ESP32_5.83cd4d0a9808c0d02777.JPG",
     "static/media/fototriatlon.JPG": "/static/media/fototriatlon.9a603f8fc24d04cd72e1.JPG",
+    "static/media/AUTOMATISMOS RESAMANIA ACTUALIZADA.png": "/static/media/AUTOMATISMOS RESAMANIA ACTUALIZADA.1a088f557e279cb86835.png",
     "static/media/IaIniciacion.png": "/static/media/IaIniciacion.49d4ce9bbca599b6fc49.png",
     "static/media/tsaf.png": "/static/media/tsaf.c2926a5490adab202426.png",
     "static/media/bachiller.png": "/static/media/bachiller.e57a6ef92ee579b69b57.png",
@@ -26,7 +27,6 @@
     "static/media/datascience.png": "/static/media/datascience.44286f89798ac6da7555.png",
     "static/media/EPersonal.png": "/static/media/EPersonal.75b1a6d09db7c1d18036.png",
     "static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.png": "/static/media/PROYECTOMETRICACOMERCIALVIILLALOBOS.34a6dfbe1f5e5b1d3622.png",
-    "static/media/AUTOMATISMOSRESAMANIA.png": "/static/media/AUTOMATISMOSRESAMANIA.97ed936049d75a44517a.png",
     "static/media/cpd.png": "/static/media/cpd.83647f7fd252512d7f6b.png",
     "static/media/hosteleria.png": "/static/media/hosteleria.66eb58920da96b24877f.png",
     "static/media/svbYdesa.png": "/static/media/svbYdesa.70eb76e9b365bcf95357.png",
@@ -66,11 +66,11 @@
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "index.html": "/index.html",
     "main.306ec624.css.map": "/static/css/main.306ec624.css.map",
-    "main.9fe9cc9e.js.map": "/static/js/main.9fe9cc9e.js.map",
+    "main.1ac691b7.js.map": "/static/js/main.1ac691b7.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.306ec624.css",
-    "static/js/main.9fe9cc9e.js"
+    "static/js/main.1ac691b7.js"
   ]
 }
