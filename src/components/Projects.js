@@ -172,8 +172,28 @@ function Projects() {
                           {openDetails.fitnessparkProject2 && (
                             <div className="sub-project-details">
                               <p>
-                                Desarrollé un software interno de gestión para Fitness Park en Python (GUI con Tkinter), con módulos de incidencias, mapas, préstamos y clientes. Migré la persistencia a PostgreSQL para trabajo multi‑equipo en LAN, usando almacenamiento de recursos en BLOBs y control de accesos por PIN/roles. Centralicé la ingesta de CSV diarios en la base de datos para eliminar dependencias locales. Implementé backups automáticos con pg_dump/pg_restore, histórico y copia a OneDrive, garantizando continuidad operativa.
+                                Diseñé y desarrollé desde cero un sistema integral de gestión interno para Fitness Park (Python + Tkinter) que centraliza toda la operativa diaria del club: revisión de altas, gestión de bajas con flujo de retención, suspensiones, potenciales, llamadas comerciales, ventas de productos, préstamos, taquillas, incidencias, mapas interactivos y agenda staff. Más de 30 módulos interconectados que sustituyen Excel y procesos manuales.
                               </p>
+                              <p>
+                                Implementé una arquitectura cliente-servidor multi-PC sobre PostgreSQL con sincronización bidireccional en tiempo real (live polling cada 5 segundos), de forma que el equipo manager y la recepción del club trabajan sobre el mismo estado compartido sin colisiones. Todos los recursos (fotos, reportes, BLOBs) viven en la base de datos eliminando dependencias de carpetas locales, y los backups automáticos con pg_dump + copia incremental a OneDrive garantizan continuidad operativa.
+                              </p>
+                              <p>
+                                Desarrollé algoritmos propios de cálculo dinámico de objetivos: reparto adaptativo de llamadas entre comerciales proporcional a sus horas de contrato, con ponderación por día de la semana (jornada completa, media jornada sabatina, descanso) y recálculo automático según el pendiente del mes. El sistema de comisiones por tipo de retención y los rankings de oro/plata/bronce funcionan como motor de motivación del equipo, visibles en el dashboard de cabecera del menú principal.
+                              </p>
+                              <p>
+                                Construí un panel de KPIs en tiempo real con métricas avanzadas (embudo operativo, cohortes mensuales, análisis de retención por censura por la derecha, tasa de conversión, % derivación a recobro), integraciones nativas con Outlook (HTML + inline), WhatsApp y Excel, y un sistema de control de accesos por PIN para acciones sensibles. UX cuidada con modo oscuro, modales custom, tooltips contextuales y feedback inmediato.
+                              </p>
+                              <p>
+                                <strong>Stack técnico:</strong> Python 3, Tkinter, PostgreSQL, pandas, PIL/Pillow para visualizaciones, win32com para integración Outlook, pg_dump para backups, threading para tareas en background. Empaquetado con PyInstaller para distribución como ejecutable Windows nativo.
+                              </p>
+
+                              <ul className="project-highlights">
+                                <li>✓ 30+ módulos funcionales en producción</li>
+                                <li>✓ 2 PCs sincronizados en tiempo real (&lt;5 s de latencia)</li>
+                                <li>✓ 100 % de la operativa diaria del club centralizada</li>
+                                <li>✓ 0 dependencias de archivos locales — todo persistido en PostgreSQL</li>
+                                <li>✓ Backups automáticos + redundancia en OneDrive</li>
+                              </ul>
 
                               <div className="project-images">
                                 <img src={automatismosResamania} alt="Software de Gestión Propio Fitness Park" loading="lazy" />

@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm start:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "PowerShell(npm run build)",
+      "PowerShell(git add -A)"
     ]
   }
 }

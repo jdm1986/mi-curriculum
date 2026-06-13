@@ -64,6 +64,24 @@
   transform-origin: top;
 }
 
+/* Lista de logros / métricas destacadas */
+.project-highlights {
+  list-style: none;
+  margin: 18px 0 4px;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid #4caf50;
+  border-radius: 6px;
+}
+
+.project-highlights li {
+  margin: 6px 0;
+  padding-left: 4px;
+  line-height: 1.5;
+  color: #f0f0f0;
+  text-align: left;
+}
+
 @keyframes expandIn {
   from {
     opacity: 0;
