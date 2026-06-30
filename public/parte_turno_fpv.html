@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Parte de Turno · FP Villalobos</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0d0d0d; --black2:#161616; --black3:#1f1f1f;
+  --gold:#f0c040; --gold-dim:#a08030;
+  --grey:#9b9b9b; --line:#2a2a2a;
+  --green:#3ddc84; --green-dim:rgba(61,220,132,.12);
+  --red:#e3342f; --r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;overscroll-behavior:none;}
+
+/* ── HEADER ── */
+.app-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(13,13,13,.96);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:12px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.app-title{font-family:'Barlow Condensed';font-size:19px;font-weight:800;color:var(--gold);letter-spacing:.04em;text-transform:uppercase;line-height:1;}
+.header-date{font-size:12.5px;color:var(--grey);margin-top:2px;}
+.turno-pills{display:flex;gap:8px;}
+.pill{
+  padding:9px 20px;border-radius:7px;
+  font-family:'Barlow Condensed';font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  border:1.5px solid var(--line);background:transparent;color:var(--grey);
+  cursor:pointer;transition:all .15s;
+}
+.pill.active{background:var(--gold);color:var(--black);border-color:var(--gold);}
+
+/* ── STICKY SUBHEADER ── */
+.sticky-sub{
+  position:sticky;top:57px;z-index:90;
+  background:rgba(13,13,13,.97);backdrop-filter:blur(12px);
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+
+/* ── ZONE BANNER ── */
+.zone-banner{
+  margin:10px 14px 0;
+  border-radius:var(--r);padding:11px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border:1.5px solid;flex-wrap:wrap;
+}
+.zb-left{display:flex;align-items:center;gap:12px;}
+.zb-badge{
+  font-family:'Barlow Condensed';font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:4px 10px;border-radius:4px;white-space:nowrap;
+}
+.zb-name{font-family:'Barlow Condensed';font-size:17px;font-weight:700;line-height:1.2;}
+.zb-sub{font-size:12px;color:var(--grey);margin-top:2px;}
+.zb-ctrl{display:flex;gap:6px;align-items:center;}
+.ctrl-btn{
+  width:34px;height:34px;border-radius:50%;
+  border:1.5px solid var(--line);background:var(--black3);
+  color:var(--grey);font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .15s;
+}
+.zb-reset{
+  font-size:11px;color:var(--grey);background:none;border:none;
+  cursor:pointer;text-decoration:underline;padding:4px;margin-left:2px;
+}
+.zb-reset:hover{color:var(--gold);}
+
+/* ── ALERT NOTE ── */
+.alert-note{
+  margin:8px 14px 0;
+  padding:9px 13px;border-radius:8px;
+  background:rgba(240,192,64,.07);border:1px solid rgba(240,192,64,.28);
+  font-size:13px;color:var(--gold);line-height:1.4;
+}
+
+/* ── PROGRESS ── */
+.prog-wrap{
+  margin:9px 14px 0;
+  background:var(--black3);border-radius:4px;height:5px;overflow:hidden;
+}
+.prog-bar{height:100%;background:var(--gold);border-radius:4px;transition:width .35s ease;}
+.prog-label{
+  margin:5px 14px 0;font-size:12px;color:var(--grey);
+  display:flex;justify-content:space-between;
+}
+
+/* ── CHECKLIST ── */
+.cl-wrap{padding:12px 14px;display:flex;flex-direction:column;gap:9px;}
+
+.task-group{background:var(--black2);border-radius:var(--r);border:1px solid var(--line);overflow:hidden;transition:border-color .2s;}
+.task-group.grp-done{border-color:rgba(61,220,132,.45);}
+
+.grp-header{
+  display:flex;align-items:center;gap:11px;
+  padding:14px 15px;cursor:pointer;user-select:none;-webkit-user-select:none;
+}
+.grp-icon{font-size:19px;flex-shrink:0;}
+.grp-titlewrap{flex:1;min-width:0;}
+.grp-title{font-family:'Barlow Condensed';font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.15;}
+.grp-sub{font-size:11.5px;color:var(--grey);margin-top:2px;}
+.grp-badge{
+  font-size:11.5px;padding:3px 9px;border-radius:10px;
+  background:var(--black3);color:var(--grey);font-weight:600;white-space:nowrap;flex-shrink:0;
+}
+.grp-badge.done{background:var(--green-dim);color:var(--green);}
+.grp-chevron{color:var(--grey);font-size:12px;flex-shrink:0;transition:transform .2s;}
+.grp-chevron.open{transform:rotate(180deg);}
+
+.grp-body{display:none;border-top:1px solid var(--line);}
+.grp-body.open{display:block;}
+
+.task-item{
+  display:flex;align-items:flex-start;gap:13px;
+  padding:12px 15px;border-bottom:1px solid var(--line);
+  cursor:pointer;transition:background .12s;
+  -webkit-user-select:none;user-select:none;
+}
+.task-item:last-child{border-bottom:none;}
+.task-item:active{background:rgba(255,255,255,.03);}
+.task-item.checked{background:rgba(61,220,132,.03);}
+
+.task-chk{
+  width:26px;height:26px;border-radius:7px;
+  border:2px solid #3a3a3a;background:transparent;flex-shrink:0;margin-top:1px;
+  transition:all .15s;display:flex;align-items:center;justify-content:center;
+}
+.task-item.checked .task-chk{background:var(--green);border-color:var(--green);}
+.chk-icon{display:none;color:var(--black);font-weight:900;font-size:14px;}
+.task-item.checked .chk-icon{display:block;}
+
+.task-text{flex:1;font-size:14.5px;line-height:1.4;color:#d0d0d0;}
+.task-item.checked .task-text{color:#5a5a5a;text-decoration:line-through;}
+.task-hint{font-size:12px;color:var(--gold);font-weight:600;margin-top:3px;display:block;}
+
+/* ── BOTTOM SEND ── */
+.send-wrap{
+  padding:14px;display:flex;gap:9px;flex-wrap:wrap;
+  position:sticky;bottom:0;
+  background:linear-gradient(to top,var(--black) 65%,transparent);
+  padding-top:28px;
+}
+.btn-wa{
+  flex:1;min-width:180px;
+  padding:16px 18px;border-radius:10px;border:none;
+  background:#25D366;color:#fff;
+  font-family:'Barlow Condensed';font-size:18px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:opacity .15s;
+}
+.btn-wa:active{opacity:.85;}
+.btn-copy{
+  padding:16px 18px;border-radius:10px;
+  border:1.5px solid var(--line);background:var(--black3);
+  color:var(--grey);font-family:'Barlow Condensed';
+  font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  cursor:pointer;transition:all .15s;
+}
+.btn-copy:active{border-color:var(--gold);color:var(--gold);}
+.btn-reset{
+  width:100%;margin-top:0;
+  padding:11px;border-radius:8px;
+  border:1px solid var(--line);background:transparent;
+  color:#5a5a5a;font-size:12.5px;cursor:pointer;transition:all .15s;
+}
+.btn-reset:active{color:var(--red);border-color:var(--red);}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:110px;left:50%;
+  transform:translateX(-50%) translateY(14px);
+  background:var(--black3);border:1px solid var(--green);
+  color:var(--green);padding:10px 20px;border-radius:8px;
+  font-size:13.5px;font-weight:600;opacity:0;
+  transition:all .22s;pointer-events:none;white-space:nowrap;z-index:200;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+@media(max-width:460px){
+  .app-title{font-size:16px;}
+  .pill{padding:8px 13px;font-size:13px;}
+  .grp-title{font-size:14px;}
+  .task-text{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div>
+    <div class="app-title">FP Villalobos · Parte de Turno</div>
+    <div class="header-date" id="hdr-date"></div>
+  </div>
+  <div class="turno-pills">
+    <button class="pill" id="pill-m" onclick="setTurno('M')">☀️ Mañana</button>
+    <button class="pill" id="pill-t" onclick="setTurno('T')">🌙 Tarde</button>
+  </div>
+</header>
+
+<div class="sticky-sub">
+  <div id="zone-banner" class="zone-banner"></div>
+  <div id="alert-note" class="alert-note"></div>
+  <div class="prog-wrap"><div class="prog-bar" id="prog-bar" style="width:0%"></div></div>
+  <div class="prog-label"><span id="prog-txt">0 de 0 tareas</span><span id="prog-pct">0%</span></div>
+</div>
+
+<div class="cl-wrap" id="checklist"></div>
+
+<div class="send-wrap">
+  <button class="btn-wa" onclick="sendWA()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Enviar al grupo
+  </button>
+  <button class="btn-copy" onclick="copyMsg()">📋 Copiar</button>
+  <button class="btn-reset" onclick="confirmReset()">🔄 Resetear turno actual</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════
+// DATOS
+// ════════════════════════════════
+const ZONES = [
+  {day:1,label:"ZONA 1",name:"Musculación Libre",color:"#e3342f",espejos:true},
+  {day:2,label:"ZONA 2",name:"Zona Media de Máquinas",color:"#3ddc84",espejos:false},
+  {day:3,label:"ZONA 3",name:"Hammer",color:"#2f8fe3",espejos:false},
+  {day:4,label:"ZONA 4",name:"Cross + Skill / Eleiko",color:"#ec3fb1",espejos:true},
+  {day:5,label:"ZONAS 5+6",name:"Musculación Guiada + Cardio",color:"#2e8b8b",espejos:false},
+  {day:6,label:"ZONAS 5+6",name:"Musculación Guiada + Cardio (cont.)",color:"#2e8b8b",espejos:false},
+  {day:7,label:"ÁREAS INTERNAS",name:"Staff · Dirección · Pasillo Emergencia",color:"#9b9b9b",espejos:false},
+];
+
+const TASKS_M = [
+  {id:"gM1",icon:"🔍",title:"Tour inicial de inspección",sub:"Primera tarea al entrar — recorre TODO el club",tasks:[
+    {id:"M1a",txt:"Detectar incidencias: líquidos derramados, papeles, botellas vacías"},
+    {id:"M1b",txt:"Revisar todos los dispensadores y reponer papel / líquido donde falte"},
+    {id:"M1c",txt:"Vestuarios: cerrar taquillas abiertas y retirar objetos abandonados"},
+    {id:"M1d",txt:"Taquilla con candado (incl. we-lock amarillas) → FOTO + WhatsApp al club",hint:"⚠️ +34 681 872 664 — el staff lo gestiona al entrar a las 09:00"},
+  ]},
+  {id:"gM2",icon:"🛎",title:"Recepción",tasks:[
+    {id:"M2a",txt:"Mesa y encimera"},
+    {id:"M2b",txt:"Cristalería (vitrinas, mostrador)"},
+    {id:"M2c",txt:"Eliminar polvo y huellas en superficies visibles"},
+  ]},
+  {id:"gM3",icon:"🥤",title:"Zona Vending",tasks:[
+    {id:"M3a",txt:"Rejilla de la máquina water station"},
+    {id:"M3b",txt:"Cristalería de la tienda"},
+    {id:"M3c",txt:"Polvo en altos de las máquinas"},
+  ]},
+  {id:"gM4",icon:"🚶",title:"Pasillo principal + Cardio",tasks:[
+    {id:"M4a",txt:"Mopa + fregado completo del pasillo"},
+    {id:"M4b",txt:"Máquinas de cardio: limpiar las afectadas por sudor / churretes"},
+  ]},
+  {id:"gM5",icon:"🤸",title:"Abdominales y estiramientos",tasks:[
+    {id:"M5a",txt:"Eliminación de pelusas"},
+    {id:"M5b",txt:"Fregado rápido del suelo"},
+  ]},
+  {id:"gM6",icon:"⚖️",title:"Báscula · Hidromasaje · Studio Bike · Posing",tasks:[
+    {id:"M6a",txt:"Fregado del suelo (misma pasada que el pasillo central)"},
+    {id:"M6b",txt:"Sala hidromasaje: repasar cristales si hay churretes"},
+    {id:"M6c",txt:"Studio Bike: eliminar sudores de bicicletas con paño desinfectante"},
+  ]},
+  {id:"gM7",icon:"🚹",title:"Vestuario Masculino",sub:"⏱ Empezar ANTES de las 06:10",tasks:[
+    {id:"M7a",txt:"Duchas: producto FRESC + bote dosificador + manguera azul",hint:"Rociar habitáculo → dejar actuar 10-15 min → aclarar evitando cercos"},
+    {id:"M7b",txt:"Lavabos y espejos"},
+    {id:"M7c",txt:"Inodoros / urinarios"},
+    {id:"M7d",txt:"Altos de taquillas (polvo)"},
+    {id:"M7e",txt:"Suelo (usar máquina si hay suciedad incrustada)"},
+  ]},
+  {id:"gM8",icon:"🚺",title:"Vestuario Femenino",sub:"Mismo protocolo que el masculino",tasks:[
+    {id:"M8a",txt:"Duchas: producto FRESC + bote dosificador + manguera azul",hint:"Rociar habitáculo → dejar actuar 10-15 min → aclarar evitando cercos"},
+    {id:"M8b",txt:"Lavabos y espejos"},
+    {id:"M8c",txt:"Inodoros"},
+    {id:"M8d",txt:"Altos de taquillas (polvo)"},
+    {id:"M8e",txt:"Suelo (usar máquina si hay suciedad incrustada)"},
+  ]},
+  {id:"gM9",icon:"🧘",title:"Sala Pilates (Actividades Dirigidas)",tasks:[
+    {id:"M9a",txt:"Mopa + fregado del suelo"},
+    {id:"M9b",txt:"Dejar lista antes de la primera clase colectiva"},
+  ]},
+];
+
+const TASKS_T = [
+  {id:"gT1",icon:"🔍",title:"Tour inicial de inspección",sub:"Primera tarea al entrar",tasks:[
+    {id:"T1a",txt:"Detectar incidencias: líquidos, papeles, botellas vacías"},
+    {id:"T1b",txt:"Revisar dispensadores y reponer donde falte"},
+    {id:"T1c",txt:"Vestuarios: cerrar taquillas abiertas y retirar objetos"},
+  ]},
+  {id:"gT2",icon:"🛎",title:"Recepción",tasks:[
+    {id:"T2a",txt:"Mesa, encimera y cristalería (repaso rápido)"},
+  ]},
+  {id:"gT3",icon:"🥤",title:"Zona Vending",sub:"Versión reducida — repaso general",tasks:[
+    {id:"T3a",txt:"Repaso rápido (sin pararse en rejilla ni cristalería)"},
+  ]},
+  {id:"gT4",icon:"🚶",title:"Pasillo principal",sub:"Solo mopa — NO fregar (riesgo con socios a pie de calle)",tasks:[
+    {id:"T4a",txt:"Mopa del pasillo completo (NO fregar)"},
+  ]},
+  {id:"gT5",icon:"🤸",title:"Abdominales y estiramientos",tasks:[
+    {id:"T5a",txt:"Eliminación de pelusas"},
+    {id:"T5b",txt:"Fregado rápido del suelo"},
+  ]},
+  {id:"gT6",icon:"⚖️",title:"Báscula · Hidromasaje · Studio Bike",tasks:[
+    {id:"T6a",txt:"Fregado del suelo"},
+    {id:"T6b",txt:"Studio Bike: repasar bicicletas con paño"},
+  ]},
+  {id:"gT7",icon:"🚹",title:"Vestuario Masculino",sub:"Versión reducida — sin manguera azul",tasks:[
+    {id:"T7a",txt:"Urinarios y WC fregados"},
+    {id:"T7b",txt:"Lavabos y espejos repasados"},
+  ]},
+  {id:"gT8",icon:"🚺",title:"Vestuario Femenino",sub:"Versión reducida — sin manguera azul",tasks:[
+    {id:"T8a",txt:"Inodoros fregados"},
+    {id:"T8b",txt:"Lavabos y espejos repasados"},
+  ]},
+];
+
+// ════════════════════════════════
+// ESTADO
+// ════════════════════════════════
+let turno = 'M';
+let checks = {};
+let openGroups = {};
+
+function todayStr(){return new Date().toISOString().slice(0,10);}
+function stateKey(){return `fpv_${todayStr()}_${turno}`;}
+
+function loadChecks(){
+  try{checks=JSON.parse(localStorage.getItem(stateKey())||'{}');}
+  catch(e){checks={};}
+}
+function saveChecks(){
+  try{localStorage.setItem(stateKey(),JSON.stringify(checks));}catch(e){}
+}
+
+// Zoning day: basado en fecha de inicio
+function getZoningDay(){
+  try{
+    let s=localStorage.getItem('fpv_zstart');
+    if(!s){localStorage.setItem('fpv_zstart',todayStr());return 1;}
+    const diff=Math.floor((new Date(todayStr())-new Date(s))/(864e5));
+    return (((diff%7)+7)%7)+1; // siempre positivo, 1-7
+  }catch(e){return 1;}
+}
+function shiftZoning(direction){
+  // direction = +1 → avanzar un día de zoning · direction = -1 → retroceder un día
+  try{
+    let s=localStorage.getItem('fpv_zstart')||todayStr();
+    let dt=new Date(s);dt.setDate(dt.getDate()-direction);
+    localStorage.setItem('fpv_zstart',dt.toISOString().slice(0,10));
+    renderBanner();renderChecklist();
+  }catch(e){}
+}
+function resetZoningToDay1(){
+  try{
+    localStorage.setItem('fpv_zstart',todayStr());
+    renderBanner();renderChecklist();
+    showToast('Zoning reiniciado en Día 1');
+  }catch(e){}
+}
+
+function buildZoningGroup(){
+  const day=getZoningDay();
+  const z=ZONES.find(x=>x.day===day)||ZONES[0];
+  let tasks=[];
+  if(day===7){
+    tasks=[
+      {id:"Zz1",txt:"Limpieza completa del cuarto staff"},
+      {id:"Zz2",txt:"Limpieza de oficina de dirección"},
+      {id:"Zz3",txt:"Limpieza de pasillo de emergencia"},
+    ];
+  }else{
+    tasks=[
+      {id:"Za1",txt:"Aspirar huecos y bajos de máquinas (usar palo extensible para recovecos)"},
+      {id:"Za2",txt:"Desinfectar respaldares y asientos con producto apropiado"},
+      {id:"Za3",txt:"Eliminar polvo en altos de máquinas"},
+    ];
+    if(z.espejos) tasks.push({id:"Za4",txt:"Limpiar cristales y espejos en profundidad"});
+    tasks.push({id:"Za5",txt:"Fregado de suelo de caucho con máquina y producto adecuado"});
+  }
+  return {id:"gZ",icon:"🔄",title:`Zoning — ${z.label}`,sub:`${z.name} · tiempo restante del turno`,zcolor:z.color,tasks};
+}
+
+function allGroups(){
+  return [...(turno==='M'?TASKS_M:TASKS_T), buildZoningGroup()];
+}
+
+// ════════════════════════════════
+// RENDER
+// ════════════════════════════════
+function renderDate(){
+  const d=new Date();
+  const s=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+  document.getElementById('hdr-date').textContent=s.charAt(0).toUpperCase()+s.slice(1);
+}
+
+function renderBanner(){
+  const day=getZoningDay();
+  const z=ZONES.find(x=>x.day===day)||ZONES[0];
+  const el=document.getElementById('zone-banner');
+  el.style.borderColor=z.color+'55';
+  el.style.background=z.color+'10';
+  el.innerHTML=`
+    <div class="zb-left">
+      <div class="zb-badge" style="background:${z.color}22;color:${z.color}">DÍA ${day}/7</div>
+      <div>
+        <div class="zb-name" style="color:${z.color}">${z.label} — ${z.name}</div>
+        <div class="zb-sub">Zoning de hoy · tiempo restante tras mínimos</div>
+      </div>
+    </div>
+    <div class="zb-ctrl">
+      <button class="ctrl-btn" onclick="shiftZoning(-1)" title="Día anterior">‹</button>
+      <button class="ctrl-btn" onclick="shiftZoning(1)" title="Día siguiente">›</button>
+      <button class="zb-reset" onclick="resetZoningToDay1()">Reiniciar a Día 1</button>
+    </div>`;
+}
+
+function renderAlert(){
+  const el=document.getElementById('alert-note');
+  el.innerHTML=turno==='M'
+    ?'⚠️ Vestuario masculino: comenzar <strong>antes de las 06:10</strong>. Producto FRESC + manguera azul → dejar actuar 10-15 min antes de aclarar.'
+    :'ℹ️ Tarde: <strong>solo mopa en el pasillo</strong> (no fregar) · vestuarios en versión reducida (sin manguera azul) · vending, repaso rápido.';
+}
+
+function renderChecklist(){
+  const grps=allGroups();
+  // Inicializar openGroups solo si no existe
+  grps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=true;});
+  
+  let html='';
+  grps.forEach(g=>{
+    const done=g.tasks.filter(t=>checks[t.id]).length;
+    const total=g.tasks.length;
+    const allDone=done===total;
+    const isOpen=openGroups[g.id];
+    const zc=g.zcolor||'';
+    html+=`
+    <div class="task-group${allDone?' grp-done':''}" id="grp_${g.id}">
+      <div class="grp-header" onclick="toggleGrp('${g.id}')">
+        <div class="grp-icon">${g.icon}</div>
+        <div class="grp-titlewrap">
+          <div class="grp-title"${zc?` style="color:${zc}"`:''}>${g.title}</div>
+          ${g.sub?`<div class="grp-sub">${g.sub}</div>`:''}
+        </div>
+        <div class="grp-badge${allDone?' done':''}" id="badge_${g.id}">${done}/${total}</div>
+        <div class="grp-chevron${isOpen?' open':''}" id="chev_${g.id}">▼</div>
+      </div>
+      <div class="grp-body${isOpen?' open':''}" id="body_${g.id}">`;
+    g.tasks.forEach(t=>{
+      const ck=!!checks[t.id];
+      html+=`
+        <div class="task-item${ck?' checked':''}" id="ti_${t.id}" data-tid="${t.id}" data-gid="${g.id}" onclick="toggleTask(this)">
+          <div class="task-chk"><span class="chk-icon">✓</span></div>
+          <div class="task-text">${t.txt}${t.hint?`<span class="task-hint">${t.hint}</span>`:''}</div>
+        </div>`;
+    });
+    html+=`</div></div>`;
+  });
+  document.getElementById('checklist').innerHTML=html;
+  updateProgress();
+}
+
+function toggleGrp(id){
+  openGroups[id]=!openGroups[id];
+  document.getElementById(`body_${id}`).classList.toggle('open',openGroups[id]);
+  document.getElementById(`chev_${id}`).classList.toggle('open',openGroups[id]);
+}
+
+function toggleTask(el){
+  const tid=el.dataset.tid;
+  const gid=el.dataset.gid;
+  checks[tid]=!checks[tid];
+  saveChecks();
+  el.classList.toggle('checked',checks[tid]);
+  // update badge + group done
+  const grp=allGroups().find(g=>g.id===gid);
+  if(grp){
+    const done=grp.tasks.filter(t=>checks[t.id]).length;
+    const total=grp.tasks.length;
+    const allDone=done===total;
+    document.getElementById(`badge_${gid}`).textContent=`${done}/${total}`;
+    document.getElementById(`badge_${gid}`).className='grp-badge'+(allDone?' done':'');
+    document.getElementById(`grp_${gid}`).classList.toggle('grp-done',allDone);
+  }
+  updateProgress();
+}
+
+function updateProgress(){
+  const grps=allGroups();
+  const all=grps.flatMap(g=>g.tasks);
+  const done=all.filter(t=>checks[t.id]).length;
+  const total=all.length;
+  const pct=total>0?Math.round(done/total*100):0;
+  document.getElementById('prog-bar').style.width=pct+'%';
+  document.getElementById('prog-txt').textContent=`${done} de ${total} tareas completadas`;
+  document.getElementById('prog-pct').textContent=pct+'%';
+}
+
+// ════════════════════════════════
+// MENSAJE
+// ════════════════════════════════
+function buildMsg(){
+  const grps=allGroups();
+  const day=getZoningDay();
+  const z=ZONES.find(x=>x.day===day)||ZONES[0];
+  const tLabel=turno==='M'?'Mañana':'Tarde';
+  const d=new Date();
+  const ds=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+  const dateStr=ds.charAt(0).toUpperCase()+ds.slice(1);
+  const all=grps.flatMap(g=>g.tasks);
+  const done=all.filter(t=>checks[t.id]).length;
+
+  let m=`🏋️ FITNESS PARK VILLALOBOS\n`;
+  m+=`📋 Parte de turno — ${tLabel} · ${dateStr}\n`;
+  m+=`─────────────────────\n`;
+  m+=`✅ ${done}/${all.length} tareas completadas\n`;
+
+  // PENDIENTES — bloque principal, lo primero que se lee
+  const hasPending=grps.some(g=>g.tasks.some(t=>!checks[t.id]));
+  if(!hasPending){
+    m+=`\n🟢 TODO COMPLETADO — turno cerrado sin pendientes\n`;
+  }else{
+    m+=`\n⚠️ PENDIENTE:\n`;
+    grps.forEach(g=>{
+      const pend=g.tasks.filter(t=>!checks[t.id]);
+      if(pend.length===0)return;
+      m+=`\n  📌 ${g.title}\n`;
+      pend.forEach(t=>{m+=`    • ${t.txt}\n`;});
+    });
+  }
+
+  // COMPLETADAS — resumen compacto por grupo
+  m+=`\n─────────────────────\n`;
+  m+=`✅ COMPLETADO:\n`;
+  grps.forEach(g=>{
+    const gd=g.tasks.filter(t=>checks[t.id]).length;
+    if(gd===0)return;
+    const allDone=gd===g.tasks.length;
+    m+=`  ${allDone?'✓':'~'} ${g.title} (${gd}/${g.tasks.length})\n`;
+  });
+
+  m+=`─────────────────────\n`;
+  m+=`🔄 Zoning · Día ${day}/7 — ${z.label} ${z.name}\n`;
+  m+=`📍 Fitness Park Villalobos`;
+  return m;
+}
+
+function sendWA(){
+  const msg=buildMsg();
+  try{navigator.clipboard.writeText(msg);}catch(e){}
+  window.location.href='whatsapp://send?text='+encodeURIComponent(msg);
+  showToast('WhatsApp abierto · texto copiado como respaldo');
+}
+
+function copyMsg(){
+  navigator.clipboard.writeText(buildMsg()).then(()=>showToast('✓ Copiado al portapapeles')).catch(()=>showToast('Texto listo — inténtalo de nuevo'));
+}
+
+function showToast(t){
+  const el=document.getElementById('toast');
+  el.textContent=t;el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+// ════════════════════════════════
+// TURNO + RESET
+// ════════════════════════════════
+function setTurno(t){
+  turno=t;
+  document.getElementById('pill-m').classList.toggle('active',t==='M');
+  document.getElementById('pill-t').classList.toggle('active',t==='T');
+  openGroups={};
+  loadChecks();
+  renderAlert();
+  renderChecklist();
+}
+
+function confirmReset(){
+  if(confirm('¿Borrar el estado del turno actual y empezar de cero?')){
+    checks={};saveChecks();renderChecklist();showToast('Turno reseteado');
+  }
+}
+
+// ════════════════════════════════
+// INIT
+// ════════════════════════════════
+function autoTurno(){
+  const mins=new Date().getHours()*60+new Date().getMinutes();
+  return (mins>=270&&mins<840)?'M':'T'; // 04:30-14:00 → M
+}
+
+(function init(){
+  renderDate();
+  turno=autoTurno();
+  document.getElementById('pill-m').classList.toggle('active',turno==='M');
+  document.getElementById('pill-t').classList.toggle('active',turno==='T');
+  loadChecks();
+  renderBanner();
+  renderAlert();
+  renderChecklist();
+})();
+</script>
+</body>
+</html>
