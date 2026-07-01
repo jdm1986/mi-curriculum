@@ -165,11 +165,13 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 .btn-copy:active{border-color:var(--gold);color:var(--gold);}
 .btn-reset{
   width:100%;margin-top:0;
-  padding:11px;border-radius:8px;
-  border:1px solid var(--line);background:transparent;
-  color:#5a5a5a;font-size:12.5px;cursor:pointer;transition:all .15s;
+  padding:13px;border-radius:8px;
+  border:2px solid #e07b00;background:#e07b00;
+  color:#fff;font-size:13.5px;font-family:'Barlow Condensed';font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;transition:all .15s;
 }
-.btn-reset:active{color:var(--red);border-color:var(--red);}
+.btn-reset:active{background:#c56a00;}
 
 /* ── TOAST ── */
 .toast{
@@ -262,11 +264,6 @@ const TASKS_M = [
     {id:"M5a",txt:"Eliminación de pelusas"},
     {id:"M5b",txt:"Fregado rápido del suelo"},
   ]},
-  {id:"gM6",icon:"⚖️",title:"Báscula · Hidromasaje · Studio Bike · Posing",tasks:[
-    {id:"M6a",txt:"Fregado del suelo (misma pasada que el pasillo central)"},
-    {id:"M6b",txt:"Sala hidromasaje: repasar cristales si hay churretes"},
-    {id:"M6c",txt:"Studio Bike: eliminar sudores de bicicletas con paño desinfectante"},
-  ]},
   {id:"gM7",icon:"🚹",title:"Vestuario Masculino",sub:"⏱ Empezar ANTES de las 06:10",tasks:[
     {id:"M7a",txt:"Duchas: producto FRESC + bote dosificador + manguera azul",hint:"Rociar habitáculo → dejar actuar 10-15 min → aclarar evitando cercos"},
     {id:"M7b",txt:"Lavabos y espejos"},
@@ -280,6 +277,11 @@ const TASKS_M = [
     {id:"M8c",txt:"Inodoros"},
     {id:"M8d",txt:"Altos de taquillas (polvo)"},
     {id:"M8e",txt:"Suelo (usar máquina si hay suciedad incrustada)"},
+  ]},
+  {id:"gM6",icon:"⚖️",title:"Báscula · Hidromasaje · Studio Bike · Posing",tasks:[
+    {id:"M6a",txt:"Fregado del suelo (misma pasada que el pasillo central)"},
+    {id:"M6b",txt:"Sala hidromasaje: repasar cristales si hay churretes"},
+    {id:"M6c",txt:"Studio Bike: eliminar sudores de bicicletas con paño desinfectante"},
   ]},
   {id:"gM9",icon:"🧘",title:"Sala Pilates (Actividades Dirigidas)",tasks:[
     {id:"M9a",txt:"Mopa + fregado del suelo"},
