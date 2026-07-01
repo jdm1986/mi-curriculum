@@ -60,6 +60,16 @@ html,body{background:var(--black);color:var(--txt);font-family:'Barlow',sans-ser
   cursor:pointer;transition:all .15s;
 }
 .btn-extra.active{background:var(--red);color:#fff;}
+.btn-protocol{
+  display:inline-block;
+  padding:5px 12px;border-radius:6px;
+  font-family:'Barlow Condensed';font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;
+  border:1.5px solid var(--gold);color:var(--gold);
+  background:transparent;text-decoration:none;
+  transition:all .15s;white-space:nowrap;
+}
+.btn-protocol:active{background:var(--gold);color:var(--black);}
 
 /* ── STICKY SUBHEADER ── */
 .sticky-sub{
@@ -247,7 +257,10 @@ html,body{background:var(--black);color:var(--txt);font-family:'Barlow',sans-ser
 
 <header class="app-header">
   <div>
-    <div class="app-title">FP Villalobos · Parte de Turno</div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div class="app-title">FP Villalobos · Parte de Turno</div>
+      <a href="https://www.jesusdiazmartincv.es/protocolo_limpieza.html" target="_blank" class="btn-protocol">📋 Consulta el plan de limpieza</a>
+    </div>
     <div class="header-date" id="hdr-date"></div>
   </div>
   <div class="header-right">

@@ -24,12 +24,68 @@
     --z5:#2e8b8b;
     --z6:#8b5a2b;
     --z7:#9b9b9b;
+    --txt:#f4f4f4;
+    --txt2:#c8c8c8;
   }
+  body.light{
+    --black:#f2f2f2;
+    --black-2:#ffffff;
+    --black-3:#e6e6e6;
+    --gold:#b8860b;
+    --gold-dim:#8b6508;
+    --grey:#555555;
+    --line:#cccccc;
+    --txt:#1a1a1a;
+    --txt2:#333333;
+  }
+  /* Light mode: fix all hardcoded white/light text */
+  body.light h1, body.light h2, body.light h3, body.light h4,
+  body.light p, body.light li, body.light span:not(.ac-tag):not(.eyebrow):not(.t-time):not(.t-num),
+  body.light .lede, body.light .sub, body.light .nav-link,
+  body.light .ip-value, body.light .ip-label,
+  body.light .task-head h3, body.light .t-time,
+  body.light .adapt-row .ar-text, body.light .adapt-row .ar-label,
+  body.light .shift-banner .sb-item,
+  body.light .zc-note, body.light .task-body li,
+  body.light .flex-note, body.light [style*="color:#fff"],
+  body.light [style*="color:#b6b6b6"], body.light [style*="color:#b6"],
+  body.light .logo-wrap .sub { color:var(--txt) !important; }
+  body.light .hero h1 span { color:var(--gold) !important; }
+  body.light .top { background:var(--black) !important; border-color:var(--line) !important; }
+  body.light .top .logo-wrap .sub { color:var(--grey) !important; }
+  body.light .nav-link { color:var(--grey) !important; border-color:var(--line) !important; }
+  body.light .nav-link:hover { color:var(--gold) !important; border-color:var(--gold) !important; }
+  body.light .audience-card { background:var(--black-2) !important; border-color:var(--line) !important; }
+  body.light .task-card { background:var(--black-2) !important; border-color:var(--line) !important; }
+  body.light .task-head { background:var(--black-3) !important; }
+  body.light .adapt-table { background:var(--black-2) !important; }
+  body.light .adapt-row { border-color:var(--line) !important; background:var(--black-2) !important; }
+  body.light .shift-banner { background:var(--black-3) !important; border-color:var(--line) !important; }
+  body.light .zone-card { background:var(--black-2) !important; }
+  body.light .zc-tasks li { color:var(--txt) !important; }
+  body.light .zc-tasks li::before { color:var(--gold) !important; }
+  body.light .task-body li { color:var(--txt) !important; }
+  body.light .task-body li::before { color:var(--gold) !important; }
+  body.light footer { background:var(--black-2) !important; border-color:var(--line) !important; }
+  body.light .footer-logo { filter:invert(1) !important; }
+  body.light .info-row { background:var(--black-3) !important; }
+  body.light .flex-note { background:rgba(0,0,0,.05) !important; border-color:var(--line) !important; color:var(--txt) !important; }
+  body.light .alert-box { background:rgba(227,52,47,.08) !important; }
+  .btn-theme{
+    position:fixed;bottom:24px;right:24px;z-index:999;
+    width:44px;height:44px;border-radius:50%;
+    border:2px solid var(--gold);background:var(--black-2);
+    color:var(--gold);font-size:20px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 12px rgba(0,0,0,.4);
+    transition:all .15s;
+  }
+  .btn-theme:hover{background:var(--gold);color:var(--black);}
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
     background:var(--black);
-    color:#f4f4f4;
+    color:var(--txt);
     font-family:'Barlow', sans-serif;
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
@@ -67,6 +123,30 @@
     transition:all .2s ease; cursor:pointer; background:rgba(255,255,255,.02);
   }
   .nav-link:hover{ border-color:var(--gold); color:var(--gold); background:rgba(240,192,64,.08); }
+  .nav-link--parte{
+    border-color:#e3342f; color:#e3342f; font-weight:800;
+  }
+  .nav-link--parte:hover{ background:rgba(227,52,47,.12); border-color:#e3342f; color:#e3342f; }
+  .parte-alert{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    margin-top:24px; padding:14px 20px;
+    background:rgba(227,52,47,.1); border:2px solid #e3342f;
+    border-radius:10px; text-decoration:none;
+    transition:background .15s;
+  }
+  .parte-alert:hover{ background:rgba(227,52,47,.18); }
+  .parte-alert__icon{ font-size:20px; flex-shrink:0; }
+  .parte-alert__txt{ flex:1; font-size:15px; color:#ff6b6b; line-height:1.4; }
+  .parte-alert__txt strong{ color:#fff; }
+  .parte-alert__cta{
+    font-family:'Barlow Condensed'; font-weight:800; font-size:14px;
+    letter-spacing:.08em; text-transform:uppercase;
+    color:#fff; background:#e3342f;
+    padding:7px 16px; border-radius:6px; white-space:nowrap;
+  }
+  body.light .parte-alert__txt { color:#c0392b; }
+  body.light .parte-alert__txt strong { color:#8b1a1a; }
+  body.light .parte-alert__cta { color:#fff; }
 
   /* ===== HERO ===== */
   .hero{
@@ -417,6 +497,7 @@
       <span class="sub">Protocolo de Limpieza</span>
     </div>
     <nav class="section-nav">
+      <a class="nav-link nav-link--parte" href="https://www.jesusdiazmartincv.es/parte_turno_fpv.html" target="_blank">⚡ Parte diario limpieza</a>
       <a class="nav-link" href="#mapa">Mapa del club</a>
       <a class="nav-link" href="#fijo">Personal fijo</a>
       <a class="nav-link" href="#sustituciones">Sustituciones</a>
@@ -428,6 +509,11 @@
   <div class="eyebrow">Grupo Criza · Fitness Park Villalobos</div>
   <h1>Protocolo de<br><span>limpieza</span> del club</h1>
   <p class="lede">Toda la operativa de limpieza del club en un solo documento: mínimos indispensables de cada turno, zoning semanal por zonas y el mapa de referencia. La formación sobre productos y técnicas específicas es responsabilidad de Grupo Criza.</p>
+  <a href="https://www.jesusdiazmartincv.es/parte_turno_fpv.html" target="_blank" class="parte-alert">
+    <span class="parte-alert__icon">⚠️</span>
+    <span class="parte-alert__txt"><strong>OBLIGATORIO:</strong> rellenar el <strong>Parte Diario de Limpieza</strong> al finalizar cada turno</span>
+    <span class="parte-alert__cta">Abrir →</span>
+  </a>
 
   <div class="audience-row">
     <a class="audience-card ac-mapa" href="#mapa">
@@ -897,5 +983,22 @@
   </div>
 </footer>
 
+<button class="btn-theme" id="btn-theme" onclick="toggleTheme()" title="Modo claro / oscuro">🌙</button>
+<script>
+function toggleTheme(){
+  const isLight=document.body.classList.toggle('light');
+  document.getElementById('btn-theme').textContent=isLight?'☀️':'🌙';
+  try{localStorage.setItem('fpv_proto_theme',isLight?'light':'dark');}catch(e){}
+}
+(function initTheme(){
+  try{
+    if(localStorage.getItem('fpv_proto_theme')==='light'){
+      document.body.classList.add('light');
+      const btn=document.getElementById('btn-theme');
+      if(btn)btn.textContent='☀️';
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
