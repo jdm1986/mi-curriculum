@@ -12,33 +12,59 @@
   --grey:#9b9b9b; --line:#2a2a2a;
   --green:#3ddc84; --green-dim:rgba(61,220,132,.12);
   --red:#e3342f; --r:10px;
+  --txt:#f4f4f4; --txt2:#d0d0d0; --txt-done:#5a5a5a;
+}
+body.light{
+  --black:#f0f0f0; --black2:#ffffff; --black3:#e8e8e8;
+  --gold:#b8860b; --gold-dim:#8b6508;
+  --grey:#666666; --line:#d0d0d0;
+  --green-dim:rgba(34,139,34,.1);
+  --txt:#1a1a1a; --txt2:#333333; --txt-done:#aaaaaa;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;overscroll-behavior:none;}
+html,body{background:var(--black);color:var(--txt);font-family:'Barlow',sans-serif;overscroll-behavior:none;transition:background .2s,color .2s;}
+.btn-theme{
+  width:36px;height:36px;border-radius:50%;
+  border:1.5px solid var(--line);background:var(--black3);
+  color:var(--grey);font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;flex-shrink:0;
+}
+.btn-theme:active{border-color:var(--gold);}
 
 /* ── HEADER ── */
 .app-header{
   position:sticky;top:0;z-index:100;
-  background:rgba(13,13,13,.96);backdrop-filter:blur(12px);
+  background:var(--black);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
-  padding:12px 18px;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:10px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
 }
 .app-title{font-family:'Barlow Condensed';font-size:19px;font-weight:800;color:var(--gold);letter-spacing:.04em;text-transform:uppercase;line-height:1;}
-.header-date{font-size:12.5px;color:var(--grey);margin-top:2px;}
-.turno-pills{display:flex;gap:8px;}
+.header-date{font-size:12px;color:var(--grey);margin-top:2px;}
+.header-right{display:flex;gap:8px;align-items:center;}
+.turno-pills{display:flex;gap:7px;}
 .pill{
-  padding:9px 20px;border-radius:7px;
+  padding:8px 16px;border-radius:7px;
   font-family:'Barlow Condensed';font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
   border:1.5px solid var(--line);background:transparent;color:var(--grey);
   cursor:pointer;transition:all .15s;
 }
 .pill.active{background:var(--gold);color:var(--black);border-color:var(--gold);}
 
+/* EXTRA button */
+.btn-extra{
+  padding:8px 18px;border-radius:7px;
+  font-family:'Barlow Condensed';font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+  border:2px solid var(--red);background:transparent;color:var(--red);
+  cursor:pointer;transition:all .15s;
+}
+.btn-extra.active{background:var(--red);color:#fff;}
+
 /* ── STICKY SUBHEADER ── */
 .sticky-sub{
   position:sticky;top:57px;z-index:90;
-  background:rgba(13,13,13,.97);backdrop-filter:blur(12px);
+  background:var(--black);backdrop-filter:blur(12px);
   padding-bottom:10px;
   border-bottom:1px solid var(--line);
 }
@@ -58,18 +84,31 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 }
 .zb-name{font-family:'Barlow Condensed';font-size:17px;font-weight:700;line-height:1.2;}
 .zb-sub{font-size:12px;color:var(--grey);margin-top:2px;}
-.zb-ctrl{display:flex;gap:6px;align-items:center;}
+.zb-ctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+
+/* FLECHAS LLAMATIVAS */
 .ctrl-btn{
-  width:34px;height:34px;border-radius:50%;
-  border:1.5px solid var(--line);background:var(--black3);
-  color:var(--grey);font-size:18px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:all .15s;
+  width:40px;height:40px;border-radius:8px;
+  border:none;background:var(--gold);
+  color:var(--black);font-size:22px;font-weight:800;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;font-family:'Barlow Condensed';
 }
+.ctrl-btn:active{background:var(--gold-dim);}
+.ctrl-btn.locked{background:var(--black3);color:var(--grey);border:1.5px solid var(--line);cursor:default;}
 .zb-reset{
   font-size:11px;color:var(--grey);background:none;border:none;
-  cursor:pointer;text-decoration:underline;padding:4px;margin-left:2px;
+  cursor:pointer;text-decoration:underline;padding:4px;
 }
-.zb-reset:hover{color:var(--gold);}
+.zb-reset:active{color:var(--gold);}
+
+/* LOCK BANNER */
+.lock-note{
+  margin:8px 14px 0;
+  padding:9px 13px;border-radius:8px;
+  background:rgba(227,52,47,.08);border:1px solid rgba(227,52,47,.35);
+  font-size:13px;color:#ff7875;line-height:1.4;
+}
 
 /* ── ALERT NOTE ── */
 .alert-note{
@@ -92,9 +131,9 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 
 /* ── CHECKLIST ── */
 .cl-wrap{padding:12px 14px;display:flex;flex-direction:column;gap:9px;}
-
 .task-group{background:var(--black2);border-radius:var(--r);border:1px solid var(--line);overflow:hidden;transition:border-color .2s;}
 .task-group.grp-done{border-color:rgba(61,220,132,.45);}
+.task-group.grp-locked{opacity:.7;}
 
 .grp-header{
   display:flex;align-items:center;gap:11px;
@@ -124,6 +163,7 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 .task-item:last-child{border-bottom:none;}
 .task-item:active{background:rgba(255,255,255,.03);}
 .task-item.checked{background:rgba(61,220,132,.03);}
+.task-item.locked-item{cursor:not-allowed;opacity:.6;}
 
 .task-chk{
   width:26px;height:26px;border-radius:7px;
@@ -133,10 +173,19 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 .task-item.checked .task-chk{background:var(--green);border-color:var(--green);}
 .chk-icon{display:none;color:var(--black);font-weight:900;font-size:14px;}
 .task-item.checked .chk-icon{display:block;}
-
-.task-text{flex:1;font-size:14.5px;line-height:1.4;color:#d0d0d0;}
-.task-item.checked .task-text{color:#5a5a5a;text-decoration:line-through;}
+.task-text{flex:1;font-size:14.5px;line-height:1.4;color:var(--txt2);}
+.task-item.checked .task-text{color:var(--txt-done);text-decoration:line-through;}
 .task-hint{font-size:12px;color:var(--gold);font-weight:600;margin-top:3px;display:block;}
+
+/* EXTRA MODE styles */
+.extra-header{
+  margin:12px 14px 4px;
+  display:flex;align-items:center;gap:10px;
+  padding:10px 14px;border-radius:8px;
+  background:rgba(227,52,47,.08);border:1px solid rgba(227,52,47,.3);
+}
+.extra-header-txt{font-family:'Barlow Condensed';font-size:15px;font-weight:700;color:#ff7875;text-transform:uppercase;letter-spacing:.04em;}
+.extra-header-sub{font-size:12px;color:var(--grey);margin-top:2px;}
 
 /* ── BOTTOM SEND ── */
 .send-wrap{
@@ -183,12 +232,14 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
   transition:all .22s;pointer-events:none;white-space:nowrap;z-index:200;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast.warn{border-color:var(--red);color:#ff7875;}
 
 @media(max-width:460px){
   .app-title{font-size:16px;}
-  .pill{padding:8px 13px;font-size:13px;}
+  .pill,.btn-extra{padding:7px 11px;font-size:13px;}
   .grp-title{font-size:14px;}
   .task-text{font-size:14px;}
+  .ctrl-btn{width:36px;height:36px;font-size:20px;}
 }
 </style>
 </head>
@@ -199,15 +250,19 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
     <div class="app-title">FP Villalobos · Parte de Turno</div>
     <div class="header-date" id="hdr-date"></div>
   </div>
-  <div class="turno-pills">
-    <button class="pill" id="pill-m" onclick="setTurno('M')">☀️ Mañana</button>
-    <button class="pill" id="pill-t" onclick="setTurno('T')">🌙 Tarde</button>
+  <div class="header-right">
+    <button class="btn-theme" id="btn-theme" onclick="toggleTheme()" title="Modo claro / oscuro">🌙</button>
+    <button class="btn-extra" id="btn-extra" onclick="toggleExtra()">⭐ EXTRA</button>
+    <div class="turno-pills" id="turno-pills">
+      <button class="pill" id="pill-m" onclick="setTurno('M')">☀️ Mañana</button>
+      <button class="pill" id="pill-t" onclick="setTurno('T')">🌙 Tarde</button>
+    </div>
   </div>
 </header>
 
 <div class="sticky-sub">
   <div id="zone-banner" class="zone-banner"></div>
-  <div id="alert-note" class="alert-note"></div>
+  <div id="sub-note"></div>
   <div class="prog-wrap"><div class="prog-bar" id="prog-bar" style="width:0%"></div></div>
   <div class="prog-label"><span id="prog-txt">0 de 0 tareas</span><span id="prog-pct">0%</span></div>
 </div>
@@ -226,10 +281,10 @@ html,body{background:var(--black);color:#f4f4f4;font-family:'Barlow',sans-serif;
 <div class="toast" id="toast"></div>
 
 <script>
-// ════════════════════════════════
+// ════════════════════════════════════════
 // DATOS
-// ════════════════════════════════
-const ZONES = [
+// ════════════════════════════════════════
+const ZONES=[
   {day:1,label:"ZONA 1",name:"Musculación Libre",color:"#e3342f",espejos:true},
   {day:2,label:"ZONA 2",name:"Zona Media de Máquinas",color:"#3ddc84",espejos:false},
   {day:3,label:"ZONA 3",name:"Hammer",color:"#2f8fe3",espejos:false},
@@ -239,7 +294,7 @@ const ZONES = [
   {day:7,label:"ÁREAS INTERNAS",name:"Staff · Dirección · Pasillo Emergencia",color:"#9b9b9b",espejos:false},
 ];
 
-const TASKS_M = [
+const TASKS_M=[
   {id:"gM1",icon:"🔍",title:"Tour inicial de inspección",sub:"Primera tarea al entrar — recorre TODO el club",tasks:[
     {id:"M1a",txt:"Detectar incidencias: líquidos derramados, papeles, botellas vacías"},
     {id:"M1b",txt:"Revisar todos los dispensadores y reponer papel / líquido donde falte"},
@@ -264,7 +319,7 @@ const TASKS_M = [
     {id:"M5a",txt:"Eliminación de pelusas"},
     {id:"M5b",txt:"Fregado rápido del suelo"},
   ]},
-  {id:"gM7",icon:"🚹",title:"Vestuario Masculino",sub:"⏱ Empezar ANTES de las 06:10",tasks:[
+  {id:"gM7",icon:"🚹",title:"Vestuario Masculino",sub:"⏱ Empezar ANTES de las 06:30",tasks:[
     {id:"M7a",txt:"Duchas: producto FRESC + bote dosificador + manguera azul",hint:"Rociar habitáculo → dejar actuar 10-15 min → aclarar evitando cercos"},
     {id:"M7b",txt:"Lavabos y espejos"},
     {id:"M7c",txt:"Inodoros / urinarios"},
@@ -289,7 +344,7 @@ const TASKS_M = [
   ]},
 ];
 
-const TASKS_T = [
+const TASKS_T=[
   {id:"gT1",icon:"🔍",title:"Tour inicial de inspección",sub:"Primera tarea al entrar",tasks:[
     {id:"T1a",txt:"Detectar incidencias: líquidos, papeles, botellas vacías"},
     {id:"T1b",txt:"Revisar dispensadores y reponer donde falte"},
@@ -322,79 +377,88 @@ const TASKS_T = [
   ]},
 ];
 
-// ════════════════════════════════
+// ════════════════════════════════════════
 // ESTADO
-// ════════════════════════════════
-let turno = 'M';
-let checks = {};
-let openGroups = {};
+// ════════════════════════════════════════
+let turno='M';
+let checks={};
+let openGroups={};
+let extraMode=false;
+let extraChecks={}; // { "ex_d3_Za5": true, ... }
 
 function todayStr(){return new Date().toISOString().slice(0,10);}
 function stateKey(){return `fpv_${todayStr()}_${turno}`;}
+function extraKey(){return `fpv_extra_${todayStr()}`;}
 
 function loadChecks(){
-  try{checks=JSON.parse(localStorage.getItem(stateKey())||'{}');}
-  catch(e){checks={};}
+  try{checks=JSON.parse(localStorage.getItem(stateKey())||'{}');}catch(e){checks={};}
+  try{extraChecks=JSON.parse(localStorage.getItem(extraKey())||'{}');}catch(e){extraChecks={};}
 }
 function saveChecks(){
   try{localStorage.setItem(stateKey(),JSON.stringify(checks));}catch(e){}
+  try{localStorage.setItem(extraKey(),JSON.stringify(extraChecks));}catch(e){}
 }
 
-// Zoning day: basado en fecha de inicio
-function getZoningDay(){
-  try{
-    let s=localStorage.getItem('fpv_zstart');
-    if(!s){localStorage.setItem('fpv_zstart',todayStr());return 1;}
-    const diff=Math.floor((new Date(todayStr())-new Date(s))/(864e5));
-    return (((diff%7)+7)%7)+1; // siempre positivo, 1-7
-  }catch(e){return 1;}
-}
-function shiftZoning(direction){
-  // direction = +1 → avanzar un día de zoning · direction = -1 → retroceder un día
-  try{
-    let s=localStorage.getItem('fpv_zstart')||todayStr();
-    let dt=new Date(s);dt.setDate(dt.getDate()-direction);
-    localStorage.setItem('fpv_zstart',dt.toISOString().slice(0,10));
-    renderBanner();renderChecklist();
-  }catch(e){}
-}
-function resetZoningToDay1(){
-  try{
-    localStorage.setItem('fpv_zstart',todayStr());
-    renderBanner();renderChecklist();
-    showToast('Zoning reiniciado en Día 1');
-  }catch(e){}
+// ── DÍA DE LA SEMANA → DÍA DE ZONING (L=1 … D=7) ──
+function todayZoningDay(){
+  const d=new Date().getDay(); // 0=Dom,1=Lun,...,6=Sab
+  return {0:7,1:1,2:2,3:3,4:4,5:5,6:6}[d];
 }
 
-function buildZoningGroup(){
-  const day=getZoningDay();
+// Día que se está VIENDO en pantalla (puede ser distinto del de hoy)
+let viewingDay=1; // se inicializa en init()
+
+function isLocked(){return viewingDay!==todayZoningDay();}
+
+// Navegación de flechas — solo cambia viewingDay
+function shiftZoning(dir){
+  viewingDay=((viewingDay-1+dir+7)%7)+1;
+  renderBanner();renderChecklist();
+}
+function goToToday(){
+  viewingDay=todayZoningDay();
+  renderBanner();renderChecklist();
+  showToast('Volviendo al día de hoy');
+}
+
+// ── ZONING TASKS ──
+function zoningTasksForDay(day){
   const z=ZONES.find(x=>x.day===day)||ZONES[0];
-  let tasks=[];
   if(day===7){
-    tasks=[
-      {id:"Zz1",txt:"Limpieza completa del cuarto staff"},
-      {id:"Zz2",txt:"Limpieza de oficina de dirección"},
-      {id:"Zz3",txt:"Limpieza de pasillo de emergencia"},
+    return[
+      {id:`Zz1`,txt:"Limpieza completa del cuarto staff"},
+      {id:`Zz2`,txt:"Limpieza de oficina de dirección"},
+      {id:`Zz3`,txt:"Limpieza de pasillo de emergencia"},
     ];
-  }else{
-    tasks=[
-      {id:"Za1",txt:"Aspirar huecos y bajos de máquinas (usar palo extensible para recovecos)"},
-      {id:"Za2",txt:"Desinfectar respaldares y asientos con producto apropiado"},
-      {id:"Za3",txt:"Eliminar polvo en altos de máquinas"},
-    ];
-    if(z.espejos) tasks.push({id:"Za4",txt:"Limpiar cristales y espejos en profundidad"});
-    tasks.push({id:"Za5",txt:"Fregado de suelo de caucho con máquina y producto adecuado"});
   }
-  return {id:"gZ",icon:"🔄",title:`Zoning — ${z.label}`,sub:`${z.name} · tiempo restante del turno`,zcolor:z.color,tasks};
+  const t=[
+    {id:`Za1`,txt:"Aspirar huecos y bajos de máquinas (usar palo extensible para recovecos)"},
+    {id:`Za2`,txt:"Desinfectar respaldares y asientos con producto apropiado"},
+    {id:`Za3`,txt:"Eliminar polvo en altos de máquinas"},
+  ];
+  if(z.espejos)t.push({id:`Za4`,txt:"Limpiar cristales y espejos en profundidad"});
+  t.push({id:`Za5`,txt:"Fregado de suelo de caucho con máquina y producto adecuado"});
+  return t;
+}
+
+function buildZoningGroup(day){
+  const z=ZONES.find(x=>x.day===day)||ZONES[0];
+  const tasks=zoningTasksForDay(day).map(t=>({...t,id:`Z${day}_${t.id}`}));
+  return{id:`gZ${day}`,icon:"🔄",title:`Zoning — ${z.label}`,sub:`${z.name} · tiempo restante del turno`,zcolor:z.color,tasks,zday:day};
 }
 
 function allGroups(){
-  return [...(turno==='M'?TASKS_M:TASKS_T), buildZoningGroup()];
+  return[...(turno==='M'?TASKS_M:TASKS_T),buildZoningGroup(viewingDay)];
 }
 
-// ════════════════════════════════
+// EXTRA: todos los grupos de zoning de los 7 días
+function extraGroups(){
+  return ZONES.map(z=>buildZoningGroup(z.day));
+}
+
+// ════════════════════════════════════════
 // RENDER
-// ════════════════════════════════
+// ════════════════════════════════════════
 function renderDate(){
   const d=new Date();
   const s=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
@@ -402,38 +466,67 @@ function renderDate(){
 }
 
 function renderBanner(){
-  const day=getZoningDay();
-  const z=ZONES.find(x=>x.day===day)||ZONES[0];
+  if(extraMode){
+    const el=document.getElementById('zone-banner');
+    el.style.borderColor='rgba(227,52,47,.4)';
+    el.style.background='rgba(227,52,47,.07)';
+    el.innerHTML=`
+      <div class="zb-left">
+        <div class="zb-badge" style="background:rgba(227,52,47,.2);color:#ff7875">MODO EXTRA</div>
+        <div>
+          <div class="zb-name" style="color:#ff7875">Tareas de zoning pendientes</div>
+          <div class="zb-sub">Marca las tareas completadas de otros días · envío especial al grupo</div>
+        </div>
+      </div>`;
+    return;
+  }
+  const today=todayZoningDay();
+  const z=ZONES.find(x=>x.day===viewingDay)||ZONES[0];
+  const locked=isLocked();
   const el=document.getElementById('zone-banner');
-  el.style.borderColor=z.color+'55';
-  el.style.background=z.color+'10';
+  el.style.borderColor=z.color+(locked?'30':'55');
+  el.style.background=z.color+(locked?'08':'10');
   el.innerHTML=`
     <div class="zb-left">
-      <div class="zb-badge" style="background:${z.color}22;color:${z.color}">DÍA ${day}/7</div>
+      <div class="zb-badge" style="background:${z.color}22;color:${z.color}">DÍA ${viewingDay}/7${locked?' 👁':''}</div>
       <div>
-        <div class="zb-name" style="color:${z.color}">${z.label} — ${z.name}</div>
-        <div class="zb-sub">Zoning de hoy · tiempo restante tras mínimos</div>
+        <div class="zb-name" style="color:${z.color};${locked?'opacity:.7':''}">
+          ${z.label} — ${z.name}${locked?` <span style="font-size:12px;color:var(--grey)">(solo lectura)</span>`:''}
+        </div>
+        <div class="zb-sub">${locked?`Hoy es Día ${today}/7 · navegando en modo lectura`:'Zoning de hoy · tiempo restante tras mínimos'}</div>
       </div>
     </div>
     <div class="zb-ctrl">
       <button class="ctrl-btn" onclick="shiftZoning(-1)" title="Día anterior">‹</button>
       <button class="ctrl-btn" onclick="shiftZoning(1)" title="Día siguiente">›</button>
-      <button class="zb-reset" onclick="resetZoningToDay1()">Reiniciar a Día 1</button>
+      ${locked?`<button class="zb-reset" onclick="goToToday()">⬤ Ir al día de hoy</button>`:`<button class="zb-reset" onclick="goToToday()" style="opacity:.4;pointer-events:none">Día ${today}/7</button>`}
     </div>`;
 }
 
-function renderAlert(){
-  const el=document.getElementById('alert-note');
-  el.innerHTML=turno==='M'
-    ?'⚠️ Vestuario masculino: comenzar <strong>antes de las 06:10</strong>. Producto FRESC + manguera azul → dejar actuar 10-15 min antes de aclarar.'
-    :'ℹ️ Tarde: <strong>solo mopa en el pasillo</strong> (no fregar) · vestuarios en versión reducida (sin manguera azul) · vending, repaso rápido.';
+function renderSubNote(){
+  const el=document.getElementById('sub-note');
+  if(extraMode){
+    el.innerHTML=`<div class="extra-header"><div><div class="extra-header-txt">⭐ Modo extra — Zoning de días anteriores</div><div class="extra-header-sub">Marca las tareas que quedaron pendientes · el mensaje al grupo indicará el día y zona correspondiente</div></div></div>`;
+    return;
+  }
+  if(isLocked()){
+    const today=todayZoningDay();
+    el.innerHTML=`<div class="lock-note">🔒 Solo lectura — las tareas de este día no se pueden marcar aquí. Usa el botón <strong>⭐ EXTRA</strong> para completar tareas pendientes de otros días.</div>`;
+    return;
+  }
+  el.innerHTML=`<div class="alert-note">${turno==='M'
+    ?'⚠️ Vestuario masculino: comenzar <strong>antes de las 06:30</strong>. Producto FRESC + manguera azul → dejar actuar 10-15 min antes de aclarar.'
+    :'ℹ️ Tarde: <strong>solo mopa en el pasillo</strong> (no fregar) · vestuarios en versión reducida (sin manguera azul) · vending, repaso rápido.'
+  }</div>`;
 }
 
 function renderChecklist(){
+  if(extraMode){renderExtraChecklist();return;}
+
   const grps=allGroups();
-  // Inicializar openGroups solo si no existe
+  const locked=isLocked();
   grps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=true;});
-  
+
   let html='';
   grps.forEach(g=>{
     const done=g.tasks.filter(t=>checks[t.id]).length;
@@ -441,8 +534,12 @@ function renderChecklist(){
     const allDone=done===total;
     const isOpen=openGroups[g.id];
     const zc=g.zcolor||'';
+    const grpLocked=locked&&g.id.startsWith('gZ'); // solo el grupo de zoning queda bloqueado si es otro día
+    // En modo normal y día bloqueado: TODOS los grupos son read-only
+    const fullyLocked=locked;
+
     html+=`
-    <div class="task-group${allDone?' grp-done':''}" id="grp_${g.id}">
+    <div class="task-group${allDone?' grp-done':''}${fullyLocked?' grp-locked':''}" id="grp_${g.id}">
       <div class="grp-header" onclick="toggleGrp('${g.id}')">
         <div class="grp-icon">${g.icon}</div>
         <div class="grp-titlewrap">
@@ -456,9 +553,50 @@ function renderChecklist(){
     g.tasks.forEach(t=>{
       const ck=!!checks[t.id];
       html+=`
-        <div class="task-item${ck?' checked':''}" id="ti_${t.id}" data-tid="${t.id}" data-gid="${g.id}" onclick="toggleTask(this)">
+        <div class="task-item${ck?' checked':''}${fullyLocked?' locked-item':''}" id="ti_${t.id}"
+          data-tid="${t.id}" data-gid="${g.id}" data-locked="${fullyLocked?'1':'0'}"
+          onclick="toggleTask(this)">
           <div class="task-chk"><span class="chk-icon">✓</span></div>
           <div class="task-text">${t.txt}${t.hint?`<span class="task-hint">${t.hint}</span>`:''}</div>
+        </div>`;
+    });
+    html+=`</div></div>`;
+  });
+  document.getElementById('checklist').innerHTML=html;
+  updateProgress();
+}
+
+function renderExtraChecklist(){
+  const grps=extraGroups();
+  grps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=true;});
+
+  let html='';
+  grps.forEach(g=>{
+    const z=ZONES.find(x=>x.day===g.zday)||ZONES[0];
+    const done=g.tasks.filter(t=>!!extraChecks[t.id]).length;
+    const total=g.tasks.length;
+    const allDone=done===total&&done>0;
+    const isOpen=openGroups[g.id];
+    html+=`
+    <div class="task-group${allDone?' grp-done':''}" id="grp_${g.id}">
+      <div class="grp-header" onclick="toggleGrp('${g.id}')">
+        <div class="grp-icon">🔄</div>
+        <div class="grp-titlewrap">
+          <div class="grp-title" style="color:${z.color}">Día ${g.zday}/7 · ${z.label}</div>
+          <div class="grp-sub">${z.name}</div>
+        </div>
+        <div class="grp-badge${allDone?' done':''}" id="badge_${g.id}">${done}/${total}</div>
+        <div class="grp-chevron${isOpen?' open':''}" id="chev_${g.id}">▼</div>
+      </div>
+      <div class="grp-body${isOpen?' open':''}" id="body_${g.id}">`;
+    g.tasks.forEach(t=>{
+      const ck=!!extraChecks[t.id];
+      html+=`
+        <div class="task-item${ck?' checked':''}" id="ti_${t.id}"
+          data-tid="${t.id}" data-gid="${g.id}" data-extra="1"
+          onclick="toggleTask(this)">
+          <div class="task-chk"><span class="chk-icon">✓</span></div>
+          <div class="task-text">${t.txt}</div>
         </div>`;
     });
     html+=`</div></div>`;
@@ -474,41 +612,79 @@ function toggleGrp(id){
 }
 
 function toggleTask(el){
+  if(el.dataset.locked==='1'){
+    showToast(`⛔ Día bloqueado — usa ⭐ EXTRA para completar pendientes`,'warn');
+    return;
+  }
   const tid=el.dataset.tid;
   const gid=el.dataset.gid;
-  checks[tid]=!checks[tid];
+  const isExtra=el.dataset.extra==='1';
+
+  if(isExtra){
+    extraChecks[tid]=!extraChecks[tid];
+  }else{
+    checks[tid]=!checks[tid];
+  }
   saveChecks();
-  el.classList.toggle('checked',checks[tid]);
-  // update badge + group done
-  const grp=allGroups().find(g=>g.id===gid);
+  el.classList.toggle('checked',isExtra?extraChecks[tid]:checks[tid]);
+
+  // update badge
+  let grp;
+  if(isExtra){grp=extraGroups().find(g=>g.id===gid);}
+  else{grp=allGroups().find(g=>g.id===gid);}
   if(grp){
-    const done=grp.tasks.filter(t=>checks[t.id]).length;
+    const store=isExtra?extraChecks:checks;
+    const done=grp.tasks.filter(t=>!!store[t.id]).length;
     const total=grp.tasks.length;
     const allDone=done===total;
     document.getElementById(`badge_${gid}`).textContent=`${done}/${total}`;
     document.getElementById(`badge_${gid}`).className='grp-badge'+(allDone?' done':'');
-    document.getElementById(`grp_${gid}`).classList.toggle('grp-done',allDone);
+    document.getElementById(`grp_${gid}`).classList.toggle('grp-done',allDone&&done>0);
   }
   updateProgress();
 }
 
 function updateProgress(){
-  const grps=allGroups();
-  const all=grps.flatMap(g=>g.tasks);
-  const done=all.filter(t=>checks[t.id]).length;
-  const total=all.length;
+  let done,total;
+  if(extraMode){
+    const grps=extraGroups();
+    const all=grps.flatMap(g=>g.tasks);
+    done=all.filter(t=>!!extraChecks[t.id]).length;
+    total=all.length;
+  }else{
+    const grps=allGroups();
+    const all=grps.flatMap(g=>g.tasks);
+    done=all.filter(t=>checks[t.id]).length;
+    total=all.length;
+  }
   const pct=total>0?Math.round(done/total*100):0;
   document.getElementById('prog-bar').style.width=pct+'%';
-  document.getElementById('prog-txt').textContent=`${done} de ${total} tareas completadas`;
+  document.getElementById('prog-txt').textContent=extraMode?`${done} tareas extra completadas`:`${done} de ${total} tareas completadas`;
   document.getElementById('prog-pct').textContent=pct+'%';
 }
 
-// ════════════════════════════════
-// MENSAJE
-// ════════════════════════════════
+// ════════════════════════════════════════
+// EXTRA MODE
+// ════════════════════════════════════════
+function toggleExtra(){
+  extraMode=!extraMode;
+  document.getElementById('btn-extra').classList.toggle('active',extraMode);
+  document.getElementById('turno-pills').style.opacity=extraMode?'.4':'1';
+  document.getElementById('turno-pills').style.pointerEvents=extraMode?'none':'';
+  openGroups={};
+  renderBanner();
+  renderSubNote();
+  renderChecklist();
+}
+
+// ════════════════════════════════════════
+// MENSAJES
+// ════════════════════════════════════════
 function buildMsg(){
+  if(extraMode)return buildExtraMsg();
+
   const grps=allGroups();
-  const day=getZoningDay();
+  const day=viewingDay;
   const z=ZONES.find(x=>x.day===day)||ZONES[0];
   const tLabel=turno==='M'?'Mañana':'Tarde';
   const d=new Date();
@@ -522,7 +698,6 @@ function buildMsg(){
   m+=`─────────────────────\n`;
   m+=`✅ ${done}/${all.length} tareas completadas\n`;
 
-  // PENDIENTES — bloque principal, lo primero que se lee
   const hasPending=grps.some(g=>g.tasks.some(t=>!checks[t.id]));
   if(!hasPending){
     m+=`\n🟢 TODO COMPLETADO — turno cerrado sin pendientes\n`;
@@ -536,18 +711,44 @@ function buildMsg(){
     });
   }
 
-  // COMPLETADAS — resumen compacto por grupo
   m+=`\n─────────────────────\n`;
   m+=`✅ COMPLETADO:\n`;
   grps.forEach(g=>{
     const gd=g.tasks.filter(t=>checks[t.id]).length;
     if(gd===0)return;
-    const allDone=gd===g.tasks.length;
-    m+=`  ${allDone?'✓':'~'} ${g.title} (${gd}/${g.tasks.length})\n`;
+    m+=`  ${gd===g.tasks.length?'✓':'~'} ${g.title} (${gd}/${g.tasks.length})\n`;
   });
 
   m+=`─────────────────────\n`;
   m+=`🔄 Zoning · Día ${day}/7 — ${z.label} ${z.name}\n`;
+  m+=`📍 Fitness Park Villalobos`;
+  return m;
+}
+
+function buildExtraMsg(){
+  const grps=extraGroups();
+  const d=new Date();
+  const ds=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+  const dateStr=ds.charAt(0).toUpperCase()+ds.slice(1);
+  const completedGroups=grps.filter(g=>g.tasks.some(t=>extraChecks[t.id]));
+
+  if(completedGroups.length===0){
+    return`🏋️ FITNESS PARK VILLALOBOS\n⭐ Parte Extra · ${dateStr}\n\nℹ️ No hay tareas extra marcadas.`;
+  }
+
+  let m=`🏋️ FITNESS PARK VILLALOBOS\n`;
+  m+=`⭐ TAREAS EXTRA — Zoning pendiente completado\n`;
+  m+=`${dateStr}\n`;
+  m+=`─────────────────────\n`;
+
+  completedGroups.forEach(g=>{
+    const z=ZONES.find(x=>x.day===g.zday)||ZONES[0];
+    const done=g.tasks.filter(t=>extraChecks[t.id]);
+    m+=`\n✅ Día ${g.zday}/7 · ${z.label} — ${z.name}\n`;
+    done.forEach(t=>{m+=`    • ${t.txt}\n`;});
+  });
+
+  m+=`─────────────────────\n`;
   m+=`📍 Fitness Park Villalobos`;
   return m;
 }
@@ -558,27 +759,26 @@ function sendWA(){
   window.location.href='whatsapp://send?text='+encodeURIComponent(msg);
   showToast('WhatsApp abierto · texto copiado como respaldo');
 }
-
 function copyMsg(){
-  navigator.clipboard.writeText(buildMsg()).then(()=>showToast('✓ Copiado al portapapeles')).catch(()=>showToast('Texto listo — inténtalo de nuevo'));
+  navigator.clipboard.writeText(buildMsg()).then(()=>showToast('✓ Copiado al portapapeles')).catch(()=>showToast('Inténtalo de nuevo'));
 }
 
-function showToast(t){
+function showToast(t,type=''){
   const el=document.getElementById('toast');
-  el.textContent=t;el.classList.add('show');
-  setTimeout(()=>el.classList.remove('show'),2800);
+  el.textContent=t;el.className='toast show'+(type?' '+type:'');
+  setTimeout(()=>el.className='toast',2800);
 }
 
-// ════════════════════════════════
+// ════════════════════════════════════════
 // TURNO + RESET
-// ════════════════════════════════
+// ════════════════════════════════════════
 function setTurno(t){
   turno=t;
   document.getElementById('pill-m').classList.toggle('active',t==='M');
   document.getElementById('pill-t').classList.toggle('active',t==='T');
   openGroups={};
   loadChecks();
-  renderAlert();
+  renderSubNote();
   renderChecklist();
 }
 
@@ -588,22 +788,36 @@ function confirmReset(){
   }
 }
 
-// ════════════════════════════════
+// ════════════════════════════════════════
 // INIT
-// ════════════════════════════════
+// ════════════════════════════════════════
 function autoTurno(){
   const mins=new Date().getHours()*60+new Date().getMinutes();
-  return (mins>=270&&mins<840)?'M':'T'; // 04:30-14:00 → M
+  return(mins>=270&&mins<840)?'M':'T';
+}
+
+function toggleTheme(){
+  const isLight=document.body.classList.toggle('light');
+  document.getElementById('btn-theme').textContent=isLight?'☀️':'🌙';
+  try{localStorage.setItem('fpv_theme',isLight?'light':'dark');}catch(e){}
+}
+function initTheme(){
+  try{
+    const t=localStorage.getItem('fpv_theme');
+    if(t==='light'){document.body.classList.add('light');document.getElementById('btn-theme').textContent='☀️';}
+  }catch(e){}
 }
 
 (function init(){
+  initTheme();
+  viewingDay=todayZoningDay();
   renderDate();
   turno=autoTurno();
   document.getElementById('pill-m').classList.toggle('active',turno==='M');
   document.getElementById('pill-t').classList.toggle('active',turno==='T');
   loadChecks();
   renderBanner();
-  renderAlert();
+  renderSubNote();
   renderChecklist();
 })();
 </script>
