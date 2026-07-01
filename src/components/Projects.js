@@ -52,6 +52,7 @@ function Projects() {
     fitnesspark: false,
     fitnessparkProject1: false,
     fitnessparkProject2: false,
+    fitnessparkProject3: false,
     gestionatuscv: false,
     jesusdiazmartincv: false,
     powerbi: false,
@@ -197,6 +198,33 @@ function Projects() {
 
                               <div className="project-images">
                                 <img src={automatismosResamania} alt="Software de Gestión Propio Fitness Park" loading="lazy" />
+                              </div>
+                            </div>
+                          )}
+                        </li>
+                        <li>
+                          <span onClick={() => toggleDetails('fitnessparkProject3')} className="details-toggle">
+                            Sistema de Gestión de Limpieza · Zoning & Checking {openDetails.fitnessparkProject3 ? <FaCaretUp /> : <FaCaretDown />}
+                          </span>
+
+                          {openDetails.fitnessparkProject3 && (
+                            <div className="sub-project-details">
+                              <p>
+                                Diseño e implementación de un sistema digital propio para la coordinación del equipo de limpieza del club, eliminando por completo el uso de papel y resolviendo los problemas de coordinación entre turnos. El sistema se compone de dos herramientas:
+                              </p>
+                              <p>
+                                <strong>1. Protocolo interactivo de limpieza</strong> (HTML autocontenido): documento de referencia completo con los mínimos indispensables por turno, el sistema de zoning semanal por zonas del club y guía de onboarding para sustituciones, con identidad visual Fitness Park.
+                              </p>
+                              <p>
+                                <strong>2. App de checking de turno</strong> (PWA accesible desde móvil): aplicación web instalada como acceso directo en los teléfonos del equipo de limpieza. Detecta automáticamente el turno (mañana/tarde) y el día del ciclo de zoning según el día de la semana. Permite marcar tareas completadas, bloquea modificaciones en días que no corresponden, incluye un modo EXTRA para registrar tareas pendientes de otros días, y genera automáticamente un parte de turno estructurado que se envía al grupo de WhatsApp del equipo con un solo tap — indicando explícitamente qué ha quedado completado y qué permanece pendiente.
+                              </p>
+                              <p>
+                                <strong>Impacto:</strong> coordinación sin fricciones entre dos operarias en turnos distintos, trazabilidad diaria del estado de limpieza del club y eliminación total del papeleo.
+                              </p>
+
+                              <div className="project-links">
+                                <a href="https://www.jesusdiazmartincv.es/protocolo_limpieza.html" target="_blank" rel="noopener noreferrer" className="project-link-btn">📄 Ver Protocolo</a>
+                                <a href="https://www.jesusdiazmartincv.es/parte_turno_fpv.html" target="_blank" rel="noopener noreferrer" className="project-link-btn">✅ Abrir App Checking</a>
                               </div>
                             </div>
                           )}
