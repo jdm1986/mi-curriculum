@@ -298,13 +298,13 @@ html,body{background:var(--black);color:var(--txt);font-family:'Barlow',sans-ser
 // DATOS
 // ════════════════════════════════════════
 const ZONES=[
-  {day:1,label:"ZONA 1",name:"Musculación Libre",color:"#e3342f",espejos:true},
-  {day:2,label:"ZONA 2",name:"Zona Media de Máquinas",color:"#3ddc84",espejos:false},
-  {day:3,label:"ZONA 3",name:"Hammer",color:"#2f8fe3",espejos:false},
-  {day:4,label:"ZONA 4",name:"Cross + Skill / Eleiko",color:"#ec3fb1",espejos:true},
-  {day:5,label:"ZONAS 5+6",name:"Musculación Guiada + Cardio",color:"#2e8b8b",espejos:false},
-  {day:6,label:"ZONAS 5+6",name:"Musculación Guiada + Cardio (cont.)",color:"#2e8b8b",espejos:false},
-  {day:7,label:"ÁREAS INTERNAS",name:"Staff · Dirección · Pasillo Emergencia",color:"#9b9b9b",espejos:false},
+  {day:1,label:"ZONA 1",name:"Musculación Libre",color:"#e3342f",espejos:true,sueloblanco:false},
+  {day:2,label:"ZONA 2",name:"Zona Media de Máquinas",color:"#3ddc84",espejos:false,sueloblanco:false},
+  {day:3,label:"ZONA 3",name:"Hammer",color:"#2f8fe3",espejos:false,sueloblanco:false},
+  {day:4,label:"ZONA 4",name:"Cross + Skill / Eleiko",color:"#ec3fb1",espejos:true,sueloblanco:false},
+  {day:5,label:"ZONA 5",name:"Musculación Guiada",color:"#2e8b8b",espejos:false,sueloblanco:true},
+  {day:6,label:"ZONA 6",name:"Cardio",color:"#e07b00",espejos:false,sueloblanco:true},
+  {day:7,label:"ÁREAS INTERNAS",name:"Staff · Dirección · Pasillo Emergencia",color:"#9b9b9b",espejos:false,sueloblanco:false},
 ];
 
 const TASKS_M=[
@@ -450,7 +450,11 @@ function zoningTasksForDay(day){
     {id:`Za3`,txt:"Eliminar polvo en altos de máquinas"},
   ];
   if(z.espejos)t.push({id:`Za4`,txt:"Limpiar cristales y espejos en profundidad"});
-  t.push({id:`Za5`,txt:"Fregado de suelo de caucho con máquina y producto adecuado"});
+  if(z.sueloblanco){
+    t.push({id:`Za5`,txt:"Fregado de suelo blanco con máquina de limpieza · usar producto friegasuelos / lejía"});
+  }else{
+    t.push({id:`Za5`,txt:"Fregado de suelo de caucho con máquina y producto adecuado"});
+  }
   return t;
 }
 
