@@ -783,8 +783,8 @@
       </div>
     </div>
 
-    <h3 style="font-size:22px; font-weight:800; color:#fff; margin:36px 0 8px; text-transform:none; letter-spacing:0;">Bloque 3 · Zoning — limpieza profunda</h3>
-    <p style="font-size:14.5px; color:#b6b6b6; margin-bottom:8px; text-transform:none; letter-spacing:0;">Con el tiempo restante de cada turno se completa la limpieza integral de las zonas en un ciclo de 7 días.</p>
+    <h3 style="font-size:22px; font-weight:800; color:#fff; margin:36px 0 8px; text-transform:none; letter-spacing:0;">Bloque 3 · Zoning — limpieza profunda por rotación semanal</h3>
+    <p style="font-size:14.5px; color:#b6b6b6; margin-bottom:8px; text-transform:none; letter-spacing:0;">Con el tiempo restante de cada turno se completa la limpieza integral de las zonas en un ciclo de 7 días — y las zonas <strong style="color:#fff">rotan automáticamente cada semana</strong> para garantizar que los miércoles (cuando coinciden ambas operarias) siempre se ataque una zona diferente y se pueda hacer una limpieza más profunda con los dos pares de manos.</p>
     <div class="flex-note"><b>Reparto de tiempo:</b> el tiempo de zoning se reparte entre lo que sobre del turno de mañana y del turno de tarde de ese mismo día. Si una zona requiere más tiempo del disponible, se continúa al día siguiente.</div>
 
     <div class="zoning-grid">
@@ -858,6 +858,74 @@
     </div>
 
     <div class="flex-note">El objetivo es que al finalizar el Día 7 se haya completado una limpieza integral de todas las zonas de entrenamiento. <b>Zonas 5 y 6 tienen suelo blanco</b> — usar siempre friegasuelos / lejía, nunca el producto de caucho.</div>
+
+    <!-- ROTACIÓN SEMANAL -->
+    <div style="margin:24px 0 8px;">
+      <h4 style="font-family:'Barlow Condensed';font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);margin-bottom:10px;">⟳ Rotación semanal automática</h4>
+      <p style="font-size:14px;color:#b6b6b6;margin-bottom:16px;line-height:1.6;">Las zonas no son fijas por día de semana — <strong style="color:#fff">rotan una posición cada semana</strong>. Esto garantiza que los miércoles, cuando coinciden las dos operarias, siempre toque una zona diferente y se pueda aprovechar la doble presencia para una limpieza más profunda. El aplicativo calcula la zona automáticamente: ambas trabajadoras ven la misma zona en su móvil sin necesidad de coordinación previa.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:8px;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:560px;">
+        <thead>
+          <tr style="background:var(--black-3);">
+            <th style="padding:9px 12px;text-align:left;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.05em;color:var(--grey);border-bottom:1px solid var(--line);">SEMANA</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">LUN</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">MAR</th>
+            <th style="padding:9px 12px;text-align:center;background:rgba(240,192,64,.07);color:var(--gold);font-weight:700;border-bottom:1px solid var(--line);">MIÉ ★</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">JUE</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">VIE</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">SÁB</th>
+            <th style="padding:9px 12px;text-align:center;color:#9b9b9b;border-bottom:1px solid var(--line);">DOM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);white-space:nowrap;">Sem. 1</td>
+            <td style="padding:8px 12px;text-align:center;">Z1</td><td style="padding:8px 12px;text-align:center;">Z2</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z3</td>
+            <td style="padding:8px 12px;text-align:center;">Z4</td><td style="padding:8px 12px;text-align:center;">Z5</td><td style="padding:8px 12px;text-align:center;">Z6</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);">Sem. 2</td>
+            <td style="padding:8px 12px;text-align:center;">Z2</td><td style="padding:8px 12px;text-align:center;">Z3</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z4</td>
+            <td style="padding:8px 12px;text-align:center;">Z5</td><td style="padding:8px 12px;text-align:center;">Z6</td><td style="padding:8px 12px;text-align:center;">Z1</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);">Sem. 3</td>
+            <td style="padding:8px 12px;text-align:center;">Z3</td><td style="padding:8px 12px;text-align:center;">Z4</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z5</td>
+            <td style="padding:8px 12px;text-align:center;">Z6</td><td style="padding:8px 12px;text-align:center;">Z1</td><td style="padding:8px 12px;text-align:center;">Z2</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);">Sem. 4</td>
+            <td style="padding:8px 12px;text-align:center;">Z4</td><td style="padding:8px 12px;text-align:center;">Z5</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z6</td>
+            <td style="padding:8px 12px;text-align:center;">Z1</td><td style="padding:8px 12px;text-align:center;">Z2</td><td style="padding:8px 12px;text-align:center;">Z3</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);">Sem. 5</td>
+            <td style="padding:8px 12px;text-align:center;">Z5</td><td style="padding:8px 12px;text-align:center;">Z6</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z1</td>
+            <td style="padding:8px 12px;text-align:center;">Z2</td><td style="padding:8px 12px;text-align:center;">Z3</td><td style="padding:8px 12px;text-align:center;">Z4</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px;font-weight:700;color:var(--gold);">Sem. 6</td>
+            <td style="padding:8px 12px;text-align:center;">Z6</td><td style="padding:8px 12px;text-align:center;">Z1</td>
+            <td style="padding:8px 12px;text-align:center;background:rgba(240,192,64,.07);font-weight:700;color:var(--gold);">Z2</td>
+            <td style="padding:8px 12px;text-align:center;">Z3</td><td style="padding:8px 12px;text-align:center;">Z4</td><td style="padding:8px 12px;text-align:center;">Z5</td>
+            <td style="padding:8px 12px;text-align:center;color:var(--grey);">Z7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--grey);margin-bottom:24px;">★ Miércoles: coinciden ambas operarias — limpieza en profundidad de la zona. · Dom (Z7) siempre fijo: cuarto staff, oficina dirección y pasillo de emergencia. · El ciclo se reinicia automáticamente cada 6 semanas.</p>
 
     <div class="checklist-common">
       <h4>Checklist común para cada zona</h4>
