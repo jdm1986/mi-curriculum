@@ -193,15 +193,17 @@ body.light .task-item.skipped .task-text{color:#aaa;}
 .task-item.checked .task-text{color:var(--txt-done);text-decoration:line-through;}
 .task-hint{font-size:12px;color:var(--gold);font-weight:600;margin-top:3px;display:block;}
 
-/* EXTRA MODE styles */
-.extra-header{
-  margin:12px 14px 4px;
+/* EXTRA MODE separator inline */
+.extra-sep{
+  margin:16px 0 4px;
+  padding:13px 15px;border-radius:10px;
+  background:rgba(227,52,47,.08);border:2px solid rgba(227,52,47,.35);
   display:flex;align-items:center;gap:10px;
-  padding:10px 14px;border-radius:8px;
-  background:rgba(227,52,47,.08);border:1px solid rgba(227,52,47,.3);
 }
-.extra-header-txt{font-family:'Barlow Condensed';font-size:15px;font-weight:700;color:#ff7875;text-transform:uppercase;letter-spacing:.04em;}
-.extra-header-sub{font-size:12px;color:var(--grey);margin-top:2px;}
+.extra-sep-ico{font-size:20px;flex-shrink:0;}
+.extra-sep-txt{flex:1;}
+.extra-sep-title{font-family:'Barlow Condensed';font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#ff7875;}
+.extra-sep-sub{font-size:12px;color:var(--grey);margin-top:2px;}
 
 /* ── BOTTOM SEND ── */
 .send-wrap{
@@ -496,9 +498,10 @@ function allGroups(){
   return[...(turno==='M'?TASKS_M:TASKS_T),buildZoningGroup(viewingDay)];
 }
 
-// EXTRA: todos los grupos de zoning de los 7 días
+// EXTRA: zonas distintas a la de hoy
 function extraGroups(){
-  return ZONES.map(z=>buildZoningGroup(z.day));
+  const today=todayZoningDay();
+  return ZONES.filter(z=>z.day!==today).map(z=>buildZoningGroup(z.day));
 }
 
 // ════════════════════════════════════════
@@ -511,20 +514,7 @@ function renderDate(){
 }
 
 function renderBanner(){
-  if(extraMode){
-    const el=document.getElementById('zone-banner');
-    el.style.borderColor='rgba(227,52,47,.4)';
-    el.style.background='rgba(227,52,47,.07)';
-    el.innerHTML=`
-      <div class="zb-left">
-        <div class="zb-badge" style="background:rgba(227,52,47,.2);color:#ff7875">MODO EXTRA</div>
-        <div>
-          <div class="zb-name" style="color:#ff7875">Tareas de zoning pendientes</div>
-          <div class="zb-sub">Marca las tareas completadas de otros días · envío especial al grupo</div>
-        </div>
-      </div>`;
-    return;
-  }
+  // Extra mode: banner shows today's zone normally (extra is just inline below)
   const today=todayZoningDay();
   const z=ZONES.find(x=>x.day===viewingDay)||ZONES[0];
   const locked=isLocked();
@@ -551,7 +541,10 @@ function renderBanner(){
 function renderSubNote(){
   const el=document.getElementById('sub-note');
   if(extraMode){
-    el.innerHTML=`<div class="extra-header"><div><div class="extra-header-txt">⭐ Modo extra — Zoning de días anteriores</div><div class="extra-header-sub">Marca las tareas que quedaron pendientes · el mensaje al grupo indicará el día y zona correspondiente</div></div></div>`;
+    const base=turno==='M'
+      ?'⚠️ Vestuario masculino: comenzar <strong>antes de las 06:30</strong>. Producto FRESC + manguera azul → dejar actuar 10-15 min antes de aclarar.'
+      :'ℹ️ Tarde: <strong>solo mopa en el pasillo</strong> (no fregar) · vestuarios reducidos · vending, repaso rápido.';
+    el.innerHTML=`<div class="alert-note">${base}</div>`;
     return;
   }
   if(isLocked()){
@@ -566,8 +559,6 @@ function renderSubNote(){
 }
 
 function renderChecklist(){
-  if(extraMode){renderExtraChecklist();return;}
-
   const grps=allGroups();
   const locked=isLocked();
   grps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=true;});
@@ -610,46 +601,51 @@ function renderChecklist(){
     });
     html+=`</div></div>`;
   });
-  document.getElementById('checklist').innerHTML=html;
-  updateProgress();
-}
-
-function renderExtraChecklist(){
-  const grps=extraGroups();
-  grps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=true;});
-
-  let html='';
-  grps.forEach(g=>{
-    const z=ZONES.find(x=>x.day===g.zday)||ZONES[0];
-    const done=g.tasks.filter(t=>!!extraChecks[t.id]).length;
-    const total=g.tasks.length;
-    const allDone=done===total&&done>0;
-    const isOpen=openGroups[g.id];
-    html+=`
-    <div class="task-group${allDone?' grp-done':''}" id="grp_${g.id}">
-      <div class="grp-header" onclick="toggleGrp('${g.id}')">
-        <div class="grp-icon">🔄</div>
-        <div class="grp-titlewrap">
-          <div class="grp-title" style="color:${z.color}">Día ${g.zday}/7 · ${z.label}</div>
-          <div class="grp-sub">${z.name}</div>
-        </div>
-        <div class="grp-badge${allDone?' done':''}" id="badge_${g.id}">${done}/${total}</div>
-        <div class="grp-chevron${isOpen?' open':''}" id="chev_${g.id}">▼</div>
+  // Si EXTRA activo: separador + grupos de otras zonas (colapsados por defecto)
+  if(extraMode){
+    const exGrps=extraGroups();
+    exGrps.forEach(g=>{if(openGroups[g.id]===undefined)openGroups[g.id]=false;});
+    html+=`<div class="extra-sep">
+      <div class="extra-sep-ico">⭐</div>
+      <div class="extra-sep-txt">
+        <div class="extra-sep-title">Tareas extraordinarias habilitadas</div>
+        <div class="extra-sep-sub">Marca aquí lo que hayas adelantado de otras zonas · se incluye en el mismo reporte</div>
       </div>
-      <div class="grp-body${isOpen?' open':''}" id="body_${g.id}">`;
-    g.tasks.forEach(t=>{
-      const st=getTaskState(t.id);
-      const ck=st==='done'; const sk=st==='skip';
+    </div>`;
+    exGrps.forEach(g=>{
+      const z=ZONES.find(x=>x.day===g.zday)||ZONES[0];
+      const doneCt=g.tasks.filter(t=>extraChecks[t.id]==='done').length;
+      const skipCt=g.tasks.filter(t=>extraChecks[t.id]==='skip').length;
+      const total=g.tasks.length;
+      const allResolved=(doneCt+skipCt)===total&&total>0;
+      const isOpen=!!openGroups[g.id];
       html+=`
-        <div class="task-item${ck?' checked':''}${sk?' skipped':''}" id="ti_${t.id}"
-          data-tid="${t.id}" data-gid="${g.id}" data-extra="1"
-          onclick="toggleTask(this)">
-          <div class="task-chk"><span class="chk-icon">✓</span></div>
-          <div class="task-text">${t.txt}</div>
-        </div>`;
+      <div class="task-group${allResolved?' grp-done':''}" id="grp_${g.id}" style="border-color:${z.color}33;">
+        <div class="grp-header" onclick="toggleGrp('${g.id}')">
+          <div class="grp-icon">🔄</div>
+          <div class="grp-titlewrap">
+            <div class="grp-title" style="color:${z.color}">Día ${g.zday}/7 · ${z.label} — ${z.name}</div>
+            <div class="grp-sub">Tarea extraordinaria · marcar solo lo que hayas adelantado</div>
+          </div>
+          <div class="grp-badge${allResolved?' done':''}" id="badge_${g.id}">${doneCt}/${total}</div>
+          <div class="grp-chevron${isOpen?' open':''}" id="chev_${g.id}">▼</div>
+        </div>
+        <div class="grp-body${isOpen?' open':''}" id="body_${g.id}">`;
+      g.tasks.forEach(t=>{
+        const st=extraChecks[t.id];
+        const ck=st==='done'; const sk=st==='skip';
+        html+=`
+          <div class="task-item${ck?' checked':''}${sk?' skipped':''}" id="ti_${t.id}"
+            data-tid="${t.id}" data-gid="${g.id}" data-extra="1"
+            onclick="toggleTask(this)">
+            <div class="task-chk"><span class="chk-icon">✓</span></div>
+            <div class="task-text">${t.txt}</div>
+          </div>`;
+      });
+      html+=`</div></div>`;
     });
-    html+=`</div></div>`;
-  });
+  }
+
   document.getElementById('checklist').innerHTML=html;
   updateProgress();
 }
@@ -709,17 +705,14 @@ function toggleTask(el){
 
 function updateProgress(){
   let done,total;
+  const grps=allGroups();
+  const all=grps.flatMap(g=>g.tasks);
+  done=all.filter(t=>{const s=getTaskState(t.id);return s==='done'||s==='skip';}).length;
+  total=all.length;
   if(extraMode){
-    const grps=extraGroups();
-    const all=grps.flatMap(g=>g.tasks);
-    done=all.filter(t=>extraChecks[t.id]==='done').length;
-    total=all.length;
-  }else{
-    const grps=allGroups();
-    const all=grps.flatMap(g=>g.tasks);
-    // resolved = done + skip (both counted toward progress)
-    done=all.filter(t=>{const s=getTaskState(t.id);return s==='done'||s==='skip';}).length;
-    total=all.length;
+    const exAll=extraGroups().flatMap(g=>g.tasks);
+    done+=exAll.filter(t=>extraChecks[t.id]==='done'||extraChecks[t.id]==='skip').length;
+    total+=exAll.length;
   }
   const pct=total>0?Math.round(done/total*100):0;
   document.getElementById('prog-bar').style.width=pct+'%';
@@ -733,9 +726,6 @@ function updateProgress(){
 function toggleExtra(){
   extraMode=!extraMode;
   document.getElementById('btn-extra').classList.toggle('active',extraMode);
-  document.getElementById('turno-pills').style.opacity=extraMode?'.4':'1';
-  document.getElementById('turno-pills').style.pointerEvents=extraMode?'none':'';
-  openGroups={};
   renderBanner();
   renderSubNote();
   renderChecklist();
@@ -745,8 +735,6 @@ function toggleExtra(){
 // MENSAJES
 // ════════════════════════════════════════
 function buildMsg(){
-  if(extraMode)return buildExtraMsg();
-
   const grps=allGroups();
   const day=viewingDay;
   const z=ZONES.find(x=>x.day===day)||ZONES[0];
@@ -755,12 +743,12 @@ function buildMsg(){
   const ds=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
   const dateStr=ds.charAt(0).toUpperCase()+ds.slice(1);
   const all=grps.flatMap(g=>g.tasks);
-  const done=all.filter(t=>checks[t.id]).length;
+  const doneCount=all.filter(t=>{const s=getTaskState(t.id);return s==='done'||s==='skip';}).length;
 
   let m=`🏋️ FITNESS PARK VILLALOBOS\n`;
   m+=`📋 Parte de turno — ${tLabel} · ${dateStr}\n`;
   m+=`─────────────────────\n`;
-  m+=`✅ ${done}/${all.length} tareas completadas\n`;
+  m+=`✅ ${doneCount}/${all.length} tareas completadas\n`;
 
   const hasPending=grps.some(g=>g.tasks.some(t=>!getTaskState(t.id)));
   if(!hasPending){
@@ -786,39 +774,26 @@ function buildMsg(){
     m+=line+'\n';
   });
 
+  // Tareas extraordinarias (si extra activo y hay algo marcado)
+  if(extraMode){
+    const exDone=extraGroups().filter(g=>g.tasks.some(t=>extraChecks[t.id]==='done'));
+    if(exDone.length>0){
+      m+=`─────────────────────\n`;
+      m+=`⭐ TAREAS EXTRAORDINARIAS REALIZADAS:\n`;
+      exDone.forEach(g=>{
+        const zz=ZONES.find(x=>x.day===g.zday)||ZONES[0];
+        m+=`\n  ✅ Día ${g.zday}/7 · ${zz.label} — ${zz.name}\n`;
+        g.tasks.filter(t=>extraChecks[t.id]==='done').forEach(t=>{m+=`    • ${t.txt}\n`;});
+      });
+    }
+  }
+
   m+=`─────────────────────\n`;
   m+=`🔄 Zoning · Día ${day}/7 — ${z.label} ${z.name}\n`;
   m+=`📍 Fitness Park Villalobos`;
   return m;
 }
 
-function buildExtraMsg(){
-  const grps=extraGroups();
-  const d=new Date();
-  const ds=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
-  const dateStr=ds.charAt(0).toUpperCase()+ds.slice(1);
-  const completedGroups=grps.filter(g=>g.tasks.some(t=>extraChecks[t.id]));
-
-  if(completedGroups.length===0){
-    return`🏋️ FITNESS PARK VILLALOBOS\n⭐ Parte Extra · ${dateStr}\n\nℹ️ No hay tareas extra marcadas.`;
-  }
-
-  let m=`🏋️ FITNESS PARK VILLALOBOS\n`;
-  m+=`⭐ TAREAS EXTRA — Zoning pendiente completado\n`;
-  m+=`${dateStr}\n`;
-  m+=`─────────────────────\n`;
-
-  completedGroups.forEach(g=>{
-    const z=ZONES.find(x=>x.day===g.zday)||ZONES[0];
-    const done=g.tasks.filter(t=>extraChecks[t.id]);
-    m+=`\n✅ Día ${g.zday}/7 · ${z.label} — ${z.name}\n`;
-    done.forEach(t=>{m+=`    • ${t.txt}\n`;});
-  });
-
-  m+=`─────────────────────\n`;
-  m+=`📍 Fitness Park Villalobos`;
-  return m;
-}
 
 function sendWA(){
   const msg=buildMsg();
