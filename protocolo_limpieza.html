@@ -798,7 +798,7 @@
     </div>
 
     <h3 style="font-size:22px; font-weight:800; color:#fff; margin:36px 0 8px; text-transform:none; letter-spacing:0;">Bloque 3 · Zoning — limpieza profunda por rotación semanal</h3>
-    <p style="font-size:14.5px; color:#b6b6b6; margin-bottom:8px; text-transform:none; letter-spacing:0;">Con el tiempo restante de cada turno se completa la limpieza integral de las zonas en un ciclo de 7 días — y las zonas <strong style="color:#fff">rotan automáticamente cada semana</strong> para garantizar que los miércoles (cuando coinciden ambas operarias) siempre se ataque una zona diferente y se pueda hacer una limpieza más profunda con los dos pares de manos.</p>
+    <p style="font-size:14.5px; color:#b6b6b6; margin-bottom:8px; text-transform:none; letter-spacing:0;">Con el tiempo restante de cada turno se completa la limpieza integral de las zonas siguiendo este esquema: <strong style="color:#fff">de lunes a sábado</strong>, las 6 zonas de entrenamiento rotan automáticamente en un ciclo de 6 semanas — garantizando que los miércoles (cuando coinciden ambas operarias) siempre se ataque una zona diferente. <strong style="color:#fff">El domingo es siempre fijo</strong>: Zona 7 (Áreas internas — cuarto staff, dirección, pasillo, fachada y cristales de entrada), independientemente de la semana del ciclo.</p>
     <div class="flex-note"><b>Reparto de tiempo:</b> el tiempo de zoning se reparte entre lo que sobre del turno de mañana y del turno de tarde de ese mismo día. Si una zona requiere más tiempo del disponible, se continúa al día siguiente.</div>
 
     <div class="zoning-grid">
@@ -807,9 +807,10 @@
         <h4>Zona 1</h4>
         <div class="zc-name">Musculación Libre</div>
         <ul>
+          <li>Limpieza del mancuernero: polvo en estructuras, soportes y superficies</li>
           <li>Cristales y espejos del mancuernero</li>
           <li>Aspirar huecos y bajos de máquinas</li>
-          <li>Desinfectar respaldares y altos</li>
+          <li>Limpieza integral de máquinas: polvo en zonas altas y desinfección de respaldares y asientos</li>
           <li>Fregado de suelo de caucho</li>
         </ul>
       </div>
@@ -818,8 +819,7 @@
         <h4>Zona 2</h4>
         <div class="zc-name">Zona media (máquinas)</div>
         <ul>
-          <li>Igual que Zona 1</li>
-          <li>Sin espejos en esta zona</li>
+          <li>Igual que Zona 1 (sin mancuernero ni espejos)</li>
         </ul>
       </div>
       <div class="zone-card" style="--zc:var(--z3);">
@@ -827,8 +827,7 @@
         <h4>Zona 3</h4>
         <div class="zc-name">Hammer</div>
         <ul>
-          <li>Igual que Zona 1</li>
-          <li>Sin espejos en esta zona</li>
+          <li>Igual que Zona 1 (sin mancuernero ni espejos)</li>
         </ul>
       </div>
       <div class="zone-card" style="--zc:var(--z4);">
@@ -836,8 +835,7 @@
         <h4>Zona 4</h4>
         <div class="zc-name">Cross + Skill / Eleiko</div>
         <ul>
-          <li>Igual que Zona 1</li>
-          <li>Sí hay espejos: limpiarlos en profundidad</li>
+          <li>Igual que Zona 1 (sin mancuernero) · hay espejos: limpiarlos en profundidad</li>
         </ul>
       </div>
       <div class="zone-card" style="--zc:var(--z5);">
@@ -845,8 +843,8 @@
         <h4>Zona 5</h4>
         <div class="zc-name">Musculación Guiada</div>
         <ul>
-          <li>Igual que Zona 1</li>
-          <li>⚠️ Suelo blanco: usar friegasuelos / lejía (no producto de caucho)</li>
+          <li>Igual que Zona 1 (sin mancuernero ni espejos)</li>
+          <li>⚠️ Suelo blanco: usar friegasuelos / lejía</li>
         </ul>
       </div>
       <div class="zone-card" style="--zc:var(--z6);">
@@ -867,6 +865,8 @@
           <li>Cuarto staff</li>
           <li>Oficina de Dirección</li>
           <li>Pasillo de emergencia</li>
+          <li>Repaso de fachada exterior</li>
+          <li>Cristales de puerta de entrada</li>
         </ul>
       </div>
     </div>
@@ -876,7 +876,7 @@
     <!-- ROTACIÓN SEMANAL -->
     <div style="margin:24px 0 8px;">
       <h4 style="font-family:'Barlow Condensed';font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);margin-bottom:10px;">⟳ Rotación semanal automática</h4>
-      <p style="font-size:14px;color:#b6b6b6;margin-bottom:16px;line-height:1.6;">Las zonas no son fijas por día de semana — <strong style="color:#fff">rotan una posición cada semana</strong>. Esto garantiza que los miércoles, cuando coinciden las dos operarias, siempre toque una zona diferente y se pueda aprovechar la doble presencia para una limpieza más profunda. El aplicativo calcula la zona automáticamente: ambas trabajadoras ven la misma zona en su móvil sin necesidad de coordinación previa.</p>
+      <p style="font-size:14px;color:#b6b6b6;margin-bottom:16px;line-height:1.6;">Las zonas 1–6 no son fijas por día de semana — <strong style="color:#fff">rotan una posición cada semana</strong> de lunes a sábado. Esto garantiza que los miércoles, cuando coinciden las dos operarias, siempre toque una zona diferente. El domingo siempre es <strong style="color:#fff">Zona 7 (Áreas internas)</strong> — no rota ni forma parte del ciclo. El aplicativo calcula la zona automáticamente: ambas trabajadoras ven la misma zona en su móvil sin necesidad de coordinación previa.</p>
     </div>
 
     <div style="overflow-x:auto;margin-bottom:8px;">
@@ -939,14 +939,14 @@
         </tbody>
       </table>
     </div>
-    <p style="font-size:12px;color:var(--grey);margin-bottom:24px;">★ Miércoles: coinciden ambas operarias — limpieza en profundidad de la zona. · Dom (Z7) siempre fijo: cuarto staff, oficina dirección y pasillo de emergencia. · El ciclo se reinicia automáticamente cada 6 semanas.</p>
+    <p style="font-size:12px;color:var(--grey);margin-bottom:24px;">★ Miércoles: coinciden ambas operarias — limpieza en profundidad de la zona + el aplicativo muestra un check especial «🧹 LIMPIEZA PROFUNDA · 2 OPERARIAS» (fregado de paredes, zonas altas y recovecos). · Dom (Z7) siempre fijo: cuarto staff, oficina dirección, pasillo de emergencia, fachada exterior y cristales de entrada. · El ciclo se reinicia automáticamente cada 6 semanas.</p>
 
     <div class="checklist-common">
       <h4>Checklist común para cada zona</h4>
       <ul>
         <li>Aspirar huecos y bajos de máquinas (palo extensible para recovecos)</li>
-        <li>Desinfectar respaldares y asientos con producto apropiado</li>
-        <li>Eliminar polvo en altos de máquinas</li>
+        <li>Limpieza integral de máquinas: eliminar polvo en zonas altas y desinfectar respaldares y asientos con producto apropiado</li>
+        <li>Zona 1 únicamente: limpieza del mancuernero (estructuras, soportes y superficies)</li>
         <li>Limpiar cristales y espejos (si los hay en la zona)</li>
         <li>Zonas 1–4: fregado de suelo de caucho con máquina y producto adecuado</li>
           <li>Zonas 5–6: fregado de suelo blanco con máquina de limpieza · usar producto friegasuelos / lejía</li>
@@ -1092,7 +1092,8 @@
       <h4>En cada zona, siempre se hacen estas tareas</h4>
       <ul>
         <li>Aspirar huecos y bajos de máquinas (palo extensible para recovecos)</li>
-        <li>Desinfectar respaldares, asientos y altos de máquinas</li>
+        <li>Limpieza integral de máquinas: eliminar polvo en zonas altas y desinfectar respaldares y asientos con producto apropiado</li>
+        <li>Zona 1 únicamente: limpieza del mancuernero (estructuras, soportes y superficies)</li>
         <li>Limpiar cristales y espejos si los hay en esa zona</li>
         <li>Zonas 1–4: fregar el suelo de caucho con la máquina y producto adecuado</li>
         <li>Zonas 5–6: fregar el suelo blanco con la máquina · usar producto friegasuelos / lejía</li>
@@ -1140,7 +1141,7 @@
         <div class="zc-day">Día 7</div>
         <h4>Staff / Dir.</h4>
         <div class="zc-name">Áreas internas</div>
-        <p class="zc-desc">Cuarto staff · Oficina de Dirección · Pasillo de emergencia.</p>
+        <p class="zc-desc">Cuarto staff · Oficina de Dirección · Pasillo de emergencia · Fachada exterior · Cristales de entrada.</p>
       </div>
     </div>
 
