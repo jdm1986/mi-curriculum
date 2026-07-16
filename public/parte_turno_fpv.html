@@ -454,8 +454,10 @@ let viewingDay=1; // se inicializa en init()
 function isLocked(){return viewingDay!==todayZoningDay();}
 
 // Navegación de flechas — solo cambia viewingDay
+// En domingo viewingDay=7 es fijo. Resto de días: ciclo 1-6 (domingo excluido)
 function shiftZoning(dir){
-  viewingDay=((viewingDay-1+dir+7)%7)+1;
+  if(viewingDay===7) return; // domingo fijo, sin navegación
+  viewingDay=((viewingDay-1+dir+6)%6)+1; // cicla 1-6
   renderBanner();renderChecklist();
 }
 function goToToday(){
@@ -472,13 +474,15 @@ function zoningTasksForDay(day){
       {id:`Zz1`,txt:"Limpieza completa del cuarto staff"},
       {id:`Zz2`,txt:"Limpieza de oficina de dirección"},
       {id:`Zz3`,txt:"Limpieza de pasillo de emergencia"},
+      {id:`Zz4`,txt:"Repaso de fachada exterior"},
+      {id:`Zz5`,txt:"Limpieza de cristales de puerta de entrada"},
     ];
   }
   const t=[
     {id:`Za1`,txt:"Aspirar huecos y bajos de máquinas (usar palo extensible para recovecos)"},
-    {id:`Za2`,txt:"Desinfectar respaldares y asientos con producto apropiado"},
-    {id:`Za3`,txt:"Eliminar polvo en altos de máquinas"},
+    {id:`Za2`,txt:"Limpieza integral de máquinas: eliminar polvo en zonas altas y desinfectar respaldares y asientos con producto apropiado"},
   ];
+  if(day===1) t.push({id:`Za3`,txt:"Limpieza del mancuernero: polvo en estructuras, soportes y superficies (diferenciado de máquinas)"});
   if(z.espejos)t.push({id:`Za4`,txt:"Limpiar cristales y espejos en profundidad"});
   if(z.sueloblanco){
     t.push({id:`Za5`,txt:"Fregado de suelo blanco con máquina de limpieza · usar producto friegasuelos / lejía"});
@@ -498,7 +502,7 @@ function allGroups(){
   return[...(turno==='M'?TASKS_M:TASKS_T),buildZoningGroup(viewingDay)];
 }
 
-// EXTRA: zonas distintas a la de hoy
+// EXTRA: zonas distintas a la de hoy (domingo/Z7 incluido como opción)
 function extraGroups(){
   const today=todayZoningDay();
   return ZONES.filter(z=>z.day!==today).map(z=>buildZoningGroup(z.day));
@@ -518,23 +522,40 @@ function renderBanner(){
   const today=todayZoningDay();
   const z=ZONES.find(x=>x.day===viewingDay)||ZONES[0];
   const locked=isLocked();
+  const isSunday=(viewingDay===7);
   const el=document.getElementById('zone-banner');
   el.style.borderColor=z.color+(locked?'30':'55');
   el.style.background=z.color+(locked?'08':'10');
+  if(isSunday){
+    el.innerHTML=`
+    <div class="zb-left">
+      <div class="zb-badge" style="background:rgba(155,155,155,.2);color:#9b9b9b">DOM · FIJO</div>
+      <div>
+        <div class="zb-name" style="color:${z.color}">${z.label} — ${z.name}</div>
+        <div class="zb-sub">Domingo siempre fijo · no rota · solo una operaria</div>
+      </div>
+    </div>
+    <div class="zb-ctrl">
+      <button class="ctrl-btn" style="opacity:.2;pointer-events:none">‹</button>
+      <button class="ctrl-btn" style="opacity:.2;pointer-events:none">›</button>
+      <span style="font-size:11px;color:var(--grey);padding:0 6px;">Z7 siempre</span>
+    </div>`;
+    return;
+  }
   el.innerHTML=`
     <div class="zb-left">
-      <div class="zb-badge" style="background:${z.color}22;color:${z.color}">DÍA ${viewingDay}/7${locked?' 👁':''}</div>
+      <div class="zb-badge" style="background:${z.color}22;color:${z.color}">DÍA ${viewingDay}/6${locked?' 👁':''}</div>
       <div>
         <div class="zb-name" style="color:${z.color};${locked?'opacity:.7':''}">
           ${z.label} — ${z.name}${locked?` <span style="font-size:12px;color:var(--grey)">(solo lectura)</span>`:''}
         </div>
-        <div class="zb-sub">${locked?`Hoy es Día ${today}/7 · navegando en modo lectura`:`Zoning de hoy · semana de rotación ${getWeekOffset()+1}/6`}</div>
+        <div class="zb-sub">${locked?`Hoy es Día ${today}/6 · navegando en modo lectura`:`Zoning de hoy · semana de rotación ${getWeekOffset()+1}/6`}</div>
       </div>
     </div>
     <div class="zb-ctrl">
       <button class="ctrl-btn" onclick="shiftZoning(-1)" title="Día anterior">‹</button>
       <button class="ctrl-btn" onclick="shiftZoning(1)" title="Día siguiente">›</button>
-      ${locked?`<button class="zb-reset" onclick="goToToday()">⬤ Ir al día de hoy</button>`:`<button class="zb-reset" onclick="goToToday()" style="opacity:.4;pointer-events:none">Día ${today}/7</button>`}
+      ${locked?`<button class="zb-reset" onclick="goToToday()">⬤ Ir al día de hoy</button>`:`<button class="zb-reset" onclick="goToToday()" style="opacity:.4;pointer-events:none">Día ${today}/6</button>`}
     </div>`;
 }
 
@@ -646,6 +667,35 @@ function renderChecklist(){
     });
   }
 
+  // ── MIÉRCOLES · 2 OPERARIAS: limpieza profunda ──
+  // Aparece solo si hoy es miércoles y estamos viendo el día de hoy (no bloqueado, no domingo)
+  if(new Date().getDay()===3 && !isLocked() && viewingDay!==7){
+    if(openGroups['Zpro']===undefined) openGroups['Zpro']=true;
+    const dpSt=getTaskState('Zpro');
+    const dpDone=dpSt==='done', dpSkip=dpSt==='skip';
+    const dpResolved=dpDone||dpSkip;
+    const dpOpen=openGroups['Zpro'];
+    html+=`
+    <div class="task-group${dpResolved?' grp-done':''}" id="grp_Zpro" style="border-color:#f0c04055;margin-top:10px;">
+      <div class="grp-header" onclick="toggleGrp('Zpro')">
+        <div class="grp-icon">🧹</div>
+        <div class="grp-titlewrap">
+          <div class="grp-title" style="color:var(--gold)">⭐ MIÉRCOLES · 2 OPERARIAS</div>
+          <div class="grp-sub">Aprovechad la doble presencia para limpiar en profundidad</div>
+        </div>
+        <div class="grp-badge${dpResolved?' done':''}" id="badge_Zpro">${dpDone?1:0}/1</div>
+        <div class="grp-chevron${dpOpen?' open':''}" id="chev_Zpro">▼</div>
+      </div>
+      <div class="grp-body${dpOpen?' open':''}" id="body_Zpro">
+        <div class="task-item${dpDone?' checked':''}${dpSkip?' skipped':''}" id="ti_Zpro"
+          data-tid="Zpro" data-gid="Zpro" onclick="toggleTask(this)">
+          <div class="task-chk"><span class="chk-icon">✓</span></div>
+          <div class="task-text">🧹 LIMPIEZA INTEGRAL Y PROFUNDA DE LA ZONA · 2 OPERARIAS: fregado de paredes, polvo en zonas más altas, recovecos donde se acumule pelusa o polvo</div>
+        </div>
+      </div>
+    </div>`;
+  }
+
   document.getElementById('checklist').innerHTML=html;
   updateProgress();
 }
@@ -685,20 +735,30 @@ function toggleTask(el){
   saveChecks();
 
   // update badge
-  let grp;
-  if(isExtra){grp=extraGroups().find(g=>g.id===gid);}
-  else{grp=allGroups().find(g=>g.id===gid);}
-  if(grp){
-    const resolved=grp.tasks.filter(t=>{
-      const s=getTaskState(t.id);
-      return s==='done'||s==='skip';
-    }).length;
-    const doneCnt=grp.tasks.filter(t=>getTaskState(t.id)==='done').length;
-    const total=grp.tasks.length;
-    const allResolved=resolved===total;
-    document.getElementById(`badge_${gid}`).textContent=`${doneCnt}/${total}`;
-    document.getElementById(`badge_${gid}`).className='grp-badge'+(allResolved?' done':'');
-    document.getElementById(`grp_${gid}`).classList.toggle('grp-done',allResolved);
+  if(gid==='Zpro'){
+    // tarea especial de miércoles — badge manual
+    const s=getTaskState('Zpro');
+    const res=s==='done'||s==='skip';
+    const done=s==='done'?1:0;
+    document.getElementById('badge_Zpro').textContent=`${done}/1`;
+    document.getElementById('badge_Zpro').className='grp-badge'+(res?' done':'');
+    document.getElementById('grp_Zpro').classList.toggle('grp-done',res);
+  }else{
+    let grp;
+    if(isExtra){grp=extraGroups().find(g=>g.id===gid);}
+    else{grp=allGroups().find(g=>g.id===gid);}
+    if(grp){
+      const resolved=grp.tasks.filter(t=>{
+        const s=getTaskState(t.id);
+        return s==='done'||s==='skip';
+      }).length;
+      const doneCnt=grp.tasks.filter(t=>getTaskState(t.id)==='done').length;
+      const total=grp.tasks.length;
+      const allResolved=resolved===total;
+      document.getElementById(`badge_${gid}`).textContent=`${doneCnt}/${total}`;
+      document.getElementById(`badge_${gid}`).className='grp-badge'+(allResolved?' done':'');
+      document.getElementById(`grp_${gid}`).classList.toggle('grp-done',allResolved);
+    }
   }
   updateProgress();
 }
@@ -713,6 +773,12 @@ function updateProgress(){
     const exAll=extraGroups().flatMap(g=>g.tasks);
     done+=exAll.filter(t=>extraChecks[t.id]==='done'||extraChecks[t.id]==='skip').length;
     total+=exAll.length;
+  }
+  // Contar tarea especial de miércoles si está activa
+  if(new Date().getDay()===3 && !isLocked() && viewingDay!==7){
+    const dpSt=getTaskState('Zpro');
+    if(dpSt==='done'||dpSt==='skip') done++;
+    total++;
   }
   const pct=total>0?Math.round(done/total*100):0;
   document.getElementById('prog-bar').style.width=pct+'%';
@@ -773,6 +839,17 @@ function buildMsg(){
     if(sk>0)line+=` · ${sk} no necesario`;
     m+=line+'\n';
   });
+
+  // Tarea especial de miércoles
+  if(new Date().getDay()===3 && !isLocked() && viewingDay!==7){
+    const dpSt=getTaskState('Zpro');
+    if(dpSt==='done'){
+      m+=`─────────────────────
+`;
+      m+=`🧹 LIMPIEZA PROFUNDA REALIZADA (2 operarias)
+`;
+    }
+  }
 
   // Tareas extraordinarias (si extra activo y hay algo marcado)
   if(extraMode){
