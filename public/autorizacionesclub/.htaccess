@@ -1,0 +1,9 @@
+# Config solo para /autorizacionesclub/ — no afecta al resto del sitio.
+# NOTA: GitHub Pages IGNORA este archivo. Solo tiene efecto si la carpeta
+# se sirve desde un Apache real (p.ej. Hostalia).
+<IfModule mod_headers.c>
+  <FilesMatch "\.json$">
+    Header set Content-Type "application/json; charset=utf-8"
+    Header set Cache-Control "max-age=300, public"
+  </FilesMatch>
+</IfModule>
