@@ -1,9 +1,4 @@
 {
   "clubs": {},
-  "app": {
-    "version_ultima": "",
-    "url_descarga": "",
-    "sha256": "",
-    "notas": ""
-  }
+  "app_token": "eyJub3RhcyI6InY5LjYiLCJzaGEyNTYiOiJkYzY3Y2NlNWFkNjY0YzkzZDEwOTQyODM5YzNiMzVkYzZhM2VjM2ZlMjAzMTE2NDU2MmRlZWNjNDk2MzYwZWZmIiwidXJsX2Rlc2NhcmdhIjoiaHR0cHM6Ly9naXRodWIuY29tL2pkbTE5ODYvZmxvd2dlc3QtcmVsZWFzZXMvcmVsZWFzZXMvZG93bmxvYWQvdjkuNi9BVVRPTUFUSVNNT1NfUkVTQU1BTklBLmV4ZSIsInZlcnNpb25fdWx0aW1hIjoiOS42In0.sv1FM6RoACq3m7PznIpUg10LFEjODd1-SOiYeR8CZyuBIO4ynzMoikHZ4sZiLAjP2D-wZ5RpOoYse0BJpFSxBA"
 }
