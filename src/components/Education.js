@@ -22,7 +22,7 @@ function Education() {
       <ul>
         <li>
           <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong>
-          <p><em>ILERNA</em> (2023 - 2025) - FINALIZANDO</p>
+          <p><em>ILERNA</em> (2023 - 2025) - FINALIZADO</p>
           <span onClick={() => toggleImage('notasDAW')} className="caret-icon">
             {activeImage === 'notasDAW' ? <FaCaretUp /> : <FaCaretDown />}
           </span>
