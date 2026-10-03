@@ -1,9 +1,9 @@
 /* Estilos del pie de página */
 .footer {
-  background: rgba(10, 12, 20, 0.55);
+  background: rgba(0, 0, 0,  0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(97, 218, 251, 0.12);
+  border-top: 1px solid rgba(255, 193, 7,  0.12);
   color: white;
   text-align: center;
   padding: 20px;

@@ -5,7 +5,7 @@ html {
 
 /* Estilos generales */
 body {
-  background-color: #1e1e1e; /* Color oscuro de fondo para el tema */
+  background-color: #0d0d0d; /* Color oscuro de fondo para el tema */
   color: #f0f0f0; /* Color del texto */
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -34,7 +34,7 @@ body {
 
 /* Estilos de la cabecera */
 .App-header {
-  background-color: #282c34;
+  background-color: #0d0d0d;
   padding: 20px;
   color: #f0f0f0;
   position: fixed; /* Cabecera fija */
@@ -53,9 +53,15 @@ body {
   text-align: center;
 }
 
-/* Imagen de fondo aplicada al cuerpo */
+/* Fondo aplicado al cuerpo: degradado radial ámbar sobre negro (reemplaza a fondo.png) */
 .background-container {
-  background-image: url('./assets/fondo.png');
+  background-color: #0d0d0d;
+  background-image: radial-gradient(ellipse 95% 80% at 50% 40%,
+    rgba(255, 193, 7, 0.55) 0%,
+    rgba(255, 170, 0, 0.38) 22%,
+    rgba(180, 120, 0, 0.18) 48%,
+    rgba(20, 20, 20, 0.50) 72%,
+    #0d0d0d 100%);
   background-size: cover;
   background-position: center;
   padding: 50px 20px; /* Ajustamos el espacio para las secciones */

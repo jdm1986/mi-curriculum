@@ -1,6 +1,6 @@
 .courses-fit {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -12,7 +12,7 @@
 
 .courses-fit h2 {
   font-size: 2rem;
-  color: #61dafb;
+  color: #FFC107;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -31,7 +31,7 @@
 }
 
 .courses-fit li strong {
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.3rem;
 }
 
@@ -42,7 +42,7 @@
 
 .caret-icon {
   cursor: pointer;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.2rem;
   margin-left: 10px;
 }

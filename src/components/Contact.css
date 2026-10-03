@@ -1,6 +1,6 @@
 .contact {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Fondo oscuro como el resto de las secciones */
   border-radius: 8px;
@@ -13,7 +13,7 @@
 
 .contact h2 {
   font-size: 2rem;
-  color: #61dafb; /* Color de título */
+  color: #FFC107; /* Color de título */
   margin-bottom: 20px;
 }
 
@@ -33,28 +33,31 @@
   font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  color: #0d0d0d; /* Texto oscuro por defecto para botones ámbar */
+  transition: background-color 0.2s ease, transform 0.15s ease, color 0.2s ease;
   width: 100%;
   max-width: 340px;
   justify-content: center;
 }
 
 .contact-btn--email {
-  background-color: #479ECE;
+  background-color: #FFC107;
 }
 
 .contact-btn--email:hover {
-  background-color: #21a1f1;
+  background-color: #E0A800;
+  color: #000000;
   transform: translateY(-2px);
 }
 
 .contact-btn--linkedin {
   background-color: #0077B5;
+  color: white; /* Linkedin sigue con texto blanco sobre azul */
 }
 
 .contact-btn--linkedin:hover {
   background-color: #005f93;
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -65,6 +68,6 @@
 
 .section-icon {
   margin-right: 10px;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.5rem;
 }

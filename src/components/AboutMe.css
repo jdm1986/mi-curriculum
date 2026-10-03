@@ -1,6 +1,6 @@
 .about-me {
   padding: 20px; /* Espacio dentro de la caja */
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Fondo oscuro consistente con otras secciones */
   border-radius: 8px; /* Bordes redondeados */
@@ -11,7 +11,7 @@
 }
 
 .about-me h2 {
-  color: #61dafb; /* Color azul para los títulos */
+  color: #FFC107; /* Color azul para los títulos */
   font-size: 2rem; /* Tamaño de fuente del título */
   margin-bottom: 20px; /* Espacio inferior entre el título y el contenido */
   text-align: center; /* Centra el título */
@@ -31,6 +31,6 @@
 
 .section-icon {
   margin-right: 10px;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.5rem;
 }

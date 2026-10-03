@@ -27,20 +27,20 @@
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
-  background-color: #479ECE; /* Fondo azul */
-  color: #F0F0F0; /* Texto claro */
+  background-color: #FFC107;
+  color: #0d0d0d; /* Texto oscuro sobre fondo ámbar para buen contraste */
   border-radius: 8px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  gap: 0px; /* Reduce el espacio entre el icono y el texto */
+  gap: 0px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 10px; /* Añadir más margen superior */
+  margin-top: 10px;
 }
 
 .download-btn:hover {
-  background-color: #21a1f1; /* Cambio de color al pasar el ratón */
-  color: white;
+  background-color: #E0A800;
+  color: #000000;
 }
 
 .menu-list-desktop li {
@@ -59,10 +59,10 @@
 
 /* Sección 2: Logo | Texto central | Foto personal (tanto móviles como pantallas grandes) */
 .navbar-section2 {
-  background: rgba(10, 12, 20, 0.55);
+  background: rgba(0, 0, 0,  0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(97, 218, 251, 0.12);
+  border-bottom: 1px solid rgba(255, 193, 7,  0.12);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,10 +109,10 @@
   list-style: none;
   padding: 10px 0 10px 10px;
   margin: 0;
-  background: rgba(10, 12, 20, 0.72);
+  background: rgba(0, 0, 0,  0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(97, 218, 251, 0.1);
+  border: 1px solid rgba(255, 193, 7,  0.1);
   text-align: left;
   position: fixed;
   top: 70px;
@@ -138,10 +138,10 @@
     left: 20px; /* Para que no quede pegado al borde izquierdo */
     display: flex; /* Siempre visible en pantallas grandes */
     flex-direction: column;
-    background: rgba(10, 12, 20, 0.72);
+    background: rgba(0, 0, 0,  0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(97, 218, 251, 0.1);
+    border: 1px solid rgba(255, 193, 7,  0.1);
     padding: 10px;
     border-radius: 10px;
   }
@@ -191,7 +191,7 @@
     display: none;
     flex-direction: column;
     height: auto;
-    background: rgba(10, 12, 20, 0.94);
+    background: rgba(0, 0, 0,  0.94);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
@@ -239,9 +239,9 @@
 .hamburger-btn {
   display: block;
   background: none;
-  border: 2px solid #61dafb;
+  border: 2px solid #FFC107;
   border-radius: 6px;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.4rem;
   cursor: pointer;
   padding: 4px 8px;
@@ -249,7 +249,7 @@
 }
 
 .hamburger-btn:hover {
-  background-color: rgba(97, 218, 251, 0.15);
+  background-color: rgba(255, 193, 7,  0.15);
 }
 
 @media (min-width: 1025px) {
@@ -260,7 +260,7 @@
 
 .menu-icon {
   margin-right: 10px; /* Espacio entre el icono y el texto */
-  color: #61dafb; /* Color del icono */
+  color: #FFC107; /* Color del icono */
   font-size: 1.2rem; /* Tamaño del icono */
 }
 
@@ -281,18 +281,18 @@
 }
 
 .menu-list-mobile li:hover {
-  background-color: rgba(97, 218, 251, 0.1);
-  color: #61dafb;
+  background-color: rgba(255, 193, 7,  0.1);
+  color: #FFC107;
   text-decoration: underline;
 }
 
 .menu-list-mobile li.active {
-  background-color: rgba(97, 218, 251, 0.08);
-  border-left: 3px solid #61dafb;
+  background-color: rgba(255, 193, 7,  0.08);
+  border-left: 3px solid #FFC107;
 }
 
 .menu-list-mobile li.active a {
-  color: #61dafb;
+  color: #FFC107;
   font-weight: bold;
 }
 

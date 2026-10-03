@@ -1,6 +1,6 @@
 .courses {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Fondo uniforme con las otras secciones */
   border-radius: 8px;
@@ -12,7 +12,7 @@
 
 .courses h2 {
   font-size: 2rem;
-  color: #61dafb;
+  color: #FFC107;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -36,7 +36,7 @@
 }
 
 .courses li strong {
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.3rem;
 }
 
@@ -47,7 +47,7 @@
 
 .section-icon {
   margin-right: 10px;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.5rem;
 }
 
@@ -57,7 +57,7 @@
 
 .caret-icon {
   cursor: pointer;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.2rem;
   margin-left: 10px;
 }

@@ -1,6 +1,6 @@
 .projects {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -12,7 +12,7 @@
 
 .projects h2 {
   font-size: 2rem;
-  color: #61dafb;
+  color: #FFC107;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -32,13 +32,13 @@
 
 .project-list a,
 .project-title {
-  color: #61dafb;
+  color: #FFC107;
   text-decoration: none;
 }
 
 .project-list a:hover,
 .project-title:hover {
-  color: #61dafb;
+  color: #FFC107;
 }
 
 .details-toggle {
@@ -164,7 +164,7 @@
 }
 
 .project-button:hover {
-  color: #61dafb;
+  color: #FFC107;
 }
 
 /* Centrar el enlace "Toca aquí para visitar" */

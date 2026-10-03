@@ -1,6 +1,6 @@
 .github-section {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Consistente con el resto de secciones */
   border-radius: 8px;
@@ -13,12 +13,12 @@
 
 .github-section h2 {
   font-size: 2rem;
-  color: #61dafb; /* Color del título */
+  color: #FFC107; /* Color del título */
   margin-bottom: 20px;
 }
 
 .github-link {
-  color: #61dafb; /* Color de los enlaces */
+  color: #FFC107; /* Color de los enlaces */
   font-size: 1.2rem;
   text-decoration: none;
 }

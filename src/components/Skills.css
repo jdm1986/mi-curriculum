@@ -1,6 +1,6 @@
 .skills {
   padding: 20px;
-  background: rgba(10, 12, 20, 0.6);
+  background: rgba(0, 0, 0,  0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -12,7 +12,7 @@
 
 .skills h2 {
   font-size: 2rem;
-  color: #61dafb;
+  color: #FFC107;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -33,7 +33,7 @@
   min-width: 120px;
   font-size: 0.8rem;
   font-weight: bold;
-  color: #61dafb;
+  color: #FFC107;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding-top: 4px;
@@ -57,13 +57,13 @@
 
 .skill-chip:hover {
   background-color: #3a3a3a;
-  border-color: #61dafb;
-  color: #61dafb;
+  border-color: #FFC107;
+  color: #FFC107;
 }
 
 .section-icon {
   margin-right: 10px;
-  color: #61dafb;
+  color: #FFC107;
   font-size: 1.5rem;
 }
 

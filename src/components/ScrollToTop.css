@@ -5,8 +5,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #479ECE;
-  color: white;
+  background-color: #FFC107;
+  color: #0d0d0d; /* Icono oscuro sobre fondo ámbar para mejor contraste */
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
@@ -28,7 +28,8 @@
 }
 
 .scroll-to-top:hover {
-  background-color: #21a1f1;
+  background-color: #E0A800;
+  color: #000000;
 }
 
 /* Solo visible en móvil y tablet */
