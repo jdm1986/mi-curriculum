@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.294be29f.css",
+    "main.css": "/static/css/main.7fef3a68.css",
     "main.js": "/static/js/main.59953355.js",
     "static/js/453.ff3adc7b.chunk.js": "/static/js/453.ff3adc7b.chunk.js",
     "static/media/ESP32_2.JPG": "/static/media/ESP32_2.6658ca0bd0642e88ab84.JPG",
@@ -16,6 +16,7 @@
     "static/media/CARETO2.png": "/static/media/CARETO2.429100397104a3071149.png",
     "static/media/logodeveloper.png": "/static/media/logodeveloper.c7522d4b7b60916ad9d0.png",
     "static/media/AUTOMATISMOS RESAMANIA ACTUALIZADA.png": "/static/media/AUTOMATISMOS RESAMANIA ACTUALIZADA.e139be54bb659df12930.png",
+    "static/media/fondo.png": "/static/media/fondo.4507b7209511205e7078.png",
     "static/media/logomenu.png": "/static/media/logomenu.a6801a2cd616180efd7b.png",
     "static/media/powerbi.png": "/static/media/powerbi.1d5035dff02e52bd08f9.png",
     "static/media/CicloFeda.png": "/static/media/CicloFeda.848e625e40be4ebc6d53.png",
@@ -64,12 +65,12 @@
     "static/media/notasDAW.png": "/static/media/notasDAW.4ba0aad04f0bb00bd4ef.png",
     "static/media/crossfitlevel1.png": "/static/media/crossfitlevel1.9d491c0951a720cda92c.png",
     "index.html": "/index.html",
-    "main.294be29f.css.map": "/static/css/main.294be29f.css.map",
+    "main.7fef3a68.css.map": "/static/css/main.7fef3a68.css.map",
     "main.59953355.js.map": "/static/js/main.59953355.js.map",
     "453.ff3adc7b.chunk.js.map": "/static/js/453.ff3adc7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.294be29f.css",
+    "static/css/main.7fef3a68.css",
     "static/js/main.59953355.js"
   ]
 }
